@@ -1,6 +1,15 @@
-# HacktoberFest-2020
+# Overview
+The goal of this project is to help the beginners with their contributions in Open Source. We aim to achieve this collaboratively, so feel free to contribute in any way you want, just make sure to follow the contribution guidelines. You can contribute to it in either of the following ways:
 
-### Disclaimer :- This Repository is for learning purpose, how to create issue and Pull request on github during HacktoberFest.
+- Beginners
+	- A "Hello World" program in your favorite language
+- Intermediate
+	- Add any one of your favorite algorithm, from simple to complex!
+
+
+
+
+# HacktoberFest-2020
 
 Open source is changing the world - one pull request at a time. 
 
