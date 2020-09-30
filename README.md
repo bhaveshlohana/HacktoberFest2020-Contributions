@@ -39,7 +39,7 @@ Contributing to open-source is easy.
   - improving to documentation
 - push your work and Crete a PR.
 
-Check [How to Participate for details](/HOW_TO_PARTICIPATE.MD)
+Check [How to Participate for details](/Contribute.md)
 
 ## What if my pull requests aren’t accepted?
 
