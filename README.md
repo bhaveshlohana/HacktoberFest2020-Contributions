@@ -4,7 +4,7 @@ The goal of this project is to help the beginners with their contributions in Op
 - Beginners
 	- A "Hello World" program in your favorite language
 - Intermediate
-	- Add any one of your favorite algorithm, from simple to complex!
+	- Add any one of your favorite algorithm in your favorite language, from simple to complex!
 
 
 
