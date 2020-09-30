@@ -41,14 +41,14 @@ Hacktoberfest® is open to everyone in our global community. Whether you’re a 
 Contributing to open-source is easy.
 
 
-- fork the repo
+- Fork the repository
 - Improve current program by
   - improving functionality
   - adding new feature
   - improving to documentation
-- push your work and Crete a PR.
+- Push your work and Create a Pull Request
 
-Check [How to Participate for details](/Contribute.md)
+[Click here for detailed explanation](/Contribute.md)
 
 ## What if my pull requests aren’t accepted?
 
