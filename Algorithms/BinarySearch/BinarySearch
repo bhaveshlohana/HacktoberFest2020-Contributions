@@ -1,0 +1,27 @@
+fun binarySearch(arr: IntArray, first: Int, last: Int, key: Int) {
+    var first = first
+    var last = last
+    var mid = (first + last) / 2
+    while (first <= last) {
+        if (arr[mid] < key) {
+            first = mid + 1
+        } else if (arr[mid] == key) {
+            println("Element is found at index: $mid")
+            break
+        } else {
+            last = mid - 1
+        }
+        mid = (first + last) / 2
+    }
+    if (first > last) {
+        println("Element is not found!")
+    }
+}
+
+
+fun main() {
+    val arr = intArrayOf(1, 2, 4, 6, 17, 30, 146, 3467)
+    val key = 30
+    val last = arr.size - 1
+    binarySearch(arr, 0, last, key)
+}
