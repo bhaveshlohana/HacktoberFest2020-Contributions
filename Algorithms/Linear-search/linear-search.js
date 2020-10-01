@@ -1,24 +1,12 @@
-let ls = function (arr, item) {
-    // Go through all the elements of arr to look for item.
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] === item) { // Found it!
-            return i;
-        }
+function linearSearch(array, element) {
+  for (var i=0; i<array.length; i++) {
+    if (arr[i] == element) {
+      return i;
     }
-    // Item not found in the array.
-    return null;
+  } return null;
 }
 
-let arr = [1, 3, 5, 7, 8, 9]; 
-let x = 5; 
+var array = [1,2,4,5,7,8,9,2];
 
-if (ls(arr, x)) 
-	document.write("Element found!<br>"); 
-else document.write("Element not found!<br>"); 
-
-x = 6; 
-
-if (ls(arr, x)) 
-	document.write("Element found!<br>"); 
-else document.write("Element not found!<br>");				 
-
+linearSearch(array, 0); // returns null
+linearSearch(array, 2); // returns 1
