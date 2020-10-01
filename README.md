@@ -63,7 +63,7 @@ You can contribute to any open source project hosted on Github.com and contribut
 ---
 ## References
 
-- [HactoberFest-2020](https://hacktoberfest.digitalocean.com/)
+- [Hacktoberfest presented by DigitalOcean](https://hacktoberfest.digitalocean.com/)
 - [A participation guide for Hacktoberfest](https://dev.to/zenika/a-participation-guide-for-hacktoberfest-19c1)
 - [What is Hacktoberfest and How can a beginner contribute?](https://medium.com/@bawantharathnayaka/what-is-hacktoberfest-and-how-can-a-beginner-contribute-39cf2081804e)
 - [Hacktoberfest 2019: How you can get your free shirt — even if you’re new to coding](https://www.freecodecamp.org/news/hacktoberfest-2018-how-you-can-get-your-free-shirt-even-if-youre-new-to-coding-96080dd0b01b/)
