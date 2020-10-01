@@ -15,6 +15,7 @@ import java.util.Scanner;
  * 		Worst Case :- element not present in the list
  * 					O(logn)
  *
+ * Space Complexity:- O(1)
  */
 
 
