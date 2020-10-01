@@ -19,7 +19,7 @@ def GetKey():
         if(' ' in tempKey):
             print("White spaces are not allowed!")
         else:
-            print("Password must be at least 8 characters long and at max 32 characters long. Try Again!")
+            print("Password must be at least 8 characters long and at max 32 characters long. Please, Try Again!")
     while(len(tempKey)%8!=0):
         tempKey+=PADDING_CHARACTER
     KEY=tempKey
