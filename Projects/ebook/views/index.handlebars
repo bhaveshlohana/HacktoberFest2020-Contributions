@@ -1,0 +1,27 @@
+<section class="py-2">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <h1 class="display-3 mt-3 pt-5">
+        FULL STACK WEB DEVELOPMENT
+      </h1><p class="lead">A Book For All Enthuastic Developers to learn Web Development</p>
+      <form action="/charge" method="POST">
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="{{stripePublishableKey}}"
+          data-amount="999"
+          data-name="Web Development Ebook"
+          data-description="Ebook written by XYZ"
+          data-locale="auto">
+        </script>
+        <script>
+          // Hide default stripe button
+          document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+        </script>
+        <button type="submit" class="btn btn-outline-light text-dark btn-lg">Purchase For Rs.999</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <img src="/img/book.png" alt="" class="img-fluid">
+    </div>
+  </div>
+</section>
