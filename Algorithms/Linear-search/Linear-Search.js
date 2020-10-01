@@ -9,4 +9,4 @@ function linearSearch(array, element) {
 var array = [1,2,4,5,7,8,9,2];
 
 linearSearch(array, 0); // returns null
-linearSearch(array, 2); // returns 1
+linearSearch(array, 2); // returns 1 
