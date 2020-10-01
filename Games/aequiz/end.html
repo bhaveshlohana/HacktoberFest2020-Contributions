@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Congrats!</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="loader"></div>
+      <div id="end" class="flex-center flex-column hidden">
+        <h1 id="finalScore"></h1>
+        <form id="score-form">
+          <input type="text" id="username" placeholder="username" />
+          <button type="submit" class="btn" onclick="saveScore(event)">Save</button>
+        </form>
+        <a class="btn" href="game.html">Play Again</a>
+        <a class="btn" href="scoreboard.html">Score Board</a>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@aeternity/aepp-sdk@6.1.2/dist/aepp-sdk.browser-script.js"></script>
+    <script src="js/end.js"></script>
+  </body>
+</html>
