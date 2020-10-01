@@ -12,7 +12,54 @@ struct Node {
   }
 };
 
-int intersectPoint(struct Node* head1, struct Node* head2);
+
+/* Linked List Node
+struct Node {
+  int data;
+  struct Node *next;
+  Node(int x) {
+    data = x;
+    next = NULL;
+  }
+}; */
+
+/* Should return data of intersection point of two linked
+   lists head1 and head2.
+   If there is no intersecting point, then return -1. */
+   
+int lengt(Node *head){
+       int c = 1;
+       while(head->next!=NULL){
+           c++;
+           head = head->next;
+       }
+       return c;
+}
+int intersectPoint(Node* head1, Node* head2)
+{
+    // Your Code Here
+    int m = lengt(head1);
+    int n = lengt(head2);
+    if(n>m){
+        Node *temp = head1;
+        head1 = head2;
+        head2 = temp;
+    }
+    for(int i=0;i<abs(m-n);i++){
+        head1 = head1->next;
+    }
+    while(head1!=NULL && head2!=NULL){
+        if(head1 == head2) return head1->data;
+        head1 = head1->next;head2=head2->next;
+    }
+    return -1;
+}
+
+
+
+
+
+
 
 void append(struct Node** head_ref, struct Node **tail_ref, int new_data)
 {
@@ -62,46 +109,4 @@ int main()
     return 0;
 }
 
-
-/* Linked List Node
-struct Node {
-  int data;
-  struct Node *next;
-  Node(int x) {
-    data = x;
-    next = NULL;
-  }
-}; */
-
-/* Should return data of intersection point of two linked
-   lists head1 and head2.
-   If there is no intersecting point, then return -1. */
-   
-int lengt(Node *head){
-       int c = 1;
-       while(head->next!=NULL){
-           c++;
-           head = head->next;
-       }
-       return c;
-}
-int intersectPoint(Node* head1, Node* head2)
-{
-    // Your Code Here
-    int m = lengt(head1);
-    int n = lengt(head2);
-    if(n>m){
-        Node *temp = head1;
-        head1 = head2;
-        head2 = temp;
-    }
-    for(int i=0;i<abs(m-n);i++){
-        head1 = head1->next;
-    }
-    while(head1!=NULL && head2!=NULL){
-        if(head1 == head2) return head1->data;
-        head1 = head1->next;head2=head2->next;
-    }
-    return -1;
-}
 
