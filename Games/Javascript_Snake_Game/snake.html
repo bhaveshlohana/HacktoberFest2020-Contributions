@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body { background: black; align-items: center; justify-content: center; }
+    canvas { border: 1px solid white; }
+  </style>
+
+</head>
+<body onload="getHighScore()">
+<canvas width="400" height="400" id="game" style="margin-top:70px;margin-left:35%;"></canvas>
+<span><h1 style="margin-left: 35%; color:white">Score &nbsp <p style="margin-left:10%;font-size:22px;margin-top:-30px;" id="scoreCounter">&nbsp<h1 style="margin-left: 55%;margin-top:-55px;color:white">HighScore &nbsp<h2 style="margin-left:68%;color:white;margin-top:-52px;" id="highScoreCounter"></h2></h1></span>
+
+<script>
+
+
+
+var count=0;  
+var flag=1;
+var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
+var grid = 16;
+var count = 0;
+var highScore=0;
+var inter;
+var doAnim=true;
+var dir='a';
+let dx=0;
+let dy=0;
+var play=0;
+
+document.getElementById("scoreCounter").innerHTML=0;
+
+function getHighScore(){
+  if(!localStorage.highScore){
+    localStorage.highScore=JSON.stringify(0);
+  }
+  else{
+    highScore=JSON.parse(localStorage.highScore);
+    snake=JSON.parse(localStorage.snakePos);
+    context.clearRect(0, 0, canvas.width,canvas.height);
+    drawSnake();
+    drawApple();
+    document.getElementById("highScoreCounter").innerHTML=highScore;
+  }
+}
+
+
+var snake = 
+{
+  x : 160,
+  y : 160 ,
+ cells : [{x:160 , y:160}] ,
+};
+
+var apple = {
+  x: 320,
+  y: 320
+};
+
+// draw apple
+function drawApple()
+{
+  context.fillStyle = 'red';
+  context.fillRect(apple.x, apple.y, grid-1, grid-1); 
+}
+drawApple();
+
+// draw snake
+function drawSnake()
+{
+  context.fillStyle='yellow';
+  context.fillRect(snake.cells[0].x, snake.cells[0].y, grid-1, grid-1);
+
+  context.fillStyle = 'green';
+  for(let i=1 ; i<snake.cells.length ; i++)
+    context.fillRect(snake.cells[i].x, snake.cells[i].y, grid-1, grid-1);
+}
+drawSnake();
+
+function moveSnake()
+{
+  snake.x += dx ;
+  snake.y += dy ;
+
+  
+  for(var i=0;i<snake.cells.length;i++)
+  {
+    if(snake.x==snake.cells[i].x && snake.y==snake.cells[i].y)
+    {
+      clearInterval(inter);
+      alert("Game Over");
+      reset();
+      location.reload();  
+    }
+  }
+
+  if(snake.x>=400 || snake.y>=400 || snake.x<0 ||snake.y<0)
+  {
+    clearInterval(inter);
+    alert("Game Over");
+      reset();
+      location.reload();
+  }
+
+
+
+  snake.cells.unshift({x: snake.x , y: snake.y}) ; // Insert at 0th position
+
+
+  if(snake.x==apple.x && snake.y==apple.y)
+  {
+    apple.x=Math.floor(Math.random()*(24)+1);
+    apple.y=Math.floor(Math.random()*(24)+1);
+    count++;
+    showScore(count);
+    apple.x*=16;
+    apple.y*=16;
+  }
+  
+  else
+  snake.cells.pop();
+
+  drawSnake();
+}
+
+
+
+// listen to keyboard events to move the snake
+document.addEventListener('keydown', function(e) 
+{
+  
+  // left arrow key
+  
+  if (e.keyCode == 37 && dir!='right' && doAnim==true) 
+  {
+ 
+    clearInterval(inter);
+    inter=setInterval(function(){
+      dx = -grid;
+      dy = 0;
+     moveContinuous();
+    },180);
+    
+    dir='left';
+ 
+  }
+   // up arrow key
+  else if (e.keyCode == 38 && dir!='down' && doAnim==true) 
+  {
+    clearInterval(inter);
+    inter=setInterval(function(){
+      dy = -grid;
+      dx = 0;
+      moveContinuous();
+    },180);
+    dir='up';
+  }
+   // right arrow key
+  else if (e.keyCode == 39 && dir!='left' && doAnim==true) 
+  {
+    clearInterval(inter);
+    inter=setInterval(function(){
+      dx = grid;
+      dy = 0;
+      moveContinuous();
+    },180);
+    dir='right';
+
+  }
+   // down arrow key
+  else if (e.keyCode == 40 && dir!='up' && doAnim==true )
+  {
+    clearInterval(inter);
+    inter=setInterval(function(){
+      dy = grid;
+      dx = 0;
+      moveContinuous();
+    },180);
+
+    dir='down';
+  }
+
+
+  else if(e.keyCode==80){    // Pause
+      clearInterval(inter);
+    
+      localStorage.snakePos = JSON.stringify(snake);
+      doAnim=false;
+      console.log(doAnim);
+      play=1;
+      
+  }
+
+  else if(e.keyCode==82 && play==1){  // Play
+      
+      doAnim=true;
+      play=0;
+      // setInterval(moveSnake,180);
+      // context.clearRect(0, 0, canvas.width,canvas.height);
+      // moveContinuous();
+      inter=setInterval(moveContinuous,200);
+    //  setInterval(console.log(snake),5000);
+  }
+
+
+ else
+  return ;
+
+  
+
+  function moveContinuous(){
+  context.clearRect(0, 0, canvas.width,canvas.height);// Clear the Canvas
+      moveSnake();
+      drawApple();
+}
+
+
+
+
+// function anim(){
+//     if(!doAnim){
+//       // context.clearRect(0,0, canvas.width, canvas.height);
+//       context=null;
+//       return ;
+//     }
+// }
+
+});
+
+
+function reset()
+{
+  snake = 
+    {
+      x : 160,
+      y : 160 ,
+      cells : [{x:160 , y:160}] ,
+    };
+    localStorage.snakePos=JSON.stringify(snake);
+
+}
+
+
+function showScore(count)
+{
+  if(!count)
+  count=0;
+
+  document.getElementById("scoreCounter").innerHTML=count;
+  
+  if(count>highScore){
+  highScore=count;
+  document.getElementById("highScoreCounter").innerHTML=highScore;
+  }
+  else{
+    document.getElementById("highScoreCounter").innerHTML=highScore;
+    // console.log(highScore);
+  }
+
+  highScoreSave();
+}
+
+function highScoreSave(){
+  localStorage.highScore = JSON.stringify(highScore);
+}
+
+</script>
+</body>
+
+  
+<!-- <script src="alertify.js-0.3.11/lib/alertify.min.js"></script> -->
+
+</html>
