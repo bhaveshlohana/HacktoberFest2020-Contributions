@@ -9,7 +9,7 @@ The goal of this project is to help the beginners with their contributions in Op
 	- Add any graphical game in your favorite programming language!
 	
 
-![logo](LOGO.svg)
+![logo](https://github.com/rutuparna07/HacktoberFest2020-Contributions/blob/master/LOGO.svg)
 
 
 # HacktoberFest-2020
