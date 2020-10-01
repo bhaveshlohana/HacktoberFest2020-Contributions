@@ -1,6 +1,5 @@
 """Code to search and remove or include element in a list"""
 
-import pytest
 
 def remove_ord(key, list_i):
     """Remotion of an element of the list by a key that was gaved"""
