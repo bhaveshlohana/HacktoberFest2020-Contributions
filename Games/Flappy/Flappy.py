@@ -6,7 +6,9 @@ Exercises
 2. Vary the speed.
 3. Vary the size of the balls.
 4. Allow the bird to move forward and back.
-
+5. If bird crosses pipes a sound will play
+6. Same in case if the bird fall or got hit and if it flap 
+7. Showing the points in centre and increment it as bird crosses pipe
 """
 from distutils.core import setup
 from random import *
