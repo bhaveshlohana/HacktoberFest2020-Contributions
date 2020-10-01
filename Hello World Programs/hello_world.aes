@@ -1,0 +1,10 @@
+contract HelloWorld =
+
+  record state = { word : string }
+
+  entrypoint init() = { word = "" }
+
+  public stateful entrypoint say_hello(name : string) : string = 
+    let new_word = String.concat("Hello, ", name)
+    put(state{word = new_word})
+    new_word
