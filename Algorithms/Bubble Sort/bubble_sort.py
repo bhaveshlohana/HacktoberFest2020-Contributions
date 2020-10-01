@@ -11,4 +11,4 @@ def bubble_sort(num_list):
 	return num_list
 	
 	
-print bubble_sort([54,26,93,17,77,31,44,55,20])
+print (bubble_sort([54,26,93,17,77,31,44,55,20]))
