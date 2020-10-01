@@ -1,4 +1,4 @@
-#Followinf code is wriyyen usning Python Programming Language
+#Following code is written using Python Programming Language
 
 #Trying to make the code a little amusing, creative with cool Text.
 
