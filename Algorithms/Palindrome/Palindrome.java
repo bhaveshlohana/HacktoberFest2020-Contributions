@@ -1,24 +1,17 @@
-import java.util.Scanner;
- 
-class Palindrome
-{
-   public static void main(String args[])
-   {
-      String str, rev = "";
-      Scanner sc = new Scanner(System.in);
- 
-      System.out.println("Enter a string:");
-      str = sc.nextLine();
- 
-      int length = str.length();
- 
-      for ( int i = length - 1; i >= 0; i-- )
-         rev = rev + str.charAt(i);
- 
-      if (str.equals(rev))
-         System.out.println(str+" is a palindrome");
-      else
-         System.out.println(str+" is not a palindrome");
- 
-   }
-}
+class Palindrome{  
+    public static void main(String args[]){  
+     int r=0,sum=0,temp=0;    
+     int n=454;//It is the number variable to be checked for palindrome  
+     
+     temp=n;    
+     while(n>0){    
+      r=n%10;  //getting remainder  
+      sum=(sum*10)+r;    
+      n=n/10;    
+     }    
+     if(temp==sum)    
+      System.out.println("palindrome number ");    
+     else    
+      System.out.println("not palindrome");    
+   }  
+   }  
