@@ -78,15 +78,16 @@ while areSame(initial_state,final_state)!=True:
 
     count_iterations += 1
     # all possible cases of the 0 box and then appropriate directions are called.
+   #if row index is 0 then we can't move up
     if row_index != 0:
-        entry_one= moveUp(initial_state,row_index,column_index)        
+        entry_one= moveUp(initial_state,row_index,column_index) 
+    #if column index is 0 then we can't move left       
     if column_index!=0:
         entry_four= moveLeft(initial_state,row_index,column_index)
-
+   #if column index is 2 then we can't move right
     if column_index != 2:
         entry_two= moveRight(initial_state,row_index,column_index)
-            
-
+   #if row index is 2 then we can't move down
     if row_index != 2:
         entry_three = moveDown(initial_state,row_index,column_index)
 
