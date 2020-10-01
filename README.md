@@ -7,9 +7,6 @@ The goal of this project is to help the beginners with their contributions in Op
 	- Add any one of your favorite algorithm in your favorite language, from simple to complex!
 - Expert:
 	- Add any graphical game in your favorite programming language!
-	
-
-![logo](https://github.com/rutuparna07/HacktoberFest2020-Contributions/blob/master/LOGO.svg)
 
 
 # HacktoberFest-2020
