@@ -6,7 +6,8 @@ The goal of this project is to help the beginners with their contributions in Op
 - Intermediate:
 	- Add any one of your favorite algorithm in your favorite language, from simple to complex!
 - Expert:
-	-Add any graphical game in your favorite programming language!
+	- Add any graphical game in your favorite programming language!
+	
 
 
 
