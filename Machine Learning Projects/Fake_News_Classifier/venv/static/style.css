@@ -1,0 +1,187 @@
+*{margin:0px;
+    padding:0px;
+    box-sizing: border-box;}
+    body{
+        overflow:hidden;
+      
+    }
+
+
+    .head_div{
+        overflow:hidden;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        /*linear-gradient(180deg,#008aff,#ff137d)*/
+        background:#00ccff;
+        background-size: cover;
+        background-blend-mode: screen;
+      
+       
+        text-align:center;
+        position:relative;
+    
+    }
+    .head1{
+        width:100vw;
+        background:rgba(0,0,0,0.7);
+        margin-top:0vh;
+    }
+    .head{
+        color:white;
+        padding-top:2vh;
+        border:0;
+        font-size:10vh;
+        font-family:'Montserrat', sans-serif;
+    }
+    .p1{
+        color:white;
+        font-size:2.5vh;
+        font-family:'Montserrat', sans-serif;
+    }
+    .back{
+        width:100vw;
+        height:100vh;
+        margin:0;
+        padding-left:10vw;
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+        background:grey url(bubble.jpg);
+        background-size: cover;
+        background-blend-mode: screen;
+        position:relative;
+    
+    }
+
+    .div1{
+        position:absolute;
+        top:0;
+        left:0;
+        width:40vw;
+        height:70vh;
+        padding-top:5vh;
+        padding-left:5vh;
+    
+        display:flex;
+        flex-direction: row;
+        
+    }
+    .imholder{
+
+        width:40vw;
+        height:70vh;
+        
+        background:url(fake.png);
+        background-blend-mode: screen;
+        background-size: cover;
+        border-radius:30%;
+        border-color:white;
+        padding:5vh;
+        opacity:0.8;
+    }
+
+    
+    .box1{
+        position:absolute;
+        top:20vh;
+        left:45vw;
+        height:40vh;
+        width:20vw;
+        padding:0;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0,0,0,0.8);
+        margin-left:30vh;
+    }
+    #lb{
+        color:white;
+        font-size:3vh;
+        margin:1vh;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .inp{
+        background-color:rgba(0,0,0,0);
+        width:15vw;
+        height:6vh;
+        font-size:3vh;
+        margin:2vh;
+        border:none;
+        border-bottom:0.5vh solid green;
+        color:white;
+        overflow-wrap:normal;
+    }
+    
+    #inp1{
+        background-color:rgba(0,0,0,0);
+        width:15vw;
+        height:15vh;
+        font-size:2.5vh;
+        margin-top:3vh;
+        border:0.5vh solid#00CCFF;
+        color:white;
+        padding:1vh;
+        overflow-wrap:normal;
+        resize:none;
+        font-family: 'Montserrat', sans-serif;
+        word-wrap:break-word  ;
+        word-break: break-all;
+        
+    }
+    #inp1:hover{
+        background-color:rgba(0,0,0,0);
+        width:15vw;
+        height:15vh;
+        font-size:2.5vh;
+        margin-top:3vh;
+        border:0.5vh solid #00CCFF;
+        color:white;
+        padding:1vh;
+        cursor:auto;
+        word-wrap:break-word  ;
+        word-break: break-all;
+        resize:none;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .btn{
+      
+        width:7.5vw;
+        height:6vh;
+        margin:2vh;
+        font-size:2.5vh;
+        cursor:pointer;
+        font-family: 'Montserrat', sans-serif;
+  
+        
+        background-color: 	#FF1493;
+        border:0.5vh solid  	#FF1493;
+        color:white; 
+    }  
+  
+    .btn:hover{
+
+        width:7.5vw;
+        height:6vh;
+        margin-top:2vh;
+        margin-bottom:2;
+        margin-right:2.5vh;
+        font-size:2.5vh;
+        cursor:pointer;
+        font-family: 'Montserrat', sans-serif;
+        background-color:rgba(0,0,0,0);
+        border:0.5vh solid  	#FF1493;
+        color: 	#FF1493;
+     
+    }
+.credits{
+    position:fixed;
+    bottom:0vh;
+    left:40vw;
+    font-size:2.5vh;
+    color:whitesmoke;
+    font-family: 'Montserrat',sans-serif;
+}
