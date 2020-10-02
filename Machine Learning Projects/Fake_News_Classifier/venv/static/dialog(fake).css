@@ -1,0 +1,37 @@
+#checkmark1{
+    font-size:7vh;
+    color:red;
+}
+.lb11{
+    font-size:7vh;
+    color:red;
+    margin:3vh;
+}
+#close1{
+    position:absolute;
+    color:white;
+    font-size:5vh;
+    margin:0;
+    right:0%;
+    top:0%;
+    cursor:pointer;
+}
+.dia1{
+
+
+    visibility:visible;
+    position:fixed;
+    top:0vh;
+    left:10vw;
+    
+    text-align: center;
+    background:rgb(0,0,0,0.7);
+    border:none;
+    padding-top:50vh;
+    padding-bottom:60vh;
+    padding-left:30vw;
+    padding-right:30vw;
+    z-index:1;
+    margin:0;
+
+}
