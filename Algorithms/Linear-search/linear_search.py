@@ -1,20 +1,20 @@
-n = int(input("Enter the number of elements in array: "))
-a = []
-print(f"Enter {n} elements")
-for i in range(n):
-    x = int(input())
-    a.append(x)
+# Python3 code to linearly search x in arr[]. 
+# If x is present then return its location, 
+# otherwise return -1 
 
-key = int(input("Enter the key you would do search: "))
+def search(arr, n, x): 
 
-found = False
-index = -1
-for i in range(n):
-    if a[i] == key:
-        found = True
-        index = i
-        break
-if found:
-    print('Key {} found at index {}'.format(key, index))
-else:
-    print('Key {} not found in the array'.format(key))
+	for i in range (0, n): 
+		if (arr[i] == x): 
+			return i; 
+	return -1; 
+
+# Driver Code 
+arr = [ 2, 3, 4, 10, 40 ]; 
+x = 10; 
+n = len(arr); 
+result = search(arr, n, x) 
+if(result == -1): 
+	print("Element is not present in array") 
+else: 
+	print("Element is present at index", result); 
