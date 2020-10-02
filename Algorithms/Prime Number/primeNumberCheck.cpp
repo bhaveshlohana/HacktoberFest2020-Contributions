@@ -1,4 +1,5 @@
 #include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -13,7 +14,7 @@ int main() {
         isPrime = false;
     }
     else {
-        for (i = 2; i <= n / 2; ++i) {
+        for (i = 2; i*i <= n; ++i) {            //Time Complexity reduced from O(n) to O(sqrt(n))
             if (n % i == 0) {
                 isPrime = false;
                 break;
