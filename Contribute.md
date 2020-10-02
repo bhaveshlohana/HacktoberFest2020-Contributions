@@ -1,4 +1,4 @@
-Hacktoberfest® is open to everyone in our global community. Whether you’re a developer or a student learning to code.
+Hacktoberfest®(1 October-31 October is open to everyone in our global community. Whether you’re a developer or a student learning to code.
 
 Enter Your email on our Webiste to win T-shirt.
 
