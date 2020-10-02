@@ -19,7 +19,6 @@ public class NewSort {
             System.out.print(i+" ");    
         }    
         System.out.println();    
-            
         insertionSort(arr1);//sorting array using insertion sort    
            
         System.out.println("After Insertion Sort");    
@@ -27,4 +26,4 @@ public class NewSort {
             System.out.print(i+" ");    
         }    
     }   
-	}
+}
