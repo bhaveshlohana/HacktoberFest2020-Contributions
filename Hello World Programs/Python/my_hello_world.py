@@ -1,1 +1,0 @@
-print("MY HELLO WORLD")

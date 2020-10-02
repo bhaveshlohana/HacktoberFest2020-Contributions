@@ -1,6 +1,0 @@
-<aiml>
-    <category>
-        <pattern>*</pattern>
-        <template>Hello Hacktoberfest2020</template>
-    </category>
-</aiml>
