@@ -1,2 +1,0 @@
-CLS
-PRINT "Hello, World!"
