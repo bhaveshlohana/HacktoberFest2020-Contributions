@@ -34,7 +34,7 @@ But, it’s not just about the t-shirts or stickers. Its about supporting open s
 
 ## What Can I Contribute?
 
-Hacktoberfest® is open to everyone in our global community. Whether you’re a developer, student learning to code. You can contribute to anything from code to simple fix, new feature to grammar mistake.
+Hacktoberfest® is open to everyone in our global community. Whether you’re a developer, student learning to code. You can contribute to anything from code to simple fix, new feature to grammar mistake. This motivates even a beginner to be a part of open source contributions.
 
 ## How to Contribute in this repo.
 
