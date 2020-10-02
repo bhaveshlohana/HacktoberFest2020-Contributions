@@ -1,0 +1,25 @@
+.board button{
+    width: 120px;
+    height: 120px;
+    background-color: rgb(116, 104, 104);
+    border: 5px solid black;
+    border-radius: 50%;
+}
+body{
+    background-color: #e4e71ce0;
+}
+
+h1{
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 100px;
+}
+
+h2{
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 200;
+    font-size: 70px;
+}
+
+h3{
+  font-family: 'Knewave', cursive; 
+}
