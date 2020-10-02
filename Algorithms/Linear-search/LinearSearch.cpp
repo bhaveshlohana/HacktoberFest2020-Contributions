@@ -1,39 +1,26 @@
-#include <bits/stdc++.h> 
+// C++ code to linearly search x in arr[]. If x 
+// is present then return its location, otherwise 
+// return -1 
+
+#include <iostream> 
 using namespace std; 
 
-int linearSearch(int a[], int n, int x) 
+int search(int arr[], int n, int x) 
 { 
 	int i; 
 	for (i = 0; i < n; i++) 
-		if (a[i] == x) 
+		if (arr[i] == x) 
 			return i; 
 	return -1; 
 } 
 
-// Driver code 
-int main() 
+int main(void) 
 { 
-	int n;
-	cout<<"ENTER SIZE OF ARRAY:- ";
-	cin>>n;
-	int a[n];
-	cout<<"ENTER ARRAY ELEMENTS:- ";
-	for(int i=0;i<n;i++)
-	cin>>a[i];
-	
-	cout<<"ARRAY ELEMENTS ARE :- ";
-	for(int i=0;i<n;i++)
-	cout<<a[i]<<" ";
-	
-	int x;
-	cout<<"\nENTER ELEMENT TO BE SEARCHED:- ";
-	cin>>x;
-	int index = linearSearch(a,n,x); 
-	if (index == -1) 
-		cout << "ELEMENT IS NOT PRESENT IN ARRAY!\n"; 
-	else
-		cout << "ELEMENT IS PRESENT AT POSITION :-  " << index; 
-
-	return 0; 
+	int arr[] = { 2, 3, 4, 10, 40 }; 
+	int x = 10; 
+	int n = sizeof(arr) / sizeof(arr[0]); 
+	int result = search(arr, n, x); 
+(result == -1)? cout<<"Element is not present in array"
+				: cout<<"Element is present at index " <<result; 
+return 0; 
 } 
-
