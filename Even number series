@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{int i,n;
+    printf("enter number of terms");
+    scanf("%d",&n);
+    i=0;
+    while(i<=n)
+    {printf("%d,",2*i);
+        i++;
+        }
+    printf("\b ");
+    getch();
+    }
