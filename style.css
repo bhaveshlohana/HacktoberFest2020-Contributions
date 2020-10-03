@@ -1,0 +1,10 @@
+body {
+   
+   background-image: url(images/pexels-photo-1078850.jpeg);
+    background-size: cover;
+}
+p{
+    font-size: 60px;
+    text-align: center;
+    color:aliceblue;
+}
