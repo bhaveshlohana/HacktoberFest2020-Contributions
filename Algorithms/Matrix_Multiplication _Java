@@ -1,0 +1,52 @@
+import java.util.*;
+public class Main {
+
+    public static void main(String[] args) {
+	    Scanner abc=new Scanner(System.in);// scanner used to take input
+        int r1,c1; // no of rows and columns for the first matrix
+        int r2,c2; // no of rows and columns for the second matrix
+        int i,j,k;// loop control variables
+        System.out.println("Enter Number of rows and cols for first matrix");
+        r1=abc.nextInt();
+        c1=abc.nextInt();
+        System.out.println("Enter Number of rows and cols for second matrix");
+        r2=abc.nextInt();
+        c2=abc.nextInt();
+        System.out.println("ENTER FIRST MATRIX ELEMENTS");
+        int arr1[][]=new int[r1][c1];
+        for(i=0;i<r1;i++)
+        {
+            for(j=0;j<c1;j++)
+                arr1[i][j]=abc.nextInt();
+        }
+        System.out.println("ENTER SECOND MATRIX ELEMENTS");
+        int arr2[][]=new int[r2][c2];
+        for(i=0;i<r2;i++)
+        {
+            for(j=0;j<c2;j++)
+                arr2[i][j]=abc.nextInt();
+        }
+        //checking whether matrix multiplication is possible or not
+        if(c1!=r2) {
+            System.out.println("MATRIX MULTIPLICATION NOT POSSIBLE");
+        }
+        else {
+            int ans[][] = new int[r1][c2];
+            for (i = 0; i < r1; i++) {
+                for (j = 0; j < c2; j++) {
+                    for (k = 0; k < r2; k++)
+                        ans[i][j] += arr1[i][k] * arr2[k][j];
+                }
+            }
+            System.out.println("YOUR ANSWER MATRIX IS");
+            for(i=0;i<r1;i++)
+            {
+                for(j=0;j<c2;j++)
+                   System.out.print(ans[i][j]+" ");
+                System.out.println();
+            }
+
+        }
+
+    }
+}
