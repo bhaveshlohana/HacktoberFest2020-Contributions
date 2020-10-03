@@ -1,3 +1,3 @@
-#HelloWorldProgram
-print("Hello World!")
+#HellofromAustraliaProgram
+print("Hello from Australia!")
 print('Stay Safe.')
