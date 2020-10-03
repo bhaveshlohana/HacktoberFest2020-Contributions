@@ -1,0 +1,9 @@
+The main Optimisation over Naive approach is usgae of LPS array, which stores the longest proper prefix which is also suffix
+
+Usage of LPS :
+1)We start comparison of pat[j] with j = 0 with characters of current window of text.
+2)We keep matching characters txt[i] and pat[j] and keep incrementing i and j while pat[j] and txt[i] keep matching.
+3)When we see a mismatch
+    a)We know that characters pat[0..j-1] match with txt[i-j…i-1] (Note that j starts with 0 and increment it only when there is a match).
+    b)We also know (from above definition) that lps[j-1] is count of characters of pat[0…j-1] that are both proper prefix and suffix.
+    c)From above two points, we can conclude that we do not need to match these lps[j-1] characters with txt[i-j…i-1] because we know that these characters will anyway match. Let us consider above example to understand this.
