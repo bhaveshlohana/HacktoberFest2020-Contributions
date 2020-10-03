@@ -47,6 +47,7 @@ Contributing to open-source is easy.
   - improving functionality
   - adding new feature
   - improving the documentation
+  - improving the gramatical mistakes
 - Push your work and Create a Pull Request
 
 [Click here for detailed explanation](/Contribute.md)
