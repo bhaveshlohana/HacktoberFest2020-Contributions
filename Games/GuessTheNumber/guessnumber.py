@@ -2,8 +2,8 @@
 # GitHub : daniele-mc
 import random
 guess = random.randrange(100)
-num = int(input("Enter a number (0 to 100): "))
-while (guess < 101):
+num = int(input("Enter a number (0 to 200): "))
+while (guess < 201):
     if (num < guess):
         print("Input a higher number\n")      
     elif (num > guess):
@@ -11,4 +11,4 @@ while (guess < 101):
     else:
         print("You guess the number\n")
         break
-    num = int(input("Enter a number (0 to 100): "))   
+    num = int(input("Enter a number (0 to 200): "))   
