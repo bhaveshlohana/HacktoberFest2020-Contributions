@@ -1,16 +1,16 @@
 #include<stdio.h>
 void quicksort(int number[25],int first,int last){
-   int i, j, pivot, temp;
+   int i, j, p, temp;
 
    if(first<last){
-      pivot=first;
+      p=first;
       i=first;
       j=last;
 
       while(i<j){
-         while(number[i]<=number[pivot]&&i<last)
+         while(number[i]<=number[p]&&i<last)
             i++;
-         while(number[j]>number[pivot])
+         while(number[j]>number[p])
             j--;
          if(i<j){
             temp=number[i];
@@ -19,8 +19,8 @@ void quicksort(int number[25],int first,int last){
          }
       }
 
-      temp=number[pivot];
-      number[pivot]=number[j];
+      temp=number[p];
+      number[p]=number[j];
       number[j]=temp;
       quicksort(number,first,j-1);
       quicksort(number,j+1,last);
