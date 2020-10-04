@@ -1,0 +1,415 @@
+{
+    "cities": [
+        {
+            "name": "Arad",
+            "x": 81,
+            "y": 226,
+            "connected": [
+                "Deva",
+                "Timisoara"
+            ]
+        },
+        {
+            "name": "Oradea",
+            "x": 125,
+            "y": 137,
+            "connected": [
+                "Arad",
+                "Satu Mare",
+                "Turda",
+                "Deva"
+            ]
+        },
+        {
+            "name": "Timisoara",
+            "x": 74,
+            "y": 272,
+            "connected": [
+                "Resita",
+                "Deva",
+                "Drobeta Turnu"
+            ]
+        },
+        {
+            "name": "Satu Mare",
+            "x": 193,
+            "y": 57,
+            "connected": [
+                "Zalau",
+                "Baia Mare"
+            ]
+        },
+        {
+            "name": "Baia Mare",
+            "x": 245,
+            "y": 72,
+            "connected": [
+                "Bistrita",
+                "Cluj Napoca"
+            ]
+        },
+        {
+            "name": "Zalau",
+            "x": 207,
+            "y": 122,
+            "connected": [
+                "Cluj Napoca"
+            ]
+        },
+        {
+            "name": "Cluj Napoca",
+            "x": 248,
+            "y": 166,
+            "connected": [
+                "Turda"
+            ]
+        },
+        {
+            "name": "Alba Iulia",
+            "x": 245,
+            "y": 240,
+            "connected": [
+                "Sibiu"
+            ]
+        },
+        {
+            "name": "Turda",
+            "x": 260,
+            "y": 189,
+            "connected": [
+                "Alba Iulia",
+                "Targu Mures"
+            ]
+        },
+        {
+            "name": "Deva",
+            "x": 197,
+            "y": 260,
+            "connected": [
+                "Hunedoara",
+                "Alba Iulia"
+            ]
+        },
+        {
+            "name": "Sighetu",
+            "x": 268,
+            "y": 42,
+            "connected": [
+                "Baia Mare"
+            ]
+        },
+        {
+            "name": "Bistrita",
+            "x": 311,
+            "y": 128,
+            "connected": [
+                "Vatra Dornei",
+                "Targu Mures"
+            ]
+        },
+        {
+            "name": "Hunedoara",
+            "x": 196,
+            "y": 273,
+            "connected": [
+                "Targu Jiu"
+            ]
+        },
+        {
+            "name": "Sibiu",
+            "x": 286,
+            "y": 268,
+            "connected": [
+                "Ramnicu Valcea"
+            ]
+        },
+        {
+            "name": "Brasov",
+            "x": 391,
+            "y": 282,
+            "connected": [
+                "Sinaia",
+                "Pitesti"
+            ]
+        },
+        {
+            "name": "Targu Mures",
+            "x": 315,
+            "y": 191,
+            "connected": [
+                "Sighisoara"
+            ]
+        },
+        {
+            "name": "Vatra Dornei",
+            "x": 372,
+            "y": 106,
+            "connected": [
+                "Suceava"
+            ]
+        },
+        {
+            "name": "Radauti",
+            "x": 413,
+            "y": 53,
+            "connected": [
+                "Suceava"
+            ]
+        },
+        {
+            "name": "Suceava",
+            "x": 439,
+            "y": 72,
+            "connected": [
+                "Botosani",
+                "Piatra Neamt"
+            ]
+        },
+        {
+            "name": "Botosani",
+            "x": 466,
+            "y": 63,
+            "connected": [
+                "Iasi"
+            ]
+        },
+        {
+            "name": "Piatra Neamt",
+            "x": 447,
+            "y": 150,
+            "connected": [
+                "Bacau"
+            ]
+        },
+        {
+            "name": "Iasi",
+            "x": 534,
+            "y": 125,
+            "connected": [
+                "Vaslui",
+                "Bacau"
+            ]
+        },
+        {
+            "name": "Bacau",
+            "x": 485,
+            "y": 188,
+            "connected": [
+                "Onesti",
+                "Vaslui",
+                "Focsani"
+            ]
+        },
+        {
+            "name": "Vaslui",
+            "x": 544,
+            "y": 181,
+            "connected": [
+                "Barlad"
+            ]
+        },
+        {
+            "name": "Onesti",
+            "x": 476,
+            "y": 220,
+            "connected": [
+                "Sfantu Gheorghe"
+            ]
+        },
+        {
+            "name": "Barlad",
+            "x": 540,
+            "y": 224,
+            "connected": [
+                "Focsani"
+            ]
+        },
+        {
+            "name": "Focsani",
+            "x": 505,
+            "y": 280,
+            "connected": [
+                "Buzau"
+            ]
+        },
+        {
+            "name": "Galat",
+            "x": 564,
+            "y": 306,
+            "connected": [
+                "Braila"
+            ]
+        },
+        {
+            "name": "Braila",
+            "x": 560,
+            "y": 323,
+            "connected": [
+                "Buzau",
+                "Tulcea",
+                "Calarasi"
+            ]
+        },
+        {
+            "name": "Tulcea",
+            "x": 621,
+            "y": 331,
+            "connected": [
+                "Constanta"
+            ]
+        },
+        {
+            "name": "Izmail",
+            "x": 625,
+            "y": 315,
+            "connected": [
+                "Tulcea"
+            ]
+        },
+        {
+            "name": "Constanta",
+            "x": 610,
+            "y": 436,
+            "connected": [
+                "Calarasi",
+                "Bucharest"
+            ]
+        },
+        {
+            "name": "Mangalia",
+            "x": 605,
+            "y": 471,
+            "connected": [
+                "Constanta"
+            ]
+        },
+        {
+            "name": "Calarasi",
+            "x": 514,
+            "y": 432,
+            "connected": [
+                "Bucharest"
+            ]
+        },
+        {
+            "name": "Bucharest",
+            "x": 427,
+            "y": 408,
+            "connected": [
+                "Buzau",
+                "Pitesti",
+                "Ploiesti",
+                "Ruse Pyce",
+                "Craiova"
+            ]
+        },
+        {
+            "name": "Buzau",
+            "x": 479,
+            "y": 336,
+            "connected": [
+                "Ploiesti"
+            ]
+        },
+        {
+            "name": "Ploiesti",
+            "x": 421,
+            "y": 356,
+            "connected": [
+                "Sinaia",
+                "Targoviste"
+            ]
+        },
+        {
+            "name": "Sighisoara",
+            "x": 332,
+            "y": 225,
+            "connected": [
+                "Brasov"
+            ]
+        },
+        {
+            "name": "Sfantu Gheorghe",
+            "x": 403,
+            "y": 262,
+            "connected": [
+                "Brasov"
+            ]
+        },
+        {
+            "name": "Sinaia",
+            "x": 387,
+            "y": 317,
+            "connected": []
+        },
+        {
+            "name": "Targoviste",
+            "x": 380,
+            "y": 359,
+            "connected": []
+        },
+        {
+            "name": "Pitesti",
+            "x": 338,
+            "y": 365,
+            "connected": [
+                "Ramnicu Valcea",
+                "Slatina"
+            ]
+        },
+        {
+            "name": "Ramnicu Valcea",
+            "x": 302,
+            "y": 341,
+            "connected": []
+        },
+        {
+            "name": "Slatina",
+            "x": 302,
+            "y": 409,
+            "connected": [
+                "Craiova"
+            ]
+        },
+        {
+            "name": "Craiova",
+            "x": 260,
+            "y": 420,
+            "connected": [
+                "Targu Jiu",
+                "Vidin",
+                "Drobeta Turnu"
+            ]
+        },
+        {
+            "name": "Targu Jiu",
+            "x": 223,
+            "y": 348,
+            "connected": []
+        },
+        {
+            "name": "Vidin",
+            "x": 194,
+            "y": 453,
+            "connected": []
+        },
+        {
+            "name": "Drobeta Turnu",
+            "x": 178,
+            "y": 388,
+            "connected": []
+        },
+        {
+            "name": "Resita",
+            "x": 120,
+            "y": 305,
+            "connected": []
+        },
+        {
+            "name": "Ruse Pyce",
+            "x": 417,
+            "y": 467,
+            "connected": []
+        }
+    ]
+}
