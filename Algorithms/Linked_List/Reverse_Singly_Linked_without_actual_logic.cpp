@@ -27,8 +27,8 @@ int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     thread t2(insert_reverse,10);
-	  thread t3(insert_reverse,20);
-	  t2.join();
-	  t3.join();
+    thread t3(insert_reverse,20);
+    t2.join();
+    t3.join();
     print();
 }
