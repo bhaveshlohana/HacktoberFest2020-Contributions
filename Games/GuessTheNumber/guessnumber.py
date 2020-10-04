@@ -1,14 +1,20 @@
 # Author : Daniele Carvalho
 # GitHub : daniele-mc
 import random
-guess = random.randrange(100)
-num = int(input("Enter a number (0 to 100): "))
-while (guess < 101):
-    if (num < guess):
-        print("Input a higher number\n")      
-    elif (num > guess):
-        print("Input a lower number\n")
-    else:
-        print("You guess the number\n")
+n = random.randint(1,100)
+guess = 0
+count = 0
+while guess != n and guess != "exit":
+    guess = input(" Your guess?")    
+    if guess == "exit":
         break
-    num = int(input("Enter a number (0 to 100): "))   
+    guess = int(guess)
+    count += 1
+    if guess < n:
+        print("Too low!")
+    elif guess > n:
+        print("Too high!")
+    else:
+        print("You got it!")
+        print("And it only took you",count,"attempts!")
+  
