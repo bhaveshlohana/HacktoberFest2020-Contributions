@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main(){
+    int n,key;
+    printf("Enter no of elements");
+    scanf("%d",&n);
+    printf("Enter the key");
+    scanf("%d",&key);
+    int a[n],i,flag=0;
+    printf("Enter the array elements\n");
+    for(i=0;i<n;i++){
+    scanf("%d",&a[i]);
+    }
+   int f=0,l=n-1;
+        while(f<=l){
+           int mid=(f+l)/2;
+             if(key>a[mid]){
+                    f=mid+1;
+
+            }
+            else if(key<a[mid]){
+                l=mid-1;
+            }
+             else if(key==a[mid]){
+             printf("Found at %d position",mid+1);
+             flag=1;
+             break;
+            }
+        }
+    if(flag!=1){
+        printf("Not found");
+    }
+    return 0;
+}
