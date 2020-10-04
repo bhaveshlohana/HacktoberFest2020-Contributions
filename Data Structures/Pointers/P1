@@ -1,0 +1,27 @@
+#include<stdio.h>
+void main( )
+{
+
+int   a[5],i;
+int   *ptr;
+
+printf(" \n Enter the element into array: \n ");
+
+for(i=0;i<5;i++)
+{
+scanf("%d",&a[i]);
+}
+
+ptr=&a[0];
+
+printf(" \n Element in array are :\n ") ;
+
+
+for(i=0; i < 5 ; i++)
+{
+printf("\t %d ", ( *ptr )) ;
+ptr++  ;
+}
+
+
+}
