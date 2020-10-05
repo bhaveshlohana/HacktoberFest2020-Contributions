@@ -3,9 +3,7 @@ from selenium import webdriver
 pnum = input("Enter phone number:")
 amt = int(input("How many times you want to send OTP:"))
 
-
 # 1> download google chrome webdriver
-
 
 browser = webdriver.Chrome('D:\\Super Brain\\Automation with python\\Chrome Driver\\chromedriver.exe')
 
