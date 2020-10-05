@@ -18,10 +18,12 @@ string encrypt(string text, int s)
  
 int main() 
 { 
-    string text="MYSUPERSECRETMESSAGE"; 
+    string text;
+    cout << "Enter the text you want to encrypt: \n";
+    cin >> text;
     int s = 4; 
-    cout << "Text : " << text; 
+    cout << "Plain Text : " << text; 
     cout << "\nShift: " << s; 
-    cout << "\nCipher: " << encrypt(text, s); 
+    cout << "\nCipher Text: " << encrypt(text, s);
     return 0; 
 } 
