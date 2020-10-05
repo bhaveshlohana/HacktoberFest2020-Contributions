@@ -1,9 +1,9 @@
-#Using list to print hello world
+# Using list to print hello world
 
-my_list = ['H','e','l','l','o',' ','W','o','r','l','d']
+my_list = ["H", "e", "l", "l", "o", " ", "W", "o", "r", "l", "d"]
 
-s = ''
+s = ""
 for i in my_list:
-	s = s + i
+    s = s + i
 
 print(s)
