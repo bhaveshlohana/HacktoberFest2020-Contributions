@@ -54,6 +54,3 @@ quickSort(arr, 0, n-1)
 print("Sorted array is:")
 for i in range(n):
 	print("%d" % arr[i]),
-
-# This code is contributed by Mohit Kumra
-#This code in improved by https://github.com/anushkrishnav
