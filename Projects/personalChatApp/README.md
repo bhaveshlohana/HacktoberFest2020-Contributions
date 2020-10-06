@@ -10,40 +10,19 @@ node index
 ```
 ### 2. Then open your index.html via live server or by copying the relative path in the browser url
 
-![rel-path](images/rel-path.png)
+![rel-path](readme_images/rel-path.png)
 
 ### 3. Then You have to enter your name in the prompt 
 
-![joined](images/joined.png)
+![joined](readme_images/joined.png)
 
 ### 4. Whenever a new user joined you get an alert at the top 
 
-![new-joined](images/new-joined.png)
+![new-joined](readme_images/new-joined.png)
 
 ### 5. Then you can start your conversion and each user's name is displayed before the message
 
-![send-recieve](images/send-recieve.png)
+![send-recieve](readme_images/send-recieve.png)
 
-## For More projects like this please visit my github website
-
-<a href = 'https://imyogeshgaur.github.io' target="_yogesh"> My Online Portfolio </a>
-
-## My Social Accounts
-
-### LinkedIn 
-
-<a href='https://linkedin.com/in/imyogeshgaur' target="_yogesh"> LinkedIn Profile</a>
-
-### Instagram 
-
-<a href='https://instagram.com/imatechgeek' target="_yogesh"> Instagram Professional </a>
-<br> <br>
-<a href='https://instagram.com/imyogeshgaur' target="_yogesh"> Instagram Personal </a>
-
-### Facebook 
-
-<a href='https://www.facebook.com/Just-for-skill-development-114448226946175'>Facebook Page</a>
-<br> <br>
-<a href='https://www.facebook.com/profile.php?id=100022189704235' target="_yogesh"> Facebook Profile </a>
 
 
