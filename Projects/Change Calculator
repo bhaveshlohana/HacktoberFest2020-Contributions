@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <math.h>
+
+void least(float value);
+int main(void)
+{
+    //validate user input
+    float change;
+    do
+    {
+        change = get_float("Change:");
+    }
+    while (change < 0);
+    //round to avoid errors
+    change = round(change * 100);
+    //run
+    least(change);
+}
+
+void least(float value)
+{
+    int coins = 0;
+    //test with values
+    while (value >= 25)
+    {
+        value -= 25;
+        coins += 1;
+    }
+    while (value >= 10)
+    {
+        value -= 10;
+        coins += 1;
+    }
+    while (value >= 5)
+    {
+        value -= 5;
+        coins += 1;
+    }
+    while (value >= 1)
+    {
+        value -= 1;
+        coins += 1;
+    }
+    //print out number of coins
+    printf("%i\n", coins);
+}
