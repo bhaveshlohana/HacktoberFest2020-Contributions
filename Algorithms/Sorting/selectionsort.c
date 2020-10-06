@@ -18,17 +18,19 @@ printf("\nEnter your numbers one by one with a space or press enter after each e
 int x,y;
   for(x=0;x<n-1;x++)
   {
+//Finding the minimum element in unsorted array
     min=x;
-    for(y=x+1;y<n;y++)
+    for(y=x+1;y<n;y++)		
     {
       if(a[y]<a[min])
       min=y;
     }
-    temp=a[x];
-    a[x]=a[min];
+//Swap the minimum element with the first element
+    temp=a[x];			
+    a[x]=a[min];		
     a[min]=temp;
   }
-    //printing out soted array
+    //printing out sorted array
     printf("The sorted numbers are:\n");
   for(j=0;j<n;j++)
     {
