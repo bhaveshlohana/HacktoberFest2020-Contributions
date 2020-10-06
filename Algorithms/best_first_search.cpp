@@ -1,4 +1,4 @@
-// PRACTICAL 6 - To study and implement Best First search using priority queue.
+// To study and implement Best First search using priority queue.
 #include <iostream> 
 #include <queue> 
 #include <bits/stdc++.h>
