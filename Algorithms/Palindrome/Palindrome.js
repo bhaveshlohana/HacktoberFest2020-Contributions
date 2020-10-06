@@ -1,13 +1,13 @@
 // For single values
-const palindrome = (val) =>
+const palindromeCheck = (val) =>
   String(val).split("").reverse().join("") === String(val)
-    ? `Culprit ${val} is a Palindrome.`
-    : `Culprit ${val} is not a Palindrome.`;
+    ? `Yes, the culprit ${val} is a Palindrome.`
+    : `No, the culprit ${val} is not a Palindrome.`;
 
 // For arrays
-const palindromeArr = (arr) =>
+const palindromeArrCheck = (arr) =>
   arr.map((val) => {
     return String(val).split("").reverse().join("") === String(val)
-      ? console.log(`Culprit ${val} is a Palindrome`)
-      : console.log(`Culprit ${val} is not a Palindrome.`);
+      ? console.log(`Yes, the culprit ${val} is a Palindrome`)
+      : console.log(`No, the culprit ${val} is not a Palindrome.`);
   });
