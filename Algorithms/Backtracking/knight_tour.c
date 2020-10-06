@@ -1,4 +1,4 @@
-//PRACTICAL 3 - To find the total number of possible solution and the time taken to compute for different value of 'n' in the knight's tour problem.
+//To find the total number of possible solution and the time taken to compute for different value of 'n' in the knight's tour problem.
 #include <stdio.h>
 #include <time.h> 
 
