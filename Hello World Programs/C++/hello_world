@@ -1,0 +1,5 @@
+#include <stdio.h>
+//simplest hello world program
+void main()
+{cout<<"hello world";
+}
