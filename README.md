@@ -1,4 +1,4 @@
-#### Edit: Don't add something if its already there in the same programming language. Try to add quality content. I won't merge PRs if you spamming.
+#### Edit: Don't add something if its already there in the same programming language. Try to add quality content. I won't merge PRs if you are spamming with PRs.
 
 
 # Overview
