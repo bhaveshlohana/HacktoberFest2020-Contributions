@@ -1,0 +1,27 @@
+{
+  "name": "2048-react-clone",
+  "version": "1.0.0",
+  "description": "A react clone of 2048. Originally created by Gabriele Cirulli. Based on 1024 by Veewo Studio and conceptually similar to Threes by Asher Vollmer.",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
+    "react-scripts": "2.1.8"
+  },
+  "devDependencies": {
+    "typescript": "3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
