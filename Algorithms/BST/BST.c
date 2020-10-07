@@ -99,6 +99,6 @@ int main(int argc, char const *argv[])
     inorder(root);
     int max = maxElement(root);
     printf("height of tree is %d\n", heightBST(root));
-    printf("\nThe maximum element is %d\n", max);
+    printf("\nThe maximum element in the tree is %d\n", max);
     return 0;
 }
