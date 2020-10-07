@@ -32,7 +32,7 @@ Mas, não se trata apenas de camisetas ou adesivos. É sobre o suporte de códig
 
 ## Como Posso Contribuir?
 
-Hacktoberfest® está aberto a todos em nossa comunidade global. Quer você seja um desenvolvedor, um aluno aprendendo a programar. Você pode contribuir com qualquer coisa, desde um código até uma correção simples, um novo recurso até um erro gramatical.
+Hacktoberfest® está aberto a todos em nossa comunidade global. Quer você seja um desenvolvedor ou um aluno aprendendo a programar. Você pode contribuir com qualquer coisa, desde um código até uma correção simples, um novo recurso até um erro gramatical.
 
 ## Como contribuir neste repositório.
 
