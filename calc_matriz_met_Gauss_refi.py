@@ -1,3 +1,4 @@
+#In Portuguese
 import math
 def EliminaGaussiana(A,b):
 	for k in range(0,n-1):
