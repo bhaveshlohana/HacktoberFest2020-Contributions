@@ -1,116 +1,82 @@
-# Tic-Tac-Toe Program using 
-# random number in Python 
+def tic_tac_toe():
+    board = ["_", "_", "_", "_", "_", "_", "_", "_", "_"]
+    end = False
+    win_commbinations = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6), (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6))
 
-# importing all necessary libraries 
-import numpy as np 
-import random 
-from time import sleep 
+    def draw():
+        print(board[0], board[1], board[2])
+        print(board[3], board[4], board[5])
+        print(board[6], board[7], board[8])
+        print()
 
-# Creates an empty board 
-def create_board(): 
-	return(np.array([[0, 0, 0], 
-					[0, 0, 0], 
-					[0, 0, 0]])) 
+    def player1():
+        n = choose_number()
+        if board[n] == "X" or board[n] == "O":
+            print("\nYou can't go there. Try again")
+            player1()
+        else:
+            board[n] = "X"
 
-# Check for empty places on board 
-def possibilities(board): 
-	l = [] 
-	
-	for i in range(len(board)): 
-		for j in range(len(board)): 
-			
-			if board[i][j] == 0: 
-				l.append((i, j)) 
-	return(l) 
+    def player2():
+        n = choose_number()
+        if board[n] == "X" or board[n] == "O":
+            print("\nYou can't go there. Try again")
+            player2()
+        else:
+            board[n] = "O"
 
-# Select a random place for the player 
-def random_place(board, player): 
-	selection = possibilities(board) 
-	current_loc = random.choice(selection) 
-	board[current_loc] = player 
-	return(board) 
+    def choose_number():
+        while True:
+            while True:
+                a = input()
+                try:
+                    a  = int(a)
+                    a -= 1
+                    if a in range(0, 9):
+                        return a
+                    else:
+                        print("\nThat's not on the board. Try again")
+                        continue
+                except ValueError:
+                   print("\nThat's not a number. Try again")
+                   continue
 
-# Checks whether the player has three 
-# of their marks in a horizontal row 
-def row_win(board, player): 
-	for x in range(len(board)): 
-		win = True
-		
-		for y in range(len(board)): 
-			if board[x, y] != player: 
-				win = False
-				continue
-				
-		if win == True: 
-			return(win) 
-	return(win) 
+    def check_board():
+        count = 0
+        for a in win_commbinations:
+            if board[a[0]] == board[a[1]] == board[a[2]] == "X":
+                print("Player 1 Wins!\n")
+                print("Congratulations!\n")
+                return True
 
-# Checks whether the player has three 
-# of their marks in a vertical row 
-def col_win(board, player): 
-	for x in range(len(board)): 
-		win = True
-		
-		for y in range(len(board)): 
-			if board[y][x] != player: 
-				win = False
-				continue
-				
-		if win == True: 
-			return(win) 
-	return(win) 
+            if board[a[0]] == board[a[1]] == board[a[2]] == "O":
+                print("Player 2 Wins!\n")
+                print("Congratulations!\n")
+                return True
+        for a in range(9):
+            if board[a] == "X" or board[a] == "O":
+                count += 1
+            if count == 9:
+                print("The game ends in a Tie\n")
+                return True
 
-# Checks whether the player has three 
-# of their marks in a diagonal row 
-def diag_win(board, player): 
-	win = True
-	y = 0
-	for x in range(len(board)): 
-		if board[x, x] != player: 
-			win = False
-	if win: 
-		return win 
-	win = True
-	if win: 
-		for x in range(len(board)): 
-			y = len(board) - 1 - x 
-			if board[x, y] != player: 
-				win = False
-	return win 
+    while not end:
+        draw()
+        end = check_board()
+        if end == True:
+            break
+        print("Player 1 choose where to place a cross")
+        player1()
+        print()
+        draw()
+        end = check_board()
+        if end == True:
+            break
+        print("Player 2 choose where to place a nought")
+        player2()
+        print()
 
-# Evaluates whether there is 
-# a winner or a tie 
-def evaluate(board): 
-	winner = 0
-	
-	for player in [1, 2]: 
-		if (row_win(board, player) or
-			col_win(board,player) or
-			diag_win(board,player)): 
-				
-			winner = player 
-			
-	if np.all(board != 0) and winner == 0: 
-		winner = -1
-	return winner 
+    if input("Play again (y/n)\n") == "y":
+        tic_tac_toe()
 
-# Main function to start the game 
-def play_game(): 
-	board, winner, counter = create_board(), 0, 1
-	print(board) 
-	sleep(2) 
-	
-	while winner == 0: 
-		for player in [1, 2]: 
-			board = random_place(board, player) 
-			print("Board after " + str(counter) + " move") 
-			print(board) 
-			sleep(2) 
-			counter += 1
-			winner = evaluate(board) 
-			if winner != 0: 
-				break
-	return(winner) 
-
-# Driver Code 
-print("Winner is: " + str(play_game())) 
+tic_tac_toe()
