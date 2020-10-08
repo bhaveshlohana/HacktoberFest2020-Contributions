@@ -1,6 +1,7 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+//code
 
 int phi(int n)
 {
