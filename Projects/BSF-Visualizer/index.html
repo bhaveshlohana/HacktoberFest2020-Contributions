@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Graph Visualization</title>
+    <script src="./library/p5.min.js"></script>
+    <script src="./js/sketch.js"></script>
+    <script src="./js/node.js"></script>
+    <script src="./js/graph.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+        integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
+    <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body id="home">
+    <div id="particles-js"></div>
+    <header id="thisisnav" style="position: sticky;">
+        <ul style="padding: 0; margin: 0;">
+            <a class="wow fadeInDown w3-button" data-wow-duration="1s" data-wow-delay="0.9s"
+                href="https://itsjigyasu.me">Home</a>
+        </ul>
+    </header>
+
+    <section class="home wow fadeIn" data-wow-duration="2s" data-wow-delay="0.8s">
+        <div class="name">
+            <h1 class="wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.8s">Graph Search - GUI</h1>
+            <h3 class="wow fadeInDown" data-wow-duration="4s" data-wow-delay="1.0s"> |
+                <a href="#about" style="text-decoration: none; color: white;">About</a> |
+                <a href="#project" style="text-decoration: none; color: white;">Program</a> |
+                <a href="#implementation" style="text-decoration: none; color: white;">Implementation</a> |
+            </h3>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="section-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
+            <h2>About</h2>
+        </div>
+        <div class="row" style="color: white; text-align: center; padding: 60px; font-size: 18px;">
+            <div class="col-xl-6">
+                <p>This project helps to visualise <b>Breadth First Search Algorithm</b> (BFS) over
+                    <b>Romania Map</b>.</p>
+                <p>Breadth-first search (BFS) is an algorithm for traversing or searching tree or graph data
+                    structures. It starts at the tree root (or some arbitrary node of a graph, sometimes referred to
+                    as a 'search key'), and explores all of the neighbor nodes at the present depth prior to
+                    moving on to the nodes at the next depth level.</p>
+                <p>
+                    Breadth-first search starts by searching a start node, followed by its adjacent nodes, then all
+                    nodes that can be reached by a path from the start node containing two edges, three edges, and so
+                    on. Formally, the BFS algorithm visits all vertices in a graph 'G' that are 'k' edges away from the
+                    source vertex 's' before visiting any vertex 'k+1' edges away. This is done until no more vertices
+                    are reachable from 's'. The image below demonstrates exactly how this traversal proceeds:
+                </p>
+            </div>
+
+            <div class="col-xl-6">
+                <img src="./img/demo.gif" alt="demo" style="border: 2px solid white;" width="530">
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="about">
+        <div class="section-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
+            <h2>Project</h2>
+        </div>
+        <div class="row" style="color: white; text-align: center; padding: 60px; font-size: 18px;">
+            <div class="col-xl-8">
+                <div id="sketch-holder" style="padding: 5px;"></div>
+                <button class="btn btn-primary" style="margin-right: 20px;" onclick="bfs()">Start</button>
+                <button class="btn btn-success" style="margin-left: 20px;" onclick="reset()">Reset</button>
+            </div>
+
+            <div id="output" class="col-xl-4" style="text-align: left;">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="implementation" class="about">
+        <div class="section-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
+            <h2>Implementation</h2>
+        </div>
+        <div class="row" style="color: white; text-align: justify; padding: 60px; font-size: 18px;">
+            <div class="col-xl-6">
+                <p>The Application require data of city in <b>JSON</b> format which has 3 attributes (Name, (X, Y)
+                    coordinates & Edges List). The program collectes the data of each city and processess it to
+                    create Node objects and put each Node in a graph array. Along with this, the edges list is also
+                    updated in Node instance and two connections between the Nodes are created.</p>
+                <p>Then the collected data is processed with p5 JS library and Node Pointers are drawn over the HTML
+                    Canvas which has background of Romania Map. And consecutive Edges are also draw using lines. Now a
+                    event listener is created for detecting mouse click and when the mouse clicks over any valid node,
+                    that node is selected as <b>Starting Node</b> and 2nd click of mouse assigns <b>Destination
+                        Node</b>. Then on pressing start button the Breadth First Search Algorithm starts working and
+                    according to iterations each node is assigned with its parent node and on successfull finding of
+                    destination node the path traced by the algorithm is drawn over canvas and final shortest path is
+                    highlighted with green color.</p>
+            </div>
+
+            <div class="col-xl-6">
+                <p>Technologies used in developing this project are:
+                    <br><br><i class="fas fa-dot-circle"></i> Front End:
+                    <br>&Tab;1. HTML
+                    <br>&Tab;2. CSS
+                    <br>&Tab;3. Javascript
+                    <br><br><i class="fas fa-dot-circle"></i> Back End:
+                    <br>&Tab;1. Javascript
+                    <br>&Tab;2. p5 JS (Processing JS)
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section style="text-align: center; color: white;">
+        <h4>Author:</h4>
+        <h3>- <a href="https://www.linkedin.com/in/jigyasuprakash/">Jigyasu Prakash</a></h3>
+        <br><br>
+    </section>
+
+    <section id="myfooter">
+    </section>
+
+    <!--Scripts are here-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load("particles-js", "js/particles.json", function () {
+            console.log("particles.json loaded..");
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script>
+    <script>
+        window.onscroll = () => {
+            const nav = document.querySelector('#thisisnav');
+            if (this.scrollY <= 5) nav.className = '';
+            else nav.className = 'mynav';
+        };
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin=anonymous></script>
+</body>
+
+</html>

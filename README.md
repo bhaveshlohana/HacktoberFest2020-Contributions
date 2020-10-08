@@ -1,3 +1,6 @@
+#### Edit: Don't add something if its already there in the same programming language. Try to add quality content. I won't merge PRs if you are spamming with PRs.
+
+
 # Overview
 The goal of this project is to help the beginners with their contributions in Open Source. We aim to achieve this collaboratively, so feel free to contribute in any way you want, just make sure to follow the contribution guidelines. You can contribute to it in either of the following ways:
 
@@ -30,12 +33,11 @@ During the entire month of October 2020, all you have to do is contribute to any
 
 The Hacktoberfest’s simple plain objective is:
 Support open source and earn a limited edition T-shirt!
-in this fest you you can gain knowledge how to create a pull request effectively.
 But, it’s not just about the t-shirts or stickers. Its about supporting open source. Its about celebrating open source, and giving it back. If you’ve never contributed to open source before, this is the perfect time to get started because Hacktoberfest provides a large list of available contribution opportunities.
 
 ## What Can I Contribute?
 
-Hacktoberfest® is open to everyone in our global community. Whether you’re a developer, student learning to code. You can contribute to anything from code to simple fix, new feature to grammar mistake. This motivates even a beginner to be a part of open source contributions.
+Hacktoberfest® is open to everyone in our global community. Whether you’re a developer, student learning to code. You can contribute to anything from code to simple fix, new feature to grammar mistake.
 
 ## How to Contribute in this repo.
 

@@ -1,7 +1,10 @@
-#include <iostream>
+#include<iostream>
 
-int main()
-{
-  cout<<"Hello World";
-  return 0;
+using namespace std;
+
+int main() {
+
+cout<<"hello World!";
+
+return 0;
 }
