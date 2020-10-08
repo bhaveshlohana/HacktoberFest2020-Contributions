@@ -1,0 +1,51 @@
+/*  */
+#include<stdio.h>
+#include<string.h>
+
+struct address
+{
+  int Door_Number;
+  char City[20];
+};
+
+struct Employee
+{
+  int Age;
+  char Name[50];
+  struct address add;
+  float Salary;  
+}*emp3;
+
+int main() 
+{
+  struct Employee emp1 = { 25, "Tutorial", 222, "Liverpool", 25000.50 };
+  struct Employee emp2;
+    
+  emp2.Age = 28;
+  strcpy(emp2.Name, "Gateway" );
+  
+  emp2.add.Door_Number = 145;
+  strcpy(emp2.add.City, "Manchester" );
+  
+  emp2.Salary = 45000.00; 
+  
+  emp3 = &emp2;
+  
+  printf("\n Details of the Employee 1 \n " );
+  printf(" Employee Age = %d \n ", emp1.Age );
+  printf(" Employee Name = %s \n ", emp1.Name );
+  printf(" Employee Door Number = %d \n ", emp1.add.Door_Number );
+  printf(" Employee City = %s \n ", emp1.add.City );
+  printf(" Employee Salary = %.2f \n\n ", emp1.Salary );
+
+  printf(" Details of the Employee 2 \n " );
+  printf(" Employee Age = %d \n ", emp3->Age );
+  printf(" Employee Name = %s \n ", emp3->Name );
+  printf(" Employee Door Number = %d \n ", emp3->add.Door_Number );
+  printf(" Employee City = %s \n ", emp3->add.City );
+  printf(" Employee Salary = %.2f \n ", emp3->Salary );
+  
+  return 0;
+}
+
+
