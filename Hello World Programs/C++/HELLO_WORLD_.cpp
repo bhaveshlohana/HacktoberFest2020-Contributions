@@ -1,7 +1,7 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 int main()
 {
-cout<<"Hello World in c++"<<endl;
-return 0;
+    cout << "Hello world" ;
+    return 0;
 }
