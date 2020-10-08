@@ -21,7 +21,7 @@ O código aberto está mudando o mundo - uma solicitação de pull por vez.
 
 ## O que é Hacktoberfest?
 
-O Hacktoberfest é um festival virtual de um mês para celebrar as contribuições de código aberto apresentadas pela Digital Ocean e DEV. É a maneira mais fácil de entrar no código aberto!
+O Hacktoberfest é um festival virtual de um mês para celebrar as contribuições de código aberto apresentadas pela Digital Ocean e DEV. É a maneira mais fácil de entrar no mundo do código aberto!
 Durante todo o mês de outubro de 2020, tudo que você precisa fazer é contribuir para qualquer projeto de código aberto e abrir pelo menos 4 solicitações pull. Sim, qualquer projeto e qualquer tipo de contribuição.
 
 ## Por Que Devo Contribuir?
