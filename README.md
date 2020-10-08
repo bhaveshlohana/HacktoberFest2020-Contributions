@@ -3,6 +3,9 @@
 #### Edit 1: Don't add something if its already there in the same programming language. Try to add quality content. I won't merge PRs if you are spamming with PRs.
 
 
+
+  [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) ![GitHub Hacktoberfest combined status](https://img.shields.io/github/hacktoberfest/2020/bhaveshlohana/HacktoberFest2020-Contributions) ![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square) ![](https://img.shields.io/github/repo-size/bhaveshlohana/HacktoberFest2020-Contributions.svg?label=Repo%20size&style=flat-square)&nbsp;
+  
 # Overview
 The goal of this project is to help the beginners with their contributions in Open Source. We aim to achieve this collaboratively, so feel free to contribute in any way you want, just make sure to follow the contribution guidelines. You can contribute to it in either of the following ways:
 
