@@ -15,7 +15,7 @@ typedef struct queue
 int isFull(queue *);
 int isEmpty(queue *);
 
-void insert(queue *, int);
+void insert(queue *, int);	
 int del(queue *);
 
 void display(queue *);
@@ -66,21 +66,21 @@ int main()
     return 0;
 }
 
-int isFull(queue *qp)
+int isFull(queue *qp)	//If the Queue was Full
 {
     if (qp->rear == SIZE - 1)
         return 1;
     return 0;
 }
 
-int isEmpty(queue *qp)
+int isEmpty(queue *qp)		//If the Queue was empty
 {
     if (qp->rear == qp->front)
         return 1;
     return 0;
 }
 
-void insert(queue *qp, int item)
+void insert(queue *qp, int item)	//inserting elements into Queue
 {
     if (isFull(qp))
         printf("\nQueue is Full");
@@ -91,7 +91,7 @@ void insert(queue *qp, int item)
     }
 }
 
-int del(queue *qp)
+int del(queue *qp)		//Deleting elements from queue
 {
     if (isEmpty(qp))
     {
@@ -105,7 +105,7 @@ int del(queue *qp)
     }
 }
 
-void display(queue *qp)
+void display(queue *qp)		//Printing the Queue
 {
     for (int i = qp->front + 1; i <= qp->rear; i++)
         printf("(%d) -", qp->arr[i]);
