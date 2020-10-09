@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-  cout<<"Hello World.. Nikhil here"<<endl;  
+int main() 
+{
+  cout<<"Hello World \n Nikhil here"<<endl;  
 }
