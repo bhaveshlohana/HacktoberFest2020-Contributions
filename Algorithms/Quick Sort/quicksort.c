@@ -1,48 +1,62 @@
-#include<stdio.h>
-void quicksort(int number[25],int first,int last){
-   int i, j, p, temp;
+// Quick sort in C
 
-   if(first<last){
-      p=first;
-      i=first;
-      j=last;
+#include <stdio.h>
 
-      while(i<j){
-         while(number[i]<=number[p]&&i<last)
-            i++;
-         while(number[j]>number[p])
-            j--;
-         if(i<j){
-            temp=number[i];
-            number[i]=number[j];
-            number[j]=temp;
-         }
-      }
-
-      temp=number[p];
-      number[p]=number[j];
-      number[j]=temp;
-      quicksort(number,first,j-1);
-      quicksort(number,j+1,last);
-
-   }
+// Function to swap position of elements
+void swap(int *a, int *b) {
+  int t = *a;
+  *a = *b;
+  *b = t;
 }
 
-int main(){
-   int i, count, number[25];
+// Function to partition the array on the basis of pivot element
+int partition(int array[], int low, int high) {
+  
+  // Select the pivot element
+  int pivot = array[high];
+  int i = (low - 1);
 
-   printf("Enter how many elements are you wanna get sorted : ");
-   scanf("%d",&count);
+  // Put the elements smaller than pivot on the left 
+  // and greater than pivot on the right of pivot
+  for (int j = low; j < high; j++) {
+    if (array[j] <= pivot) {
+      i++;
+      swap(&array[i], &array[j]);
+    }
+  }
 
-   printf("Enter %d elements: ", count);
-   for(i=0;i<count;i++)
-      scanf("%d",&number[i]);
+  swap(&array[i + 1], &array[high]);
+  return (i + 1);
+}
 
-   quicksort(number,0,count-1);
+void quickSort(int array[], int low, int high) {
+  if (low < high) {
+    
+    // Select pivot position and put all the elements smaller 
+    // than pivot on left and greater than pivot on right
+    int pi = partition(array, low, high);
+    
+    // Sort the elements on the left of pivot
+    quickSort(array, low, pi - 1);
+    
+    // Sort the elements on the right of pivot
+    quickSort(array, pi + 1, high);
+  }
+}
 
-   printf("Order of Sorted elements: ");
-   for(i=0;i<count;i++)
-      printf(" %d",number[i]);
+// Function to print eklements of an array
+void printArray(int array[], int size) {
+  for (int i = 0; i < size; ++i) {
+    printf("%d  ", array[i]);
+  }
+  printf("\n");
+}
 
-   return 0;
+// Driver code
+int main() {
+  int data[] = {8, 7, 2, 1, 0, 9, 6};
+  int n = sizeof(data) / sizeof(data[0]);
+  quickSort(data, 0, n - 1);
+  printf("Sorted array in ascending order: \n");
+  printArray(data, n);
 }
