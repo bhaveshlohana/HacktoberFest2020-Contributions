@@ -5,8 +5,8 @@ body {
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin:  5%;
+  font-size: 2rem;
+  margin:  4% 4% 1%;
   color: #FEF2BF;
 }
 
@@ -28,7 +28,7 @@ body {
 
 .game-over {
   background-color: red;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .red {
@@ -50,10 +50,4 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
-}
-
-footer {
-  font-family: 'Nothing You Could Do', cursive;
-  font-size: 1.5rem;
-  margin-top: 10%;
 }
