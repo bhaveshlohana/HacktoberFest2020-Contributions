@@ -1,0 +1,95 @@
+.front-bar{
+    height:66%;
+    background-color: #4295f4;
+    text-align: center;
+    border:1px solid #dedede;
+    border-radius: 4px;
+    position: absolute;
+    padding-top:0.3px ;
+    left:0;
+    right:0;
+    top:0;
+    font-size: 1.6vw;
+}
+#heading{
+    margin:0px;
+    font-family:"comic sana MS",cursive,sans-serif;
+}
+#container{
+    position: absolute;
+    top:7%;
+    left: 20%;
+    width:58%;
+    height: 65%;
+    border:1px solid #ccc;
+    background-color:#f3f3f3 ;
+    overflow: auto;
+    border-radius: 6px;
+    align-content:center ;
+}
+span{
+    font-family:"comic sana MS",cursive,sans-serif;
+    font-size: 35px;
+    padding-left: 5px;
+    padding-top: 3px;
+}
+#container1{
+    position: absolute;
+    top:75%;
+    left:20%;
+    width:58%;
+    height:8%;
+    border:1px solid #ccc;
+    background-color: #434547;
+    border-radius: 4px;
+    color:white;
+}
+input{
+    font-family:"comic sana MS",cursive,sans-serif ;
+    font-size: 30px;
+}
+#result{
+    height:25%;
+    width:18%;
+    border-radius: 4px;
+    background-color: black;
+    position: absolute;
+    top:17%;
+    left: 80%;
+    padding-left:4px;
+    font-family:"comic sana MS",cursive,sans-serif ;
+    color: white;
+    font-size: 1.6vw;
+}
+#countdown{
+    height:7%;
+    width:18%;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #f3f3f3;
+    position: absolute;
+    top:7%;
+    left: 80%;
+    border:2px solid #ccc;
+    font-family:"comic sana MS",cursive,sans-serif ;
+    font-size: 2.2vw;
+}
+.restart{
+    height:8%;
+    width:9%;
+    float:left;
+    background-color:#dadbd0 ;
+    border-radius: 4px;
+    border-color: black;
+    position: absolute;
+    top:4%;
+    left:1%;
+    font-family:"comic sana MS",cursive,sans-serif ;
+    font-size:1.3vw ;
+}
+.right{
+    color: rgb(18,168,56);
+}
+.wrong{
+    color: rgb(242,37,26);
+}
