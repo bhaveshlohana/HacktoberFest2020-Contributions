@@ -1,5 +1,5 @@
 // AUTHOR: Uvindu Harshana
-// LANGUAGE: CPP
+// LANGUAGE: cpp
 // GITHUB: https://github.com/d-folt
 
 #include<iostream>;
