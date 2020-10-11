@@ -1,3 +1,4 @@
+//program to check if prime or not
 n = int(input("Enter an input number"))
 
 f = False
