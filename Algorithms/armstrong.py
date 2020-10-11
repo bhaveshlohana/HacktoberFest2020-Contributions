@@ -1,19 +1,21 @@
-def isArmstrong(num):
-  sum=0;
-  a=num
-  while num>0:
-      digit=num%10
-      sum=sum+pow(digit,3)
-      num=num//10
-  if sum==a:
-      return True
-  else:
-      return False 
-    
-if __name__ == "__main__":
-    n=int(input("enter the number"))
+# Program to check Armstrong numbers in a certain interval
 
-    if isArmstrong(n):
-        print(f"{n} is Armstrong")
-    else:
-        print(f"{n} is not Armstrong")
+lower = 100
+upper = 2000
+
+for num in range(lower, upper + 1):
+
+   # order of number
+   order = len(str(num))
+    
+   # initialize sum
+   sum = 0
+
+   temp = num
+   while temp > 0:
+       digit = temp % 10
+       sum += digit ** order
+       temp //= 10
+
+   if num == sum:
+       print(num)

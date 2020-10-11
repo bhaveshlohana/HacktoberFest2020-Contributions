@@ -1,13 +1,17 @@
-# Function for nth Fibonacci number
+# Python program to display the Fibonacci sequence
 
+def recur_fibo(n):
+   if n <= 1:
+       return n
+   else:
+       return(recur_fibo(n-1) + recur_fibo(n-2))
 
-def fibonacci(num):
-    if num == 1:
-        return 0
-    elif num == 2:
-        return 1
-    else:
-        return fibonacci(num - 1) + fibonacci(num - 2)
+nterms = 10
 
-
-print(fibonacci(10))
+# check if the number of terms is valid
+if nterms <= 0:
+   print("Plese enter a positive integer")
+else:
+   print("Fibonacci sequence:")
+   for i in range(nterms):
+       print(recur_fibo(i))

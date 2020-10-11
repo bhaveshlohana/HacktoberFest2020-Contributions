@@ -1,14 +1,15 @@
-def getPrimes(a):  
-    # SieveOfEratosthenes to get all prime numbers upto a
-    if a<2:
-        return [False]*(a+1)
-    primes = [True for i in range(a+1)] 
-    p = 2
-    while p * p <= a: 
-        if primes[p]: 
-            for j in range(p * p, a+1, p): 
-                primes[j] = False
-        p += 1
-    primes[0] = False
-    primes[1] = False
-    return primes
+# Python program to display all the prime numbers within an interval
+
+lower = 900
+upper = 1000
+
+print("Prime numbers between", lower, "and", upper, "are:")
+
+for num in range(lower, upper + 1):
+   # all prime numbers are greater than 1
+   if num > 1:
+       for i in range(2, num):
+           if (num % i) == 0:
+               break
+       else:
+           print(num)
