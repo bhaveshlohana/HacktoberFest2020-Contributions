@@ -7,15 +7,15 @@
 - So, no matter how many you pick the total matches picked in a round is 3.
   This leads to the computer always getting the last match.
 
-###Dependences:
+### Dependences:
 - python
 - tkinter
 - pillow
 
-###Known Bugs:
+### Known Bugs:
 - The match picking occurs simultaneously for the user and the computer.
 - Crashes on Macos Mojave(due to the default tcl issues that mojave has).
 
-###TODO: 
+### #TODO: 
 - Add option for human v/s human
 - Fix match-pick bug
