@@ -66,9 +66,3 @@ int main(){
 }
 
 
-/*
-As bubble moves to the top, 
-similarly large element moves at the end of every iteration.
-A after each iteration decrease each iteration length
-Note : for sorted array this can be detected after 1 teration.
-*/
