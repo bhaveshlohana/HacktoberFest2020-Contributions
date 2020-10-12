@@ -1,3 +1,9 @@
+################################################
+#### Author: Kamran Sarear                   ###
+#### Email:  malik.kamrran.sarwar@gmail.com  ###
+################################################
+
+
 from PyQt5 import QtWidgets, uic
 import sys
 import requests
