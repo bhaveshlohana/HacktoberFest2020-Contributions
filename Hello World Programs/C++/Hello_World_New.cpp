@@ -4,7 +4,9 @@ int main(void){
     char *p = "Hello, World Again!";
     
     for (int i = 0; i <= 13; i++)
+    {
         printf("%c", *(p+i));
+    }
     
     printf("\n");
     
