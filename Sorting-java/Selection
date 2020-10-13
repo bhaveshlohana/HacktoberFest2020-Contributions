@@ -1,0 +1,31 @@
+import java.util.*;
+class Selection{
+  public sttic void main(String args[]){
+    int i,j,min=0,p=0;
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Enter the size of the arrray");
+    n=sc.nextInt();
+    int a[]=new int[n];
+    System.out.println("Enter the number numbers");
+    for(i=0;i<n;i++){
+      a[i]=sc.nextInt();
+    }
+    //sorting the array using selection sort technique
+    for(i=0;i<n-1;i++){
+      min=a[i];p=i;
+      for(j=i;j<n;j++){
+        if(min>a[j]){
+        min=a[j];
+        p=j;
+      }
+    }
+    a[p]=a[i];
+    a[i]=min;
+
+    }
+    //printing the sorted array
+    for(i=0;i<n;i++){
+      System.out.print(a[i]+" ");
+    }
+  }
+}
