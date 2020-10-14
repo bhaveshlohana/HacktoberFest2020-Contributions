@@ -1,28 +1,43 @@
-#include<bits/stdc++.h>
+#include<iostream>
 
 using namespace std;
 
-int main()
+void Bubble(int A[], int n)
 {
-    int i, n;
-    cin >> n;
-    int a[n];
-    for (i = 0; i < n; i++) {
-        cin >> a[i];
-    }
-    while (1) { //taking infinite ehile loop
-        bool check = false;
-        for (i = 0; i <= n - 2; i++) {
-            if (a[i] > a[i + 1]) {
-                swap(a[i], a[i + 1]); // swaping if earlier ith element is greater then i+1
-                check = true;//making check true so loop doesn't terminate 
+    int i, j, temp;
+    for(i=0; i<n-1; i++)
+    {
+        for(j=0; j<n-i-1; j++)
+        {
+            if(A[j]>A[j+1])
+            {
+                temp = A[j];
+                A[j] = A[j+1];
+                A[j+1] = temp;
             }
         }
-        if (check == false) {
-            break; // breaking loop here 
-        }
     }
-    for (i = 0; i < n; i++) {
-        cout << a[i] << " "; //input array elements
+    cout<<"\n The array is now sorted in assending order \n";
+    for(i=0; i<n; i++)
+    {
+        cout<<A[i]<<endl;
     }
+}
+
+
+
+int main()
+{
+    int *arr, n;
+    cout<<"Enter the size of the array ";
+    cin>>n;
+    arr = new int[n];
+    cout<<"\n Enter the elements into the array \n";
+    for(int i=0; i<n; i++)
+    {
+        cin>>arr[i];
+    }
+    Bubble(arr, n);
+    delete []arr;
+    return 0;
 }
