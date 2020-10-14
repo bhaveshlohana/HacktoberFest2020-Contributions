@@ -349,14 +349,16 @@ int main()
     scanf("%d",&arr1.size);
     arr1.A=(int*)malloc(arr1.size*sizeof(int));
     arr1.length=0;
-
-    printf("Menu\n");
-    printf("1: Insert\n");
-    printf("2: Delete\n");
-    printf("3: Search\n");
-    printf("4: LeftRotate\n");
-    printf("5: Display\n");
-    printf("6: Exit\n");
+    
+    printf("\t------------");
+    printf("\tMenu\n");
+    printf("\t------------");
+    printf("\t1: Insert\n");
+    printf("\t2: Delete\n");
+    printf("\t3: Search\n");
+    printf("\t4: LeftRotate\n");
+    printf("\t5: Display\n");
+    printf("\t6: Exit\n");
 
 
     do
