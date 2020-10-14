@@ -1,0 +1,25 @@
+#include<stdio.h>
+ struct code
+ { 
+   int i;
+   char c;
+   struct code *ptr; //this is a self refential structure.Hence the variables declared (variable1,variable2)of type struct code can be used to mutually access other varisble's members.
+ };
+ 
+ int main()
+ {
+   struct code variable1;  //variable1 of type struct code is declared
+   struct code variable2;  //variable2 of type struct code is declared
+   
+   variable1.i=65;
+   variable1.c='A';
+   variable1.ptr=NULL;
+   
+   variable2.1=68;
+   variable2.c='D';
+   variable2.ptr=NULL;
+   
+   variable1.ptr=&variable2;  //Done so that variable1 can access members of variable2 (as variable1 ges the address of variable2 in this step)
+   
+   printf("%d %c",variable1.ptr->i,variable1.ptr->c);
+  }
