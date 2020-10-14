@@ -13,9 +13,9 @@ The goal of this project is to help the beginners with their contributions in Op
 
 
 - Intermediate:
-	- Add any one of your favorite algorithm in your favorite language, if and only if it is not already present in the repository.
+	- Add any one of your favorite algorithm in your favorite language, **if and only if it's not already present in the repository.**
 - Expert:
-	- Add any graphical game in your favorite programming language, if and only if it not already present in the repository.
+	- Add any graphical game in your favorite programming language, **if and only if it's not already present in the repository.**
 
 
 # HacktoberFest-2020
