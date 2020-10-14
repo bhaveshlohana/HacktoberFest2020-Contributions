@@ -11,12 +11,11 @@
 # Overview
 The goal of this project is to help the beginners with their contributions in Open Source. We aim to achieve this collaboratively, so feel free to contribute in any way you want, just make sure to follow the contribution guidelines. You can contribute to it in either of the following ways:
 
-- Beginners:
-	- A "Hello World" program in your favorite language.
+
 - Intermediate:
-	- Add any one of your favorite algorithm in your favorite language, from simple to complex!
+	- Add any one of your favorite algorithm in your favorite language, if and only if it is not already present in the repository.
 - Expert:
-	- Add any graphical game in your favorite programming language!
+	- Add any graphical game in your favorite programming language, if and only if it not already present in the repository.
 
 
 # HacktoberFest-2020
