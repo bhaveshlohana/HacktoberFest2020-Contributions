@@ -1,4 +1,4 @@
-## Disclaimer:
+## DISCLAIMER:
 ![image](https://user-images.githubusercontent.com/53433312/95980882-6ed14580-0e3b-11eb-80f8-8bdd1717205b.png)
 
 #### Edit 2: You contribution would be counted towards Hacktoberfest if it has been approved or merged or has a "hacktoberfest-accepted" label. It is not mandatory to have all 3 on a particular PR.
