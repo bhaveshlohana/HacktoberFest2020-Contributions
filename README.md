@@ -29,7 +29,7 @@ Open source is changing the world - one pull request at a time.
   - [What is Hacktoberfest?](#what-is-hacktoberfest)
   - [Why Should I Contribute?](#-why-should-i-contribute)
   - [What Can I Contribute?](#what-can-i-contribute)
-  - [How to Contribute in this repo.](#how-to-contribute-in-this-repo)
+  - [How to Contribute in this repo?](#how-to-contribute-in-this-repo)
 
 ## What is Hacktoberfest?
 
