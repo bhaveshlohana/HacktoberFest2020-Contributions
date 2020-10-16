@@ -1,6 +1,6 @@
 Hacktoberfest®(1 October-31 October is open to everyone in our global community. Whether you’re a developer or a student learning to code.
 
-Enter Your email on our Webiste to win T-shirt.
+Enter your email on our webiste to win a T-shirt.
 
 Website - <https://hacktoberfest.digitalocean.com/>
 
@@ -8,13 +8,13 @@ Website - <https://hacktoberfest.digitalocean.com/>
 
 1. ### Fork the Repo
 
-   Give a start and ⭐ Click on **fork** button in the right corner.It will create a copy of repositiry in your account.
+   Give a start and ⭐ Click on **fork** button in the right corner.It will create a copy of repository in your account.
 
     - Check here [How to fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo)
 
 2. ### Clone the Repo
 
-   You can **clone** your repository in your local pc with use of **[Github_Desktop](https://desktop.github.com/)** application or for your [Terminal/bash](https://git-scm.com/downloads).
+   You can **clone** your repository on your local pc with the use of **[Github_Desktop](https://desktop.github.com/)** application or for your [Terminal/bash](https://git-scm.com/downloads).
 
    For **Terminal** -
 
@@ -26,16 +26,16 @@ Website - <https://hacktoberfest.digitalocean.com/>
 
 3. ### Upload your Code or Change
 
-    Make what change you want to make in Repo. It can be spelling mistake, code correction or anything.
+    Make the changes you want to make in the repository. It can be a spelling mistake, code correction or anything.
 
-    You can also upload your program to respective folder. It can be anything "Hello world program", "Rock Paper Scissors",etc.
+    You can also upload your program to the respective folder. It can be anything - "Hello world program", "Rock Paper Scissors",etc.
 
     `All Repository are open for contributions.`
 
 4. ### Push it and Make a PR
 
-    Push it to your repository and Issue a PR(Pull Request) in main repository.
+    Push it to your repository and Issue a PR(Pull Request) in the main repository.
 
     - [Push your first code](https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line)
 
-And, that's it!
+And, that's it. You have made your contribution to Hacktober Fest!
