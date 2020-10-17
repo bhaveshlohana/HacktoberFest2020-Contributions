@@ -15,12 +15,12 @@ function display(){
 	alert(score);
 }
 function getVariableNumber(){
-	if(ts == 10){
+	if(ts == 60){
 		variableNumberToBeFound = randomNumber(0, 8);
 	}
 	document.getElementById("addingVariableNumber").innerHTML= "Number to be searched is " + variableNumberToBeFound.toString();
 }
-var ts=10*1;
+var ts=60*1;
 var minutes=parseInt(ts/60);
 var seconds=parseInt(ts%60);
 function CheckTime(){
