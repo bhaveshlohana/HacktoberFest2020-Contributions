@@ -4,6 +4,7 @@ import java.util.Random;
 public class LinearSearch {
   
   public static void main(String[] args) {
+    //Taking random input instead of user input
     Random rd = new Random();
     int[] inputArray = new int[100];
     System.out.println("Array:");
@@ -13,6 +14,7 @@ public class LinearSearch {
     }
     System.out.println("\nInput Integer to Search:");
     Scanner sc = new Scanner(System.in);
+    //Linear search algorithm starts from here
     int searchKey = sc.nextInt();
     for (int i = 0; i < inputArray.length; i++) {
       if (inputArray[i] == searchKey) 
