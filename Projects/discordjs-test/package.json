@@ -1,0 +1,22 @@
+{
+  "name": "pan-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apex-api": "^3.1.0",
+    "discord.js": "^12.2.0",
+    "discord.js-commando": "github:discordjs/commando",
+    "dotenv": "^8.2.0",
+    "ffmpeg-static": "^4.2.3",
+    "opusscript": "0.0.7",
+    "youtube-node": "^1.3.3",
+    "ytdl": "^1.3.2"
+  }
+}
