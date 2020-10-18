@@ -1,0 +1,6 @@
+def hello(name):
+    return name + " world"
+    
+name=str(input())
+new_str = hello(name)
+print(new_str)
