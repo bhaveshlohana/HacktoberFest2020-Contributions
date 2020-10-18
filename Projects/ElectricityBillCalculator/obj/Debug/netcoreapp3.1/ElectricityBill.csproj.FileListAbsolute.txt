@@ -1,0 +1,13 @@
+C:\Users\Anush46\source\repos\ElectricityBill\obj\Debug\netcoreapp3.1\ElectricityBill.csprojAssemblyReference.cache
+C:\Users\Anush46\source\repos\ElectricityBill\obj\Debug\netcoreapp3.1\ElectricityBill.AssemblyInfoInputs.cache
+C:\Users\Anush46\source\repos\ElectricityBill\obj\Debug\netcoreapp3.1\ElectricityBill.AssemblyInfo.cs
+C:\Users\Anush46\source\repos\ElectricityBill\obj\Debug\netcoreapp3.1\ElectricityBill.csproj.CoreCompileInputs.cache
+C:\Users\Anush46\source\repos\ElectricityBill\bin\Debug\netcoreapp3.1\ElectricityBill.exe
+C:\Users\Anush46\source\repos\ElectricityBill\bin\Debug\netcoreapp3.1\ElectricityBill.deps.json
+C:\Users\Anush46\source\repos\ElectricityBill\bin\Debug\netcoreapp3.1\ElectricityBill.runtimeconfig.json
+C:\Users\Anush46\source\repos\ElectricityBill\bin\Debug\netcoreapp3.1\ElectricityBill.runtimeconfig.dev.json
+C:\Users\Anush46\source\repos\ElectricityBill\bin\Debug\netcoreapp3.1\ElectricityBill.dll
+C:\Users\Anush46\source\repos\ElectricityBill\bin\Debug\netcoreapp3.1\ElectricityBill.pdb
+C:\Users\Anush46\source\repos\ElectricityBill\obj\Debug\netcoreapp3.1\ElectricityBill.dll
+C:\Users\Anush46\source\repos\ElectricityBill\obj\Debug\netcoreapp3.1\ElectricityBill.pdb
+C:\Users\Anush46\source\repos\ElectricityBill\obj\Debug\netcoreapp3.1\ElectricityBill.genruntimeconfig.cache
