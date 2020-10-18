@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    {% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-122994978-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+</head>
+<body>
+
+<header class="page-header" role="banner">
+    <h1 class="project-name">{{ site.title }}</h1>
+    <h2 class="project-tagline">{{ site.github.project_tagline }}</h2>
+    <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+    <a href="{{ site.play_url }}" class="btn">Play Now</a>
+    <a href="{{ site.github.zip_url }}" class="btn">Download</a>
+    <a href="../" class="btn">Back to Home</a>
+</header>
+
+<main id="content" class="main-content" role="main">
+    {{ content }}
+</main>
+
+</body>
+</html>
