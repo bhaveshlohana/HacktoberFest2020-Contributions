@@ -1,82 +1,61 @@
-def tic_tac_toe():
-    board = ["_", "_", "_", "_", "_", "_", "_", "_", "_"]
-    end = False
-    win_commbinations = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6), (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6))
+def win(L):
+    a=L[0]
+    b=L[1]
+    c=L[2]
+    for i in L:
+        if(i[0]==i[1] and i[1]==i[2] and i[2]!=' '):
+            return 'a'
+    for i in range(3):
+        if(a[i]==b[i] and b[i]==c[i] and c[i]!=' '):
+            return 'a'
+    if(a[0]==b[1] and c[2]==b[1] and b[1]!=' '):
+        return 'a'
+    if(a[2]==b[1] and c[0]==b[1] and b[1]!=' '):
+        return 'a'
+    else:
+        return 'b'
 
-    def draw():
-        print(board[0], board[1], board[2])
-        print(board[3], board[4], board[5])
-        print(board[6], board[7], board[8])
-        print()
-
-    def player1():
-        n = choose_number()
-        if board[n] == "X" or board[n] == "O":
-            print("\nYou can't go there. Try again")
-            player1()
+while(True):
+    L=[[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
+    for i in range(9):
+        if(i%2==0):
+            j='X'
         else:
-            board[n] = "X"
-
-    def player2():
-        n = choose_number()
-        if board[n] == "X" or board[n] == "O":
-            print("\nYou can't go there. Try again")
-            player2()
-        else:
-            board[n] = "O"
-
-    def choose_number():
-        while True:
-            while True:
-                a = input()
-                try:
-                    a  = int(a)
-                    a -= 1
-                    if a in range(0, 9):
-                        return a
+            j='O'
+        print(L[0])
+        print(L[1])
+        print(L[2])
+        k=0
+        while(k==0):
+            a=input('Enter the Number of Row :-> ')
+            if(a.isdigit() and int(a)>0 and int(a)<4):
+                b=input('Enter the Number of Column :-> ')
+                if(b.isdigit() and int(b)>0 and int(b)<4):
+                    a=int(a)-1
+                    b=int(b)-1
+                    if(L[a][b]==' '):
+                        L[a][b]=j
+                        k=1
                     else:
-                        print("\nThat's not on the board. Try again")
+                        print('Space occupied by ',L[a][b],' Try again')
                         continue
-                except ValueError:
-                   print("\nThat's not a number. Try again")
-                   continue
-
-    def check_board():
-        count = 0
-        for a in win_commbinations:
-            if board[a[0]] == board[a[1]] == board[a[2]] == "X":
-                print("Player 1 Wins!\n")
-                print("Congratulations!\n")
-                return True
-
-            if board[a[0]] == board[a[1]] == board[a[2]] == "O":
-                print("Player 2 Wins!\n")
-                print("Congratulations!\n")
-                return True
-        for a in range(9):
-            if board[a] == "X" or board[a] == "O":
-                count += 1
-            if count == 9:
-                print("The game ends in a Tie\n")
-                return True
-
-    while not end:
-        draw()
-        end = check_board()
-        if end == True:
-            break
-        print("Player 1 choose where to place a cross")
-        player1()
-        print()
-        draw()
-        end = check_board()
-        if end == True:
-            break
-        print("Player 2 choose where to place a nought")
-        player2()
-        print()
-
-    if input("Play again (y/n)\n") == "y":
-        tic_tac_toe()
-
-tic_tac_toe()
+                else:
+                    print('Enter the Number of Column Correctly')
+            else:
+                print('Enter the Number of row correctly')
+        if(win(L)=='a'):
+            print(j, 'won')
+            print(L[0])
+            print(L[1])
+            print(L[2])
+            p=int(input('Enter 1 to playagain'))
+            if(p!=1):
+                break
+        elif(not(win(L)=='a')and i==8):
+            print('Match Tied')
+            print(L[0])
+            print(L[1])
+            print(L[2])
+            p=int(input('Enter 1 to playagain'))
+            if(p!=1):
+                break
