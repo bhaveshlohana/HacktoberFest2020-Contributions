@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800;1,900&display=swap');
+$black: #191924;
+$blue: rgb(0, 102, 255);
+@mixin flex($flex, $fd, $jc, $ai) {
+    display: $flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+} 
+html {
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 100vh;
+}
+#header {
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    @include flex(flex, row, space-between, center);
+    .logo {
+        width: 50px;
+        margin-left: 100px;
+        img#header-img {
+            width: 100%;
+        }
+    }
+    #nav-bar {
+        margin-right: 100px;
+        ul {
+            width: 100%;
+            @include flex(flex, row, space-around, center);
+
+            li {
+                margin: 0 20px;
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    color: $black;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    @include flex(flex, row, space-between, center);
+    .left {
+        width: 50%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0 50px;
+        @include flex(flex, column, center, center);
+        h1 {
+            font-weight: 800;
+            font-size: 60px;
+            width: 100%;
+            word-wrap: break-word;
+        }
+        p {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #2e2e36;
+            width: 100%;
+            word-wrap: break-word;
+        }
+        #form {
+            margin-top: 30px;
+            width: 100%;
+            height: 55px;
+            @include flex(flex, row, flex-start, center);
+            box-sizing: border-box;
+            padding-right: 50px;
+            #email {
+                width: 70%;
+                height: 100%;
+                border-radius:5px;
+                outline: none;
+                border:1px solid #434344;
+                font-size: 20px;
+                box-sizing: border-box;
+                padding: 10px 20px;
+                &:focus {
+                    border:1px solid $blue;
+                }
+            }
+            #submit {
+                height: 100%;
+                // box-sizing: border-box;
+                padding: 10px 20px;
+                color: white;
+                border-radius:5px;
+                font-size:20px;
+                border: 0px solid transparent;
+                background: $blue;
+                margin-left: 10px;
+                cursor: pointer;
+                &:hover {
+                    background: rgb(2, 89, 219);
+                }
+            }
+        }
+    }
+    .right {
+        width: 50%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+#features {
+    width: 100%;
+    // height: 70vh;
+    padding: 50px 0;
+    @include flex(flex, column, center, center);
+    h2 {
+        color: $black;
+        font-size: 40px;
+    }
+    .container {
+        // margin-top: 50px;
+        box-sizing: border-box;
+        padding: 0 70px;
+        width: 100%;
+        @include flex(flex, row, center, center);
+        flex-wrap: wrap;
+        .card {
+            width: 300px;
+            height: 120px;
+            margin-top: 30px;
+            // border: 1px solid #434344;
+            @include flex(flex, row, center, center);
+            .left {
+                @include flex(flex, row, center, center);
+                .icon {
+                    $height: 75px;
+                    width: 75px;
+                    height: $height;
+                    border-radius: 50%;
+                    background: rgb(246, 246, 246);
+                    text-align: center;
+                    line-height: $height;
+                    color: #434344;
+                    font-size: 25px;
+                }
+            }
+            .right {
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                @include flex(flex, column, center, flex-start);
+                padding: 0 15px;
+                h3 {
+                    font-size: 20px;
+                }
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+#howItWorks {
+    width: 100%;
+    padding: 100px 0;
+    @include flex(flex, row, center, center);
+}
+
+#Pricing {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 100px 50px;
+    @include flex(flex, column, center, center);
+    h2 {
+        font-size: 45px;
+    }
+    .container {
+        margin-top: 50px;
+        width: 100%;
+        @include flex(flex, row, center, center);
+        .card {
+            position: relative;
+            width: 325px;
+            height: 500px;
+            box-sizing: border-box;
+            border: 1px solid #ebece9;
+            border-radius: 5px;
+            @include flex(flex, column, flex-start, center);
+            padding: 35px 20px;
+            &.mostUsed {
+                height: auto;
+                border: 3px solid $blue;
+                .buy {
+                    background: $blue;
+                    color: white;
+                    &:hover {
+                        background: white;
+                        color: $blue;
+                    }
+                }
+            }
+            h3 {
+                font-size: 35px;
+                font-weight: 600;
+            }
+            .price {
+                p {
+                    font-size: 50px;
+                    font-weight: 600;
+                    display: inline-block;
+                }
+            }
+            p.desc {
+                margin-top: 20px;
+                width: 100%;
+                text-align: center;
+            }
+            .features {
+                margin-top: 20px;
+                .feature {
+                    margin-top: 15px;
+                    i {
+                        color: $blue;
+                        // font-weight: 300;
+                        margin-right: 10px;
+                    }
+                    font-weight: 600;
+                }
+            }
+            .buy {
+                width: 90%;
+                padding: 10px 0;
+                text-align: center;
+                border: 1px solid $blue;
+                border-radius: 5px;
+                margin-top: 40px;
+                color: $blue;
+                cursor: pointer;
+                transition: .3s;
+                &:hover {
+                    color: white;
+                    background: $blue;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    $height: 50px;
+    width: 100%;
+    height: $height;
+    text-align: center;
+    line-height: $height;
+    // border-top: 1px solid #434344;
+    a {
+        color: $blue;
+    }
+}
+
+@media screen and (max-width: 1055px) {
+    #Pricing {
+        .container {
+            @include flex(flex, row, center, center);
+            flex-wrap: wrap;
+            .card {
+                &.mostUsed {
+                    box-sizing: border-box;
+                    height: auto;
+                    border: 3px solid $blue;
+                }
+            }
+        }
+    }
+}
