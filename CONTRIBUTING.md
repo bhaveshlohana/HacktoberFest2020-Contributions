@@ -6,13 +6,13 @@ Website - <https://hacktoberfest.digitalocean.com/>
 
 ## How to Participate
 
-1. ### Fork the Repo
+1. ### Fork the Repo(repository)
 
    Give a start and ⭐ Click on **fork** button in the right corner.It will create a copy of repositiry in your account.
 
     - Check here [How to fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo)
 
-2. ### Clone the Repo
+2. ### Clone the Repo(repository)
 
    You can **clone** your repository in your local pc with use of **[Github_Desktop](https://desktop.github.com/)** application or for your [Terminal/bash](https://git-scm.com/downloads).
 
@@ -26,7 +26,7 @@ Website - <https://hacktoberfest.digitalocean.com/>
 
 3. ### Upload your Code or Change
 
-    Make what change you want to make in Repo. It can be spelling mistake, code correction or anything.
+    Make what change you want to make in Repo(repository). It can be spelling mistake, code correction or anything.
 
     You can also upload your program to respective folder. It can be anything "Hello world program", "Rock Paper Scissors",etc.
 
@@ -34,7 +34,7 @@ Website - <https://hacktoberfest.digitalocean.com/>
 
 4. ### Push it and Make a PR
 
-    Push it to your repository and Issue a PR(Pull Request) in main repository.
+    Push it to your repo(repository) and Issue a PR(Pull Request) in main repository.
 
     - [Push your first code](https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line)
 
