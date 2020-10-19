@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ricorsione{
+public class Recursion{
     public static void main (String[] args){
         Scanner tastiera = new Scanner(System.in);
         countingDown(3);
