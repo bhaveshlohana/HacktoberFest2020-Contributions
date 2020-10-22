@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1516119249 source:h:\codeblocks\game\main.cpp
+	<iostream>
+	<graphics.h>
+	<windows.h>
+	<conio.h>
+	<dos.h>
+	<cstdlib>
+	<time.h>
+
