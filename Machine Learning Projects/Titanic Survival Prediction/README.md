@@ -1,4 +1,3 @@
-[<img src="https://www.analyticsvidhya.com/wp-content/uploads/2015/06/kaggle-logo-transparent-300.png" width="60" height="30"/>][kaggle-url]
 
 ## About The Compitition
 We all know about legendary movie **Titanic**,that romatic story is unfortunately fictional, but the disaster was real.
