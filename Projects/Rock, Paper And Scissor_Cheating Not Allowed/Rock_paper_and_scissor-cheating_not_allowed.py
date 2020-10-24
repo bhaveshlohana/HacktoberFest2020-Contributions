@@ -11,15 +11,15 @@ def rock_paper_scissor(num1,num2,bit1,bit2):
         print("Player one wins !!")
     elif(player_one[p1]=="Rock" and player_two[p2]=="Paper"):
         print("Player two wins !!")
-    elif(player_one[p1]=="Paper" and player_two[p2]=="Scissor"):
-        print("Player two wins !!")
     elif(player_one[p1]=="Paper" and player_two[p2]=="Rock"):
         print("Player one wins !!")
-    elif(player_one[p1]=="Scissor" and player_two[p2]=="Rock"):
+    elif(player_one[p1]=="Paper" and player_two[p2]=="Scissor"):
         print("Player two wins !!")
     elif(player_one[p1]=="Scissor" and player_two[p2]=="Paper"):
         print("Player one wins !!")
-        
+    elif(player_one[p1]=="Scissor" and player_two[p2]=="Rock"):
+        print("Player two wins !!")
+
 player_one={0:'Rock',1:'Paper',2:'Scissor'}
 player_two={0:'Paper',1:'Rock',2:'Scissor'}
 while(1):
