@@ -5,6 +5,9 @@ On April 15, 1912, the widely considered “unsinkable” RMS Titanic sank after
 While there was some element of luck involved in surviving, it seems some groups of people were more likely to survive than others.
 Kaggle provides us train and test data sets, which containts details like **Sex,Age,Passenger Class,Embarked etc**,.Our job is to find who had survived in test data set.
 
+### Use this link incase GitHub fail to load Notebook
+### [Notebook](https://nbviewer.jupyter.org/github/Aditya-Rajgor/Personal-Projects/blob/master/Titanic%20ML%20Problem/Titanic%20Final%20Approch.ipynb)
+
 <!-- PROJECT LOGO -->
 ![][product-screenshot]
 
