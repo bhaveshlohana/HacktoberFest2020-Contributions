@@ -1,6 +1,6 @@
 import tweepy
 from Tkinter import *
-
+#variable intilizing
 consumer_key = 'consumer key'
 consumer_secret = 'consumer secrets'
 access_token = 'access token'
@@ -9,39 +9,39 @@ access_token_secret = 'access token secret'
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
-
+#calling the api
 user = api.me()
 print(user.name)
 print(user.location)
-
+ # for accesing followers
 for follower in tweepy.Cursor(api.followers).items():
     follower.follow()
 
 print("Followed everyone that is following " + user.name)
-
+  #intializing the tkinnter 
 root = Tk()
-
+# calling the label function with root and Tex parameters
 label1 = Label( root, text="Search")
 E1 = Entry(root, bd =5)
-
+# calling the label function for root and number of twwet
 label2 = Label( root, text="Number of Tweets")
-E2 = Entry(root, bd =5)
-
+E2 = Entry(root, bd =5) #entry function
+# label function for response
 label3 = Label( root, text="Response")
 E3 = Entry(root, bd =5)
-
+# label function for reply
 label4 = Label( root, text="Reply?")
 E4 = Entry(root, bd =5)
-
+# label function for retweet
 label5 = Label( root, text="Retweet?")
 E5 = Entry(root, bd =5)
-
+# label function for favorite
 label6 = Label( root, text="Favorite?")
 E6 = Entry(root, bd =5)
-
+# label function for follow option
 label7 = Label( root, text="Follow?")
 E7 = Entry(root, bd =5)
-
+# define  functions for get request of e
 def getE1():
     return E1.get()
 
