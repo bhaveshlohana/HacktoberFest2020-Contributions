@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="light-blue-text text-darken-4 center-align">Edit Task</h3>
+
+    <div class="row card-panel grey lighten-5">
+    <form class="col s12" method="POST" action="{{ url_for('edit_task', task_id=task._id) }}">
+        <!-- category selection -->
+        <div class="row">
+            <div class="input-field col s12">
+            <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <select id="category_name" name="category_name" class="validate" required>
+                    <option value="" disabled>Choose Category</option>
+                    {% for category in categories %}
+                        {% if category.category_name == task.category_name %}
+                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                        {% else %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+                <label for="category_name">Task Category</label>
+            </div>
+        </div>
+        <!-- task name -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                <input id="task_name" name="task_name" minlength="5" maxlength="50" 
+                    value="{{ task.task_name }}" type="text" class="validate" required>
+                <label for="task_name">Task Name</label>
+            </div>
+        </div>
+        <!-- task description -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <textarea id="task_description" name="task_description" minlength="5" 
+                    maxlength="200" class="materialize-textarea" required>
+                    {{- task.task_description -}}
+                </textarea>
+                <label for="task_description">Task Description</label>
+            </div>
+        </div>
+        <!-- due date picker -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                <input id="due_date" name="due_date" type="text" 
+                    value="{{ task.due_date }}" class="datepicker validate" required>
+                <label for="due_date">Due Date</label>
+            </div>
+        </div>
+        <!-- is urgent toggle -->
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
+                    <label for="is_urgent">
+                    {% if task.is_urgent == "on" %}
+                        <input type="checkbox" id="is_urgent" name="is_urgent" checked>
+                    {% else %}
+                        <input type="checkbox" id="is_urgent" name="is_urgent">
+                    {% endif %}
+                        <span class="lever"></span>
+                        Is Urgent
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- buttons -->
+        <div class="row">
+            <div class="col s12 center-align">
+            <!-- cancel button -->
+                <a href="{{ url_for('get_tasks') }}" class="btn-large red text-shadow">
+                    Cancel <i class="fas fa-times-circle right"></i>
+                </a>
+                <!-- submit edit task button -->
+                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                    Edit Task <i class="fas fa-edit right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+  </div>
+
+{% endblock %}

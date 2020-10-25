@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="light-blue-text text-darken-4 center-align">Add Task</h3>
+
+    <div class="row card-panel grey lighten-5">
+    <form class="col s12" method="POST" action="{{ url_for('add_task') }}">
+        <!-- category selection -->
+        <div class="row">
+            <div class="input-field col s12">
+            <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <select id="category_name" name="category_name" class="validate" required>
+                    <option value="" disabled selected>Choose Category</option>
+                    {% for category in categories %}
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="category_name">Task Category</label>
+            </div>
+        </div>
+        <!-- task name -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                <input id="task_name" name="task_name" minlength="5" maxlength="50" 
+                    type="text" class="validate" required>
+                <label for="task_name">Task Name</label>
+            </div>
+        </div>
+        <!-- task description -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <textarea id="task_description" name="task_description" minlength="5" maxlength="200" class="materialize-textarea" required></textarea>
+                <label for="task_description">Task Description</label>
+            </div>
+        </div>
+        <!-- due date picker -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                <input id="due_date" name="due_date"
+                    type="text" class="datepicker validate" required>
+                <label for="due_date">Due Date</label>
+            </div>
+        </div>
+        <!-- is urgent toggle -->
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
+                    <label for="is_urgent">
+                        <input type="checkbox" id="is_urgent" name="is_urgent">
+                        <span class="lever"></span>
+                        Is Urgent
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- submit button-->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                    Add Task <i class="fas fa-plus-square right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+  </div>
+
+{% endblock %}

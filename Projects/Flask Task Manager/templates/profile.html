@@ -1,0 +1,58 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="row top-margin">
+    <div class="col s12 m8 offset-m2">
+        <div class="card-panel">
+            <h3 class="center-align light-blue-text text-darken-4">{{ username }}'s User Panel</h3>
+            <p class="center-align">An overview of your tasks</p>
+        </div>
+    </div>
+</div>
+
+<!-- add task button-->
+<div class="row">
+    <div class="col s12 center-align">
+        <a href="{{ url_for('add_task') }}" class="btn-large light-blue darken-2 text-shadow">
+            Add Task <i class="fas fa-plus-square right"></i>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <ul class="collapsible">
+        {% for task in tasks %}
+            {% if session.user|lower == task.created_by|lower %}
+                <li>
+                    <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                        <div class="col s3">
+                            <i class="fas fa-caret-down"></i>
+                                <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small green accent-4">Done</a>
+                                <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small light-blue lighten-1">Edit</a>
+                            
+                        </div>
+                        <div class="col s9">
+                            <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
+                                {% if task.is_urgent == "on" %}
+                                    <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
+                                    data-position="right" data-tooltip="URGENT!"></i>
+                                {% endif %}
+                        </div>
+                    </div>
+                    <div class="collapsible-body">
+                        <strong>{{ task.category_name }}</strong>
+                        <p>{{ task.task_description }}</p>
+                        <p><em>by: {{ task.created_by }}</em></p>
+                    </div>
+                </li>
+            {% endif %}
+
+            {% if tasks|length == 0 %}
+                <h3 class="red-text text-darken-4 center-align">No Tasks Created</h3>
+                <a href="{{ url_for('add_task') }}" class="btn-large light-blue darken-1 text-shadow">
+                        Add Task <i class="fas fa-plus-square right"></i>
+                    </a>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

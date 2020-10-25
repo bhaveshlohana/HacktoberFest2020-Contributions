@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="light-blue-text text-darken-4 center-align">All Tasks</h3>
+
+    <div class="row car-panel grey lighten-5">
+        <form action="{{ url_for('search') }}" method="post" class="col s12">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12 m8">
+                    <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                    <label for="query">Search Tasks</label>
+                </div>
+                <div class="col s12 m4">
+                    <a href="{{ url_for('get_tasks') }}" class="red btn text-shadow">Reset</a>
+                    <button type="submit" class="light-blue darken-1 btn text-shadow">
+                        <i class="fas fa-search left"></i> Search
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    {% if tasks|length > 0 %}
+        <ul class="collapsible">
+            {% for task in tasks %}
+                <li>
+                    <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                        <div class="col s3">
+                            <i class="fas fa-caret-down"></i>
+                            {% if session.user|lower == task.created_by|lower %}
+                                <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small green accent-4">Done</a>
+                                <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small light-blue lighten-1">Edit</a>
+                            {% endif %}
+                        </div>
+                        <div class="col s9">
+                            <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
+                                {% if task.is_urgent == "on" %}
+                                    <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
+                                    data-position="right" data-tooltip="URGENT!"></i>
+                                {% endif %}
+                        </div>
+                    </div>
+                    <div class="collapsible-body">
+                        <strong>{{ task.category_name }}</strong>
+                        <p>{{ task.task_description }}</p>
+                        <p><em>by: {{ task.created_by }}</em></p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
+    {% endif %}
+
+{% endblock %}
