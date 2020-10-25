@@ -131,7 +131,6 @@ function bigramme(texte,keymin=3, keyMax=25)
   {
     bigrammes[alphabet.indexOf(texte.charAt(i))*26+alphabet.indexOf(texte.charAt(i+1))]["Occurences"]++;
     bigrammes[alphabet.indexOf(texte.charAt(i))*26+alphabet.indexOf(texte.charAt(i+1))]["Position"].push(i+1);
-    
   }     
        
   //On trie le tableau
@@ -148,7 +147,6 @@ if(i === 0){
   let allEcart = bigrammes.reduce((accumulator, obj) => accumulator.concat(obj["Ecart"]),[] );
   let listPgcd = pgcdList(allEcart,keymin,keyMax);
   bigrammes.push({"LougueurCle" : listPgcd}) ;
-
  return bigrammes; 
 }
 function quadrigramme(texte, keyMin=3, keyMax=25)

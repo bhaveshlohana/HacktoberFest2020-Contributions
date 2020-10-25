@@ -1,3 +1,5 @@
+/*Encrypt and decrypt using polybe square cipher */
+
 var alphabet= 'ABCDEFGHIJKLMNOPQRSTUVXYZ';
 
 function creerGrille (clef)
