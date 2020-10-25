@@ -1,0 +1,14 @@
+//optionally creating Nodejs with express.js
+//Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications
+
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
