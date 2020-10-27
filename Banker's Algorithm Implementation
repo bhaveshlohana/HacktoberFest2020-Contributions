@@ -1,0 +1,339 @@
+package BankersAlgo;
+import java.util.Scanner;
+
+class process
+{
+	//DATA MEMBERS OF CLASS PROCESS
+	int np;//stores total number of processes
+	int nr;//stores total no of resources
+	int res[]; //stores instances of each resource
+	int max[][];//stores maximum resources required for a process to complete
+	int alloc[][]; //stores the  currently allocated resources to each process
+	int need[][]; //stores the resources required by a process to complete
+	int avail[]; //stores the available resource
+	int work[]; 
+	int vis[]; //used for whether a process is in safe sequence
+	int safeseq[]; //stores processes in safe sequence
+	
+	public process() //default constructor
+	{
+		np = 0;
+		nr = 0;
+	}
+	
+	public void initializeVisitedArray() //initialize the visited array to 0
+	{
+		for(int i = 0 ; i < vis.length ; i++)
+		{
+			vis[i] = 0;
+		}
+	}
+	
+	public void accept() //accept information
+	{
+		Scanner Sc = new Scanner(System.in);
+		System.out.print("Enter number of processes = ");
+		np = Sc.nextInt();
+		
+		System.out.println();
+		
+		System.out.print("Enter number of resources = ");
+		nr = Sc.nextInt();
+		
+		System.out.println();
+		
+		res = new int[nr];
+		max = new int[np][nr];
+		alloc = new int[np][nr];
+		need = new int[np][nr];
+		avail = new int[nr];
+		work = new int[nr];
+		vis = new int[np];
+		safeseq = new int[np];
+		
+		for(int i = 0 ; i < nr ; i++)
+		{
+			System.out.print("Enter the number of Instancs of Resource " + (i+1) + " : ");
+			res[i] = Sc.nextInt();
+			System.out.println();
+		}
+		
+		System.out.println("Enter Maximun Matrix : ");
+		for(int i = 0 ; i < np ; i++)
+		{
+			System.out.println("For Process P" + i + " :");
+			for(int j = 0 ; j < nr ; j++)
+			{
+				max[i][j] = Sc.nextInt();
+			}
+		}
+		
+		System.out.println();
+		
+		System.out.println("Enter Allocation Matrix : ");
+		for(int i = 0 ; i < np ; i++)
+		{
+			System.out.println("For Process P" + i + " :");
+			for(int j = 0 ; j < nr ; j++)
+			{
+				alloc[i][j] = Sc.nextInt();
+			}
+		}
+		
+		for(int j = 0 ; j < nr ; j++ )
+		{
+			int sum = 0;
+			
+			for(int i = 0 ; i < np ; i++)
+			{
+				sum = sum + alloc[i][j]; //calculate available matrix
+			}
+			
+			avail[j] = res[j] - sum;
+			work[j] = avail[j]; //work array is copy of available array
+		}
+		
+		for(int i = 0 ; i < np ; i++) //calculate need matrix
+		{
+			for(int j = 0 ; j < nr ; j++)
+			{
+				need[i][j] = max[i][j] - alloc[i][j];
+			}
+		}
+	}
+	
+	public int calculations() //calculated safe sequence
+	{
+		int cnt = 0;
+		while(cnt < np) //loop till counter is less than no of processes
+		{
+			int check = 0; //sets check to zero
+			for(int i = 0 ; i < np ; i++) //all the procces's allocated resources are searched
+			{
+				int flag = 0;               
+				if(vis[i] == 0) //if they are not in safe sequence 
+				{
+					
+					for(int j = 0 ; j < nr ; j++)
+					{
+						if(need[i][j] > work[j]) //if needed resources are greater than available  
+						{
+							flag = 1; //sets flag to 1
+							break;//then break
+						}
+					}
+
+					if(flag == 0) //if process is found
+					{
+						check = 1; //check is set to 1
+						vis[i] = 1; //it is marked as visited
+						safeseq[cnt++] = i; //it is stored in safe sequence
+						for(int j = 0 ; j < nr ; j++) //work array is updated
+						{
+							work[j] = work[j] + alloc[i][j]; //currently available + allocated 
+						} 
+					}
+				}
+			}
+			
+			if(check == 0) //if none of the process is found
+			{
+				break;
+			}
+		}
+		
+		if(cnt != np) //no safe sequence
+		{
+			return -1;
+		}
+		else 
+		{
+			return 1;
+		}
+		
+	}
+	
+	public void request() //checks whether request is granted or not
+	{
+		Scanner Sc = new Scanner(System.in);
+		initializeVisitedArray();
+		
+		int req[] = new int[nr]; //stores requested resources
+		int op[] = new int[nr]; //stores original allocated resources
+		
+		System.out.print("Enter the process number from which request arrives = ");
+		int pno = Sc.nextInt();
+		
+		System.out.println("Enter the request :");
+		for( int i = 0 ; i < nr ; i++) //accepts requested resources
+		{
+			req[i] = Sc.nextInt();
+			op[i] = alloc[pno][i];
+			alloc[pno][i] = alloc[pno][i] + req[i]; //updated the allocated resources
+		}
+		for(int j = 0 ; j < nr ; j++ ) //updates the available matrix
+		{
+			int sum = 0;
+			
+			for(int i = 0 ; i < np ; i++)
+			{
+				sum = sum + alloc[i][j]; //calculate available matrix
+			}
+			
+			avail[j] = res[j] - sum;
+			work[j] = avail[j];
+		}
+		
+		for(int i = 0 ; i < np ; i++) //updates the need matrix
+		{
+			for(int j = 0 ; j < nr ; j++)
+			{
+				need[i][j] = max[i][j] - alloc[i][j];
+			}
+		}
+		if(calculations() == 1) //if safe sequence if formed
+		{
+			System.out.println("Request will be granted.");
+			displayTable();
+			displaySequence();
+		}
+		else //no safe sequence
+		{
+			System.out.println("Request will not be granted!");
+		}
+		
+		for( int i = 0 ; i < nr ; i++) //restore the original values of allocated sequence
+		{
+			alloc[pno][i] = op[i];
+		}
+		
+	}
+
+	public void displaySequence() //displays the safe sequence
+	{
+		System.out.println();
+		System.out.println();
+		System.out.print("Safe Sequence : ");
+		for(int i = 0 ; i < np ; i++)
+		{
+			System.out.print("P" + safeseq[i]);
+			if( i < np - 1)
+			{
+				System.out.print(" -> ");
+			}
+		}
+		System.out.println();
+	}
+	
+	public void displayTable() //displays table of processes
+	{
+		int flag = 0;
+		System.out.println("Process\t\tAllocation\tMax\t\tAvailable\tNeed");
+		for(int i = 0 ; i < np ; i++)
+		{
+			System.out.print("P"+ i + "\t\t");
+			for(int j = 0 ; j < nr ; j++)
+			{
+				System.out.print(alloc[i][j] + " ");
+			}
+			
+			System.out.print("\t\t");
+			
+			for(int j = 0 ; j < nr ; j++)
+			{
+				System.out.print(max[i][j] + " ");
+			}
+
+			System.out.print("\t\t");
+			if(flag == 0)
+			{
+				flag = 1;
+				for(int j = 0 ; j < nr ; j++)
+				{
+					System.out.print(avail[j] + " ");
+				}
+
+				System.out.print("\t\t");
+			}
+			else
+			{
+				System.out.print("\t\t");
+			}
+			for(int j = 0 ; j < nr ; j++)
+			{
+				System.out.print(need[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+
+}
+
+
+public class BankersAlgo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner Sc = new Scanner(System.in);
+		
+		process p = new process(); //object of class process
+		 
+		int ch = 0; //stores the choice
+		do
+		{
+			do
+			{
+				System.out.println();
+				System.out.println("MENU");
+				System.out.println("1. Accept");
+				System.out.println("2. Display table");
+				System.out.println("3. Safe sequence");
+				System.out.println("4. Request");
+				System.out.println("0. Exit");
+				
+				System.out.print("Enter your choice : ");
+				ch = Sc.nextInt();
+				
+				if(ch < 0 || ch > 4) //validation
+				{
+					System.out.println("Invalid choice, enter again.");
+				}
+			}while(ch < 0 || ch > 4);
+			
+			switch(ch)
+			{
+			case 1:
+				p.accept();
+				break;
+				
+			case 2:
+				p.displayTable();
+				break;
+				
+			case 3:
+				int r = p.calculations();
+				if( r == -1) 
+				{
+					System.out.println("No Safe Sequence !");
+				}
+				else
+				{
+					p.displaySequence();
+				}
+				break;
+				
+			case 4:
+				p.request();
+				break;
+				
+			case 0:
+				System.out.println("Thank You!");
+				break;
+				
+			}
+			
+		}while(ch != 0);
+		
+	}
+
+}
