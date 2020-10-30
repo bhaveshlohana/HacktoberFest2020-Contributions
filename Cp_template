@@ -1,0 +1,59 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <sstream>
+#include <queue>
+#include <deque>
+#include <bitset>
+#include <iterator>
+#include <list>
+#include <stack>
+#include <map>
+#include <set>
+#include <functional>
+#include <numeric>
+#include <utility>
+#include <limits>
+#include <time.h>
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <unordered_set>
+#include <unordered_map>  
+
+
+#define ll long long int
+#define pb push_back
+#define ff first
+#define ss second
+#define tc int test; cin>>test; while(test--)
+#define mod 1000000007
+#define pb push_back
+
+
+using namespace std;
+
+void fast()
+{
+    ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+}
+
+int main()
+{
+    fast();
+    tc
+    {
+                
+    }
+    return 0;
+}
+
+
+        
