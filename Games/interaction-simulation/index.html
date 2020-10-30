@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://pagecdn.io/lib/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Interaction Simulation</title>
+  </head>
+
+  <body>
+    <div
+      id="app"
+      :class="{'great': great, 'good': good, 'neutral': neutral, 'bad': bad, 'upset': upset}"
+      v-cloak
+    >
+      <main>
+        <input
+          v-model="name"
+          autofocus
+          placeholder="Type your name here"
+          type="text"
+        />
+
+        <div class="expression">
+          <p v-show="great" class="emoji">😄</p>
+          <p v-show="good" class="emoji">🙂</p>
+          <p v-show="neutral" class="emoji">😑</p>
+          <p v-show="bad" class="emoji">🙁</p>
+          <p v-show="upset" class="emoji">😫</p>
+
+          <p class="msg">
+            <strong>{{ message }}</strong>
+          </p>
+        </div>
+
+        <div class="mood-meter">
+          <div class="mood" :style="{ height: happiness + '%' }"></div>
+        </div>
+
+        <div class="buttons" :class="{'reverse': reverse}">
+          <button @click="treat">{{ goodChoice }}</button>
+          <button @click="annoy">{{ annoyingChoice }}</button>
+          <button @click="restart">Restart</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
