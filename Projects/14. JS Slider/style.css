@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #333;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+/* .slide .content {
+    position: absolute;
+    bottom: 70px;
+    left: -600px;
+    opacity: 0;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 35px;
+}
+
+.slide .content h1 {
+    margin-bottom: 10px;
+}
+
+.buttons button#next {
+    position: absolute; 
+    top: 50%;
+    right: 15px;
+}
+
+.buttons button#prev {
+    position: absolute; 
+    top: 50%;
+    left: 15px;
+}
+
+.buttons button {
+    border: 2px solid white;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.buttons button:hover {
+    background-color: white;
+    color: #333;
+}
+
+.slide.current .content {
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 0..7 ease-in-out 0.3;
+}
+
+@media(max-width:500px) {
+    .slide .content {
+        bottom: -300px;
+        left: 0;
+        width: 100%;
+    }
+
+    .slide.current .content {
+        transform: translateY(-300px);
+    }
+} */
+
+.slide:first-child {
+    background: url('./assets/3740304.webp') no-repeat center center/cover;
+}
+
+.slide:nth-chlid(2) {
+    background: url('./assets/91Ph+uTyyxL._SL1500_.jpg') no-repeat center top/cover;
+}
+.slide:nth-chlid(3) {
+    background: url('./assets/artistic-album-cover-design-template-d12ef0296af80b58363dc0deef077ecc_screen.jpg') no-repeat center top/cover;
+}
+.slide:nth-chlid(4) {
+    background: url('./assets/eclipse-mixtape-cover-music-cd-design-template-b6bf8293632bce2ad98c1c4ab6752e1d_screen.jpg') no-repeat center top/cover;
+}
+.slide:nth-chlid(5) {
+    background: url('./assets/Glory\ Days\ \(deluxe\).jfif') no-repeat center top/cover;
+}
+.slide:nth-chlid(6) {
+    background: url('./assets/Taylor-Swift-1989-album-covers-billboard-1000x1000-compressed.jpg') no-repeat center top/cover;
+}
