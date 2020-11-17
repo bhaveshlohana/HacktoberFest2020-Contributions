@@ -1,0 +1,31 @@
+/*******************   Prime number program in C++   ******************
+
+***   http://www.tutorial4us.com/cpp-program/prime-number  ***/
+
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+  int i,no;
+  clrscr();
+  cout<<"Enter any number: ";
+  cin>>no;
+  if(no==1)
+  {
+  cout<<"Smallest prime number is 2";
+  }
+  for(i=2;i<no;i++)
+  {
+  if(no%i==0)
+  {
+  cout<<"Not prime number";
+  break;
+  }
+  }
+ if(no==i)
+ {
+ cout<<"Prime number";
+ }
+  getch();
+}
