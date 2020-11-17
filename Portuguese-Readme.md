@@ -26,36 +26,36 @@ Durante todo o mês de outubro de 2020, tudo que você precisa fazer é contribu
 
 ## Por Que Devo Contribuir?
 
-O objetivo simples e simples do Hacktoberfest é:
+O objetivo simples e direto do Hacktoberfest é:
 Apoie o código aberto e ganhe uma camiseta de edição limitada!
-Mas, não se trata apenas de camisetas ou adesivos. É sobre o suporte de código aberto. É sobre celebrar o código aberto e devolvê-lo. Se você nunca contribuiu com o código aberto antes, este é o momento perfeito para começar, pois o Hacktoberfest oferece uma grande lista de oportunidades de contribuição disponíveis.
+Mas, não se trata apenas de camisetas ou adesivos. É sobre o suporte ao código aberto. É sobre celebrar o código aberto e devolvê-lo. Se você nunca contribuiu com o código aberto antes, este é o momento perfeito para começar, pois o Hacktoberfest oferece uma grande lista de oportunidades de contribuição disponíveis.
 
 ## Como Posso Contribuir?
 
-Hacktoberfest® está aberto a todos em nossa comunidade global. Quer você seja um desenvolvedor ou um aluno aprendendo a programar. Você pode contribuir com qualquer coisa, desde um código até uma correção simples, um novo recurso até um erro gramatical.
+Hacktoberfest® está aberto a todos em nossa comunidade global. Quer você seja um desenvolvedor ou um aluno aprendendo a programar. Você pode contribuir com qualquer coisa, desde um código até uma correção simples, de um novo recurso até um erro gramatical.
 
 ## Como contribuir neste repositório.
 
-Contribuir com código aberto é fácil.
+Contribuir para o código aberto é fácil.
 
 - Bifurcar o repositório
 - Melhorar o programa atual:
   - melhorando a funcionalidade
   - adicionando um novo recurso
   - melhorando a documentação
-- Promova seu trabalho e crie uma solicitação pull
+- Promova seu trabalho e crie uma solicitação de pull
 
 [Clique aqui para uma explicação detalhada](/Contribute.md)
 
 ## E se minhas solicitações pull não forem aceitas?
 
-Mesmo se seus pedidos de puxar não forem aceitos, eles ainda devem contar para seus 4 pedidos de puxar necessários para ganhar a camisa. A única exceção seria se o mantenedor do projeto escolher marcar sua solicitação pull como “inválida”. Eles podem fazer isso se perceberem que sua solicitação de pull é de baixo esforço ou se contém plágio.
+Mesmo se suas solicitações de pull não forem aceitas, eles ainda devem contar para seus 4 pedidos de puxar necessários para ganhar a camisa. A única exceção seria se o mantenedor do projeto escolher marcar sua solicitação pull como “inválida”. Eles podem fazer isso se perceberem que sua solicitação de pull é de baixo esforço ou se contém plágio.
 
 ## Quais tipos de solicitações de pull contam para ganhar a camisa do Hacktoberfest?
 
-Qualquer solicitação pull feita a um repositório público no GitHub será considerada. A solicitação pull deve conter commits que você mesmo fez - não commits automatizados de bots.
+Qualquer solicitação de pull feita a um repositório público no GitHub será considerada. A solicitação de pull deve conter commits que você mesmo fez - não commits automatizados de bots.
 
-Você pode contribuir com qualquer projeto de código aberto hospedado no Github.com e contribuir com qualquer coisa entre 1 de outubro a 31 de outubro à meia-noite de 2020. Você encontrará muitos problemas rotulados com hacktoberfest ou good-first-issue etc no Github. Estes serão os mais provavelmente simples e fáceis de consertar.
+Você pode contribuir com qualquer projeto de código aberto hospedado no Github.com e contribuir com qualquer coisa entre 1 de outubro a 31 de outubro à meia-noite de 2020. Você encontrará muitos problemas rotulados com hacktoberfest ou good-first-issue etc no Github. Estes serão provavelmente os mais simples e fáceis de consertar.
 
 ---
 ## Referências
