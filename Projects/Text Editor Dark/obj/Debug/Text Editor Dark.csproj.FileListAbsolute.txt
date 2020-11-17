@@ -1,0 +1,9 @@
+D:\UET WORK\Semester 4\Extra Work\Text Editor Dark\bin\Debug\Text Editor Dark.exe.config
+D:\UET WORK\Semester 4\Extra Work\Text Editor Dark\bin\Debug\Text Editor Dark.exe
+D:\UET WORK\Semester 4\Extra Work\Text Editor Dark\bin\Debug\Text Editor Dark.pdb
+D:\UET WORK\Semester 4\Extra Work\Text Editor Dark\obj\Debug\Text Editor Dark.csprojAssemblyReference.cache
+D:\UET WORK\Semester 4\Extra Work\Text Editor Dark\obj\Debug\Text_Editor_Dark.Form1.resources
+D:\UET WORK\Semester 4\Extra Work\Text Editor Dark\obj\Debug\Text_Editor_Dark.Properties.Resources.resources
+D:\UET WORK\Semester 4\Extra Work\Text Editor Dark\obj\Debug\Text Editor Dark.csproj.GenerateResource.cache
+D:\UET WORK\Semester 4\Extra Work\Text Editor Dark\obj\Debug\Text Editor Dark.exe
+D:\UET WORK\Semester 4\Extra Work\Text Editor Dark\obj\Debug\Text Editor Dark.pdb
