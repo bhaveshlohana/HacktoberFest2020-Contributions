@@ -2,7 +2,7 @@
 Make your first Node.JS application in minutes.
 # Follow the given steps to make your first Node.JS application
 
- 1. Install Node.JS from [this link](https://nodejs.org/en/download/)
+ 1. Install Node.JS from [this link](https://nodejs.org/en/download/) and optionally express from [this link](https://expressjs.com/en/starter/installing.html)
  2. Clone this repository 
  3. Enter the Node.JS folder
  4. Open terminal in the Node.JS folder
