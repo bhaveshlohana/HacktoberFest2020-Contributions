@@ -1,0 +1,917 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #EF5350;
+    font-family: 'Montserrat', sans-serif;    
+    text-align: center;
+    color: #212121
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #212121;
+    outline: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    color: #212121;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px;
+    background-color: inherit;
+    outline: none;
+}
+
+.work button {
+    color: #F2F4F4;
+}
+
+.about-intro span {
+    display: block;
+    padding-top: 15px
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 0;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px
+}
+
+/* HOME */
+
+.headline {
+    margin-top: 200px;
+}
+
+#line-separator {
+    width: 180px;
+    transform: rotate(90deg);
+    background-color: #212121;
+    border: solid 1px #212121;
+    margin-top: 130px;
+}
+
+/* ABOUT */
+
+header {
+    margin-bottom: 50px
+}
+
+.about-intro .hi {
+    text-align: left;
+    margin-left: 20px;
+    float: left;
+    margin-top: -57px;
+    font-size: 30px;
+    margin-bottom: 0
+}
+
+.about-intro p {
+    padding: 0 30px;
+    padding-bottom: 80px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 25px;
+    float: left;
+    font-family: 'Raleway', sans-serif
+}
+
+#poly-unicorn {
+    width: 80%;
+    float: right;
+}
+
+.about-content button {
+    position: absolute;
+    right: 0;
+    top: 5%;
+} 
+
+#about-close-btn {
+    width: 15px;
+    padding: 10px;
+}
+
+/* RESUME */
+
+.resume-content {
+    text-align: left;
+    padding: 0 30px;
+    padding-bottom: 80px
+}
+
+.resume-content h3 {
+    margin: 0;
+}
+
+.resume-content h4 {
+    padding-top: 20px;
+    margin-bottom: 5px;
+    font-size: 14px
+}
+
+.resume-content .resume-work, .resume-content .resume-edu, .resume-content .resume-skills, .resume-content .resume-lang {
+    padding: 30px 0;
+    border-top: solid 0.5px #212121;
+}
+
+.resume-content .resume-edu {
+    padding-bottom: 30px
+}
+
+.resume-content h1 {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+
+.resume-content p {
+    font-size: 14px;
+    margin: 5px;
+    line-height: 25px;
+    font-family: 'Raleway', sans-serif
+}
+
+.resume-content button {
+    position: absolute;
+    right: 0;
+    top: 5%;
+} 
+
+#resume-close-btn {
+    width: 15px;
+    padding: 10px;
+}
+
+/* PROJECTS */
+
+.projects {
+    background-color: #F2F4F4;
+    width: 280px;
+    height: 260px;
+    padding: 20px 0;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.projects h3 {
+    text-align: left
+}
+
+.projects h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.projects h3 {
+    font-size: 16px;
+    margin-left: 10px;
+    margin-bottom: 0
+}
+
+.project-selected {
+    padding-top: 20px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.live-repo h4, .tech-used h4 {
+    margin-bottom: 8px
+}
+
+.tech-used {
+    padding-bottom: 50px
+}
+
+.work-content .button {
+    position: absolute;
+    right: 0;
+    top: 5%;
+}
+
+#work-close-btn {
+    width: 15px;
+    padding: 10px;
+}
+
+i {
+    padding-top: 5px;
+    padding-right: 5px
+}
+
+.project-selected p {
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: 25px;
+    font-family: 'Raleway', sans-serif
+}
+
+
+/* FOOTER */
+
+.footer-home, .footer-content {
+    background-color: #F2F4F4;
+    position: fixed;
+    left: 5%;
+    bottom: 0;
+    width: 90%;
+    height: 65px;
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px
+}
+
+.contact-info {
+    text-align: left;
+    padding-left: 20px
+}
+
+.contact-icons img {
+    width: 30px;
+    padding: 5px;
+    margin-top: 15px
+}
+
+.phone h5, .email h5 {
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.phone, .email{
+    padding-top: 10px
+}
+
+.contact-info p {
+    font-size: 10px;
+}
+
+footer .footer-content {
+    height: 270px;
+}
+
+.footer-content button {
+    float: right;
+    margin-top: -20px
+} 
+
+#contact-close-btn {
+    width: 15px;
+    margin-right: 5px;
+    margin-top: -5px;
+    padding: 10px;
+}
+
+#copyright {
+    float: right;
+    margin-right: 15px;
+    color: #CCD1D1;
+}
+
+
+@media screen and (min-width: 400px) {
+
+    /* WORK */
+
+    .projects {
+        width: 300px;
+        transition: all ease-in-out 2s;
+    } 
+
+    i {
+        font-size: 20px;
+        transition: all ease-in-out 2s;
+    }
+}
+
+@media screen and (min-width: 500px) {
+
+    /* HOME */
+
+    .headline {
+        font-size: 40px;
+        transition: all ease-in-out 2s;
+    }
+
+    /* WORK */
+
+    .projects {
+        width: 320px;
+        transition: all ease-in-out 2s;
+    } 
+
+    /* ABOUT */
+
+    .about-intro .hi {
+        margin: 0 30px;
+        font-size: 40px;
+        transition: all ease-in-out 2s;
+    }
+
+    .about-intro p {
+        padding: 0 40px;
+        padding-bottom: 100px;
+        transition: all ease-in-out 2s;
+    }
+
+    #poly-unicorn {
+        width: 65%;
+        transition: all ease-in-out 2s;
+    }
+    
+}
+
+@media screen and (min-width: 650px) {
+
+    /* HOME */
+
+    body {
+        background-color: #F2F4F4;
+    }
+
+    main {
+        width: 90%;
+        height: 80%;
+        position: fixed;
+        left: 5%;
+        margin: 0;
+        z-index: -1;
+    }
+
+    #background-red {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 50%;
+        height: 100%;
+        background-color: #EF5350;
+        z-index: -1;
+
+        right: 0%;
+        padding-right: 0%;
+        margin-right: 0%;
+    }
+
+    .headline {
+        margin-top: 230px;
+        font-size: 50px;
+        transition: all ease-in-out 2s;
+    
+    }
+
+    .work {
+        transform: rotate(270deg);
+        position: fixed;
+        left: -12px;
+        top: 50%;    
+    }
+
+    .resume {
+        transform: rotate(90deg);
+        position: fixed;
+        right: -18px;
+        top: 50%; 
+    }
+
+    #line-separator {
+        display: none;
+    }
+
+    
+    .headline {
+        font-size: 50px;
+    }
+
+    li span, .contact span {
+        color: #F2F4F4
+    }
+
+    /* ABOUT */
+
+    #about-close-btn {
+        position: fixed;
+        right: 6%;
+        top: 6%;
+    }
+
+    #background-greyish {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 50%;
+        height: 100%;
+        background-color: #CCD1D1;
+        z-index: -2;
+
+        right: 0%;
+        padding-right: 0%;
+        margin-right: 0%;
+    }
+
+    #background-whitish {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: 50%;
+        height: 100%;
+        background-color:  #F2F4F4;
+        z-index: -2;
+    }
+
+    #background-white {
+        position: fixed;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+        background-color: white;
+        margin: 0;
+        z-index: -1;
+    }
+
+    #background-red-half {
+        background-color: #EF5350;
+        position: fixed;
+        top: 5%;
+        left: 5%;
+        width: 45%;
+        height: 90%;
+        z-index: 0;
+    }
+
+    #poly-unicorn {
+        display: none;
+    }
+
+    .hi {
+        display: none;
+    }
+
+    .about-title {
+        display: block;
+        font-size: 30px;
+        position: absolute;
+        z-index: 0;
+        top: 20%;
+        left: 55%;
+        margin: 0
+    }
+
+    .about-intro p {
+        position: absolute;
+        top: 30%;
+        height: 400px;
+        left: 53%;
+        margin-right: 15px;
+        overflow-y: scroll;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 60px;        
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: whitesmoke; 
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: whitesmoke
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #CCD1D1; 
+    }
+
+    /* RESUME */
+
+    #background-white-resume {
+        position: fixed;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+        background-color: #F8F9F9;
+        margin: 0;
+        z-index: -1;
+    }
+
+    .resume-scroll {
+        height: 450px;
+        margin-right: -15px;
+        overflow-y: scroll;
+        padding-right: 15px
+    }
+
+    #resume-close-btn {
+        position: fixed;
+        right: 6%;
+        top: 6%;
+    }
+
+
+    /* PROJECTS */
+
+    #work-close-btn {
+        position: fixed;
+        right: 6%;
+        top: 6%;
+    }
+
+    /* .work-content header {
+        margin-bottom: 0;
+    } */
+
+    #background-lightgrey-half {
+        background-color: #F2F4F4;
+        position: fixed;
+        top: 5%;
+        left: 5%;
+        width: 45%;
+        height: 90%;
+        z-index: -1;
+    }
+  
+    .projects {
+        background-color: transparent;
+        position: absolute;
+        top: 11%;
+        left: 2%;
+        margin: 0
+    }
+
+    .project-selected {
+        position: absolute;
+        left: 55%;
+        top: 15%;
+        padding: 0;
+    }
+
+    
+    .project-selected-content {
+        margin-right: 15px;        
+        overflow-y: scroll; 
+        height: 450px;
+    }
+
+   
+
+    .project-selected h3 {
+        font-size: 28px;
+    }
+
+    .live-repo h4  {
+        display: inline;
+    }
+
+    .live-repo a  {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .live-repo {
+        padding-top: 30px       
+    }
+
+    .tech-used {
+        padding-top: 20px
+    }
+
+    /* FOOTER */
+
+    .footer-home {
+        height: 30px;
+        background-color: transparent;
+        width: 100%;
+        left: 0
+    }
+
+    footer .footer-content {
+        height: 120px;
+        background-color: white;
+        width: 80%;
+        left: 10%;
+    }
+
+    .phone {
+        position: fixed;
+        bottom: 25px;
+        left: 15%;
+    }
+
+    .email {
+        position: fixed;
+        bottom: 25px;
+        left: 33%;
+    }
+
+    .contact-icons {
+        position: fixed;
+        bottom: 40px;
+        left: 71%;
+    }
+
+    .contact-icons img {
+        width: 25px;
+    }
+
+    #contact-close-btn {
+        margin-top: -10px
+    }
+
+    #copyright {
+        display: none;
+    }
+
+    #copyright-desktop {
+        display: block;
+        position: absolute;
+        /* bottom: 20px; */
+        transform: rotate(270deg);
+        left: -40px;
+        color: #CCD1D1;
+        font-size: 10px;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+}
+
+
+
+@media screen and (min-width: 850px) {
+
+    /* PROJECTS */
+
+    .projects h1 {
+        font-size: 40px;
+        transition: all ease-in-out 2s;
+    }
+
+    .projects h3 {
+        font-size: 28px;
+        transition: all ease-in-out 2s;
+    }
+
+    .project-selected {
+        top: 18%;
+        transition: all ease-in-out 2s;
+    }
+
+     /* FOOTER */
+
+    .phone {
+        left: 18%;
+    }
+
+    .email {
+        left: 38%;
+    }
+
+    .contact-icons img {
+        width: 30px;
+    }
+
+    #get-in-touch {
+        display: block;
+        font-weight: 700;
+        font-size: 60px;
+        opacity: 0.07;
+        margin-top: 40px
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    /* HOME */
+
+    .headline {
+        font-size: 65px;
+        margin-top: 200px
+    }
+
+    /* ABOUT */
+
+    .about-intro .about-title {
+        left: 54%;
+        font-size: 40px;
+        transition: all ease-in-out 2s;
+    }
+
+    .about-intro p {
+        line-height: 30px;
+        padding-top: 30px;
+        transition: all ease-in-out 2s;
+        overflow-y: auto;
+        padding-bottom: 0px
+    }
+
+    /* RESUME */
+
+    .resume-scroll {
+        padding-left: 80px
+    }
+
+    .resume-content h1 {
+        transition: all ease-in-out 2s;
+        font-size: 40px
+    }
+
+
+    /* PROJECTS */
+
+    .projects h1 {
+        margin-top: 50px;
+        font-size: 50px;
+        transition: all ease-in-out 2s;
+    }
+
+    .projects h3 {
+        margin-left: 20px;
+        font-size: 30px;
+        transition: all ease-in-out 2s;
+    }
+
+    .project-selected h3 {
+        font-size: 30px;
+        transition: all ease-in-out 2s;
+    }
+
+    .project-selected {
+        top: 21%
+    }
+
+    .project-selected-content {
+        height: 420px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+     /* FOOTER */
+
+    #get-in-touch {
+        font-size: 70px;
+        margin-top: 30px;
+        margin-left: 20px
+    }
+
+    .phone p, .email p {
+        font-size: 12px
+    }
+
+    footer img {
+        padding: 10px;
+    }
+    
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    /* HOME */
+
+    .headline {
+        font-size: 75px;
+        margin-top: 180px
+    }
+
+    /* ABOUT */
+
+    #background-white {
+        position: fixed;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+    }
+
+    #background-red-half {
+        top: 10%;
+        left: 10%;
+        width: 40%;
+        height: 80%;
+    }
+
+    #about-close-btn {
+        right: 11%;
+        top: 11%
+    }
+
+    .about-intro p {
+        padding-right: 80px;
+    }
+
+    /* RESUME */
+
+    #background-white-resume {
+        position: fixed;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+    }
+
+    .resume-content h1 {
+        margin-bottom: 50px;
+    }
+
+    .resume-scroll {
+        height: 400px;
+        transition: all ease-in-out 2s;
+        /* padding-left: 100px; */
+        margin-right: 50px
+    }
+
+    #resume-close-btn {
+        right: 11%;
+        top: 11%
+    }
+
+    /* PROJECTS */
+
+    .project-selected-content {
+        margin-right: 75px;
+    }
+
+    #work-close-btn {
+        right: 11%;
+        top: 11%
+    }
+
+    #background-lightgrey-half {
+        top: 10%;
+        left: 10%;
+        width: 40%;
+        height: 80%;
+    }
+
+    .projects {
+        left: 8%;
+        top: 15%;
+    }
+
+    .project-selected-content {
+        height: 400px;
+    }
+
+    #css-quiz-img {
+        width: 80%
+    }
+
+     /* FOOTER */
+
+    #get-in-touch {
+        font-size: 80px;
+        margin-top: 20px;
+        margin-left: 30px
+    }   
+}
+
+@media screen and (min-width: 1300px) {
+
+    main {
+        width: 80%;
+        left: 10%
+    }
+
+    /* ABOUT */
+
+    #background-red-half {
+        display: none
+    }
+
+    #poly-unicorn {
+        transition: none;
+        display: block;
+        width: 40%;
+        max-height: 578px;
+        float: left;
+        position: fixed;
+        top: 10%
+    }
+
+    /* PROJECTS */
+
+    #css-quiz-img {
+        width: 90%
+    }
+
+    .project-selected-content {
+        margin-right: 15px;
+    }
+}
