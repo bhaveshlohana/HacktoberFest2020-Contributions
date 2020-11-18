@@ -1,33 +1,38 @@
-var c=0;
-//var d=0;
+var score=0;
+let variableNumberToBeFound = 5;
 function content(elem)
 {
 	//elem.style.backgroundColor="red";
 	var p=document.getElementById("para");
-	if(elem.innerText==5)
+	if(elem.innerText==variableNumberToBeFound)
 	{
-		c++;
-//		d=c;
+		score++;
 	}
-	p.innerHTML='Your Score:'+ ' ' + c;
+	p.innerHTML='Your Score:'+ ' ' + score;
 	initlization();
 }
 function display(){
-	alert(c);
+	alert(score);
+}
+function getVariableNumber(){
+	if(ts == 60){
+		variableNumberToBeFound = randomNumber(0, 8);
+	}
+	document.getElementById("addingVariableNumber").innerHTML= "Number to be searched is " + variableNumberToBeFound.toString();
 }
 var ts=60*1;
-var min=parseInt(ts/60);
-var sec=parseInt(ts%60);
+var minutes=parseInt(ts/60);
+var seconds=parseInt(ts%60);
 function CheckTime(){
-	document.getElementById("timer").innerHTML='Time Left: '+ min+ ' : ' + sec;
+	document.getElementById("timer").innerHTML='Time Left: '+ minutes+ ' : ' + seconds;
 	if(ts<=0){
 		document.getElementById("timer").innerHTML='TIME OVER';
 		over();		
 	}	
 	else{
 		ts=ts-1;
-		min=parseInt(ts/60);
-		sec=parseInt(ts%60);
+		minutes=parseInt(ts/60);
+		seconds=parseInt(ts%60);
 		setTimeout("CheckTime()",1000);
 	}
 }
@@ -40,7 +45,14 @@ var nums = [];
 function initlization() {
   myTable = document.getElementsByTagName("table")[0];
   shuffle(); //need to shuffle initially 
+  getVariableNumber();
+  document.getElementById("finalScores").style.display = "none";
 }
+function randomNumber(min, max) {  
+    min = Math.ceil(min); 
+    max = Math.floor(max); 
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+} 
 
 function shuffle() {
   //need to get all tds each time the table is shuffled
@@ -63,6 +75,6 @@ for (var i = to-from; i; i--) {
 }
 function over()
 {
-	window.open("over.html","_self");
-   document.getElementById("compiler").style.display="block";
+	document.getElementById("displayScore").innerHTML = "Final Score : " + score;	
+	document.getElementById("finalScores").style.display = "block";
 }
