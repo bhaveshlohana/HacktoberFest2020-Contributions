@@ -12,6 +12,7 @@ void Display(struct Array arr)
 {
     int i;
     printf("\nElements are\n");
+    printf("\n As follows\n");
     for(i=0; i<arr.length; ++i)
         printf("%d ",arr.A[i]);
 }
