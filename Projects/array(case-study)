@@ -1,0 +1,284 @@
+#include<stdio.h>
+#include<string.h>
+
+struct students
+{
+	int rollno;
+	char name[20];
+	char father_name[20];
+	char mother_name[20];
+    int Class;
+    int semester;
+    char branch [10];
+    struct Address
+    {
+        int house_no;
+        char street_name[20];
+        char city[20];
+        char state[20];
+        char country[20];
+	}address;
+};
+
+typedef struct students array;
+
+void check_roll(array *ptr)
+{   int flag = 0;
+	do
+	{
+		printf("Enter the rollno.:");
+		scanf("%d",&ptr->rollno);
+		int ids=ptr->rollno;
+		if ( ids>=10000 && ids <=99999)	
+		flag=1;
+		else
+		{
+			flag=0;
+			printf("\nPlease enter 5 digit roll no only \n");
+		}
+	} while (flag==0);
+}
+
+int input_record(array*ptr,int fill)
+{
+	int n;
+	printf("enter the number of records you want to enter:");
+    scanf("%d",&n);
+    if(n>75-fill||n<1)
+    return fill;
+    else
+    {
+	    for(int i=0;i<n;i++){
+		printf("\nRECORD NO. %d\n",i+1);
+		check_roll(&ptr[i]);
+		printf("Enter the name: ");
+		scanf("%s",&ptr[i].name);
+		printf("Enter the fathers name: ");
+		scanf("%s",&ptr[i].father_name);
+		printf("Enter the mothers name: ");
+		scanf("%s",&ptr[i].mother_name);
+		printf("Enter the year: ");
+		scanf("%d",&ptr[i].Class);
+		printf("Enter the semester : ");
+		scanf("%d",&ptr[i].semester);
+		printf("Enter the branch : ");
+		scanf("%s",&ptr[i].branch);
+		printf("Enter the house no : ");
+		scanf("%d",&ptr[i].address.house_no);
+		printf("Enter the street name : ");
+		scanf("%s",&ptr[i].address.street_name);
+		printf("Enter the city : ");
+		scanf("%s",&ptr[i].address.city);
+		printf("Enter the state : ");
+		scanf("%s",&ptr[i].address.state);
+		printf("Enter the country : ");
+		scanf("%s",&ptr[i].address.country);
+		fflush(stdin);	
+		}
+		return n;
+
+	}
+
+}
+
+void print (array *ptr)
+{
+	printf("-------------------------------------------------------------------------------------------\n");
+	printf("rollno: %d\n",ptr->rollno);
+	printf("name: %s\n",ptr-> name);
+	printf("father's name: %s\n",ptr->father_name);
+	printf("mother's name: %s\n",ptr->mother_name);
+	printf("Year: %d\n",ptr->Class);
+	printf("Semester: %d\n",ptr->semester);
+	printf("branch: %s\n",ptr->branch);
+	printf("address:\n");
+	printf("house number: %d\nstreet: %s\ncity: %s\nstate: %s\ncountry: %s\n",ptr->address.house_no,ptr->address.street_name,ptr->address.city,ptr->address.state,ptr->address.country);
+
+}
+int search_record_by_roll(array *ptr,int fill)
+{
+	int Id,c=0,pos=0;
+	while(1)
+	{
+	printf("Enter the rollno. you want to search: ");
+	scanf("%d",&Id);
+	fflush(stdin);
+	if(Id>=10000 && Id <=99999)
+	{
+		printf("Searching...");
+		if (fill==0)
+		printf("no record\n");
+		else{
+			for(int i=0;i<fill;i++)
+			{
+				if (ptr->rollno==Id)
+				{
+					printf("Roll_No. found\n");
+					c=1;
+					break;
+				}
+			ptr++;
+			pos++;
+		}}
+		if(c==0)
+		{
+		printf("No match found\n");
+		return -1;
+		}
+		else
+		{
+		print(ptr); 
+		printf("Search has ended.\n");
+		return pos;
+		}
+		break;
+	}
+	else
+	printf("you have enterd the wrong Id.\nPlease Enter a valid positive 5 digit number Roll only.\n");	
+    }
+}
+
+int delete_record(array *ptr,int fill)
+{
+	int num;
+	printf("-----------------------------DELETE RECORDS BASED ON SEARCH-------------------------------- \n");
+	num=search_record_by_roll(ptr,fill);
+	if (num==-1)
+	{
+		printf("Deletion was unsuccessful. Record not found...\n");
+		return fill;
+	}
+    else
+    {
+    	for(int i=num-1;i<fill;i++)
+    	ptr[i]=ptr[i+1];
+    	return fill-1;
+	}
+}
+
+void display_all(array *ptr,int fill)
+{
+	int num;
+	printf("----------------------------------TOTAL_CLASS_RECORDS-------------------------------------- \n");
+	for(int i=0;i<fill;i++){
+	print(ptr);
+	ptr++;
+	num=num+1;
+	}
+	printf("-------------------------------------------------------------------------------------------\n");
+	printf("The total students in the class are: %d\n",num);
+	printf("-------------------------------------------------------------------------------------------\n");
+}
+
+void display(array *ptr,int fill)
+{
+	int choice,d_num=0,k;
+	char ch[20];
+	printf("--------------------------DISPLAY CLASS_RECORDS BASED ON SEARCH-----------------------------\n");
+	printf("HOW_DO_YOU_WANT TO SEARCH  (enter the the number)? :\n1. CITY\t 2.STATE\t 3.COUNTRY\n");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+    	case 1:
+    		{
+    			printf("Enter the name of the city :");
+    			scanf("%s",&ch);
+    				for(int i=0;i<fill;i++)
+					{
+						k=strcmp(ptr->address.city,ch);
+    					if(k==0)
+    					{
+    						print(ptr);
+    						d_num++;
+						}
+						ptr++;
+					}
+			break;
+			}
+		case 2:
+    		{
+    				printf("Enter the name of the state :");
+    			scanf("%s",&ch);
+    				for(int i=0;i<fill;i++)
+					{
+						k=strcmp(ptr->address.state,ch);
+    					if(k==0)
+    					{
+    						print(ptr);
+    						d_num++;
+						}
+						ptr++;
+					}
+			break;
+			}
+		case 3:
+    		{
+    			printf("Enter the name of the country :");
+    			scanf("%s",&ch);
+    				for(int i=0;i<fill;i++)
+					{
+						k=strcmp(ptr->address.country,ch);
+    					if(k==0)
+    					{
+    						print(ptr);
+    						d_num++;
+						}
+						ptr++;
+					}
+			break;
+			}
+	}
+	printf("-------------------------------------------------------------------------------------------\n");
+	printf("The search has ended.....%d records found\n",d_num);
+	printf("-------------------------------------------------------------------------------------------\n");
+}
+
+
+
+void main()
+{   
+	printf("**********************************CASE STUDY 1:CLASS RECORD USING STRUCTURE ARRAY**********************************\n");
+	int option,fill=0;
+	array student[75];
+
+			char tries='n';
+		do
+			{
+				//user interface 
+				int option;
+				printf("\n****************************************OPTION MENU*******************************************\n");
+				printf("1.input_record\n2.search_record\n3.display_all\n4.delete_record\n5.display_based_on_search\n6.exit");
+				printf("\nEnter the option number: ");
+				scanf("%d",&option);
+				fflush(stdin);
+				switch(option)
+		        {
+		        case 1:
+		        	printf("---------------------------------CREATE DATABASE/RECORD ARRAY-----------------------------------\n");
+	                fill=input_record(student,fill);
+	                printf("\ndatabase/record array is created.\n");
+		        	break;
+		        case 2:
+		       		search_record_by_roll(student,fill); 
+		        	break;
+		        case 3:
+		        	display_all(student,fill);
+		        	break;
+		        case 4:
+		        	fill=delete_record(student,fill);
+		        	break;	
+				case 5: 
+					display(student,fill);
+		        	break;	
+		        case 6:
+					printf("Enter y to exit:");
+		        	scanf("%c",&tries);  
+					break;     	
+		        default:
+		        	printf("You entered an invalid option.Please enter a number between 1-6 only.\n");
+		        	break;
+		        }	
+	    	}while(tries!='y');	
+	    printf("\nExiting program....\n");
+}
+

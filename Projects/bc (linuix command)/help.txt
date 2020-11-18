@@ -1,0 +1,41 @@
+		
+		OPTIONS
+Basic Operations Have Their Usual Functions
+Enter "sinx" for sine of x
+Enter "cosx" for cosine of x
+Enter "tanx" for tangent of x
+Enter "cotx" for cotangent of x
+Enter "secx" for secant of x
+Enter "cscx" for cosecant of x
+Enter "x^y" for x to the power y
+Enter "x>y" for x left shift by y digits
+Enter "x<y" for x right shift by y digits
+
+
+		INSTRUCTIONS
+The Program Doesnot Store SPACES i.e;
+123 45 will be similar to 12345
+In Case of subtraction and addition 
+	scale will be that of the operand with bigger scale
+In multiplication scale will be a.nf + b.nf where
+	a.nf is the no. of floats in x	
+	b.nf is the no. of floats in y	
+In Power function doesnot work for very big numbers
+	In "x^y" y should be integer
+	it  works when (strlen(x)*y) < 300
+	In Power scale is set as a.nf*y where 
+	a.nf is the no. of floats in x	
+In case of Division The default scale is 0 
+	Examle :
+		42734/234 = 182
+		42734.0/234 = 182.6
+		42734.00/234 = 182.62
+		42734.000/234 = 182.623
+	Or else The scale would be a.nf - b.nf where
+	a.nf is the no. of floats in x	
+	b.nf is the no. of floats in y	
+In case of trignometric functions :
+		sin5av3 will be similar as sin5
+The dot operator shows the last valid Result
+	Sorry You can't perform operation on last result
+Press 'ctrl+d' or '(space) + Enter' to exit

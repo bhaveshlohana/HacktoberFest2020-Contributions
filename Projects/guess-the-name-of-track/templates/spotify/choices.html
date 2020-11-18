@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <title>choices</title>
+</head>
+<body style="background-color: #4285f4;">
+    <header>
+        <!-- Just an image -->
+<nav class="navbar navbar-dark primary-color">
+    <a class="navbar-brand" href="#">
+      <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/38/3492427038_35c61d6c-c26a-4045-9639-65b6cb0bf069.png?cb=1596993651" width="120px" alt="mdb logo">
+    </a>
+  </nav>
+    </header>
+<main>
+    <br><br><br><br><br>
+    <div class="d-flex justify-content-center">
+    <form method="POST" action="/spotify/">
+        {% csrf_token %}
+    <select name="choices" class="browser-default custom-select" important> 
+        <option value="pop">pop</option>
+        <option value="hip-hop">hip hop</option>
+        <option value="kpop">kpop</option>
+        <option value="rock">rock</option>
+        <option value="R&B">R&B</option>
+        <option value="jazz">jazz</option>
+        <option value="Blues">Blues</option>
+        <option value="punk">punk</option>
+        <option value="country">country</option>
+        <option value="electronic/dance">electronic/dance</option>
+        <option value="khaleji">khaleji</option>
+        <option value="reggae">reggae</option>
+        <option value="rap_fr">rap fr</option>
+        <option value="tiktok_songs">tiktok songs</option>
+    </select>
+
+        <button type="submit" name="submit" value="submit-two" class="btn btn-primary">submit</button>
+
+
+    </form>
+    </div>
+
+
+
+
+
+
+
+      </select>
+</main>
+    
+</body>
+</html>

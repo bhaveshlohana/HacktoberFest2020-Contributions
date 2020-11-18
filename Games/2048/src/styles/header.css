@@ -1,0 +1,94 @@
+.header {
+  display: table;
+  width: 258px;
+  margin-left: 4px;
+}
+
+.header__row {
+  display: table-row;
+}
+
+.header__title {
+  display: table-cell;
+  float: left;
+  margin-bottom: 0px;
+}
+
+.header__intro {
+  font-size: 10px;
+  float: left;
+  width: 150px;
+}
+
+.header__intro strong {
+  margin-left: 0.3em;
+}
+
+.header .restart {
+  background: #8f7a66;
+  border-radius: 3px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #f9f6f2;
+  height: 35px;
+  font-size: 10px;
+  line-height: 35px;
+  text-align: center;
+  float: right;
+  margin-top: 4px;
+}
+
+.header .restart:focus,
+.header .restart:active,
+.header .restart {
+  border: none;
+  border-style: none;
+  outline: none;
+}
+
+.header .scores {
+  display: table-cell;
+  float: right;
+}
+
+.header .score {
+  position: relative;
+  display: inline;
+  top: 25px;
+  background: #bbada0;
+  padding: 5px 20px;
+  padding-top: 20px;
+  margin-left: 5px;
+  font-size: 12px;
+  line-height: 47px;
+  font-weight: bold;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+}
+
+.header .score--current:after {
+  content: "Score";
+  position: absolute;
+  width: 100%;
+  top: 5px;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  color: #eee4da;
+}
+
+.header .score--best:after {
+  content: "Best";
+  position: absolute;
+  width: 100%;
+  top: 5px;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  color: #eee4da;
+}

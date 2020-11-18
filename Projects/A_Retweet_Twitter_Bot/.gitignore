@@ -1,0 +1,3 @@
+./Procfile
+./node_modules
+./config/config.js

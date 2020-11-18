@@ -1,0 +1,26 @@
+{
+  "name": "twitter-bot",
+  "version": "1.0.0",
+  "description": "A simple bot made to retweet tweets containing certain words.",
+  "main": "bot.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "twit": "^2.2.11",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Twitter",
+    "Retweet",
+    "Bot"
+  ],
+  "author": "Joao Braganca",
+  "license": "ISC",
+  "engines": {
+    "node": "10.19.x"
+  }
+}

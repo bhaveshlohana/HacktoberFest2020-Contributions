@@ -1,0 +1,66 @@
+body{
+	background-color: #232323;
+	margin:0;
+	font-family: "montserrat","Avenir";/*one of these two depending on the machine*/
+}
+.square{
+	width: 30%;
+	background-color: purple;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	border-radius: 20%;   /*for rounded corners*/
+	transition: background 0.5s;   /*we selected to only transition background and time delay is 0.5 sec*/
+	-webkit-transition:background 0.6s;  /*these two added are for other browser engines*/
+	-moz-transition:background 0.6s     /*to be more browser friendly*/
+}
+#container{
+	margin:20px auto;/*0 on top and bottom and auro on left and right*/
+	max-width: 600px;
+
+}
+
+h1{
+	color: white;
+	text-align: center;
+	background-color: steelblue;
+	margin:0;
+	font-weight: normal;
+	text-transform: uppercase;
+	line-height: 1.1;	
+	padding:20px 0;
+}
+#stripe{
+	background-color: white;
+	text-align: center;
+	height: 30px;
+	color:black;
+}
+.selected{
+	color: white;
+	background-color: steelblue;
+}
+
+#colorDisplay{
+	font-size: 200%;
+}
+button{
+	border:none;
+	background:none;
+	text-transform: uppercase;
+	height: 100%;
+	font-weight: 700;
+	color: steelblue;
+	letter-spacing: 1px;
+	font-size: inherit;
+	transition: all 0.5s;    /*2 attributes :what all to be selected and time delay of fade in and fade out*/
+}
+#message{                    /*these changes leave space for message beforehand*/
+	display: inline-block;
+	width: 20%;
+}
+button:hover{
+	color:white;
+	background-color: steelblue;
+	outline:none;
+}

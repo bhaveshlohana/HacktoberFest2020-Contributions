@@ -1,2 +1,3 @@
-#!/usr/bin/env python3
-print("hello world!)
+#basic python program
+print("double quoted: hello world")
+print('single quoted: hello world')

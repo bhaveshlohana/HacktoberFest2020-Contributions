@@ -1,0 +1,27 @@
+    
+
+    This program is free software and was built for my sy DSA project;
+    You can redistribute it and/or modify it but not use it for your 
+    DSA project
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+      Peerzada Musadiq Showkat
+      111708002
+      S.Y IT
+      College Of Engineering Pune
+      COEP Hostel
+      ShivajiNagar, Pune - 411005
+
+        in case of queries :
+          peerzadams17.it@coep.ac.in
+
+
+
+
+Resources : https://stackoverflow.com
+            Abhijit A.M
+            Ritesh Tiku (TY COMP)
+            Manas Joshi (SY COMP) 

@@ -1,0 +1,37 @@
+#checkmark{
+    font-size:7vh;
+    color:green;
+}
+.lb1{
+    font-size:7vh;
+    color:green;
+    margin:3vh;
+}
+#close{
+    position:absolute;
+    color:white;
+    font-size:5vh;
+    margin:0;
+    right:0%;
+    top:0%;
+    cursor:pointer;
+}
+.dia{
+
+
+    visibility:visible;
+    position:fixed;
+    top:0vh;
+    left:10vw;
+    
+    text-align: center;
+    background:rgb(0,0,0,0.7);
+    border:none;
+    padding-top:50vh;
+    padding-bottom:60vh;
+    padding-left:30vw;
+    padding-right:30vw;
+    z-index:1;
+    margin:0;
+
+}

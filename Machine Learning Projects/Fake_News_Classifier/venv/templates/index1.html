@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+    <link rel="stylesheet" href="../static/dialog(fake).css">
+    <link href="https://fonts.googleappis.com/css2?family+Montserrat&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+</head>
+<body>
+
+    <dialog open class="dia1">
+        <a href="{{url_for('close')}}" target="blank"><i class="fas fa-times-circle" id="close1" ></i></a>
+        <i class="fas fa-exclamation-triangle" id="checkmark1"></i>
+        <label class="lb11">Fake News</label>
+    </dialog>
+
+
+    <div class="head_div">
+        <div class="head1">
+            <h1 class="head">News Classifier</h1>
+            <p class="p1">Authenticate News Articles</p>
+       </div>
+    </div>
+
+    <div class="back">
+        <div class="div1">
+            <div class= "imholder">
+           <!-- <img src="Untitled.png" id="imag">-->
+                <a></a>
+            </div>
+        </div>
+        </div>
+        <div class="box1">
+            <label id="lb"> Check Now</label>
+            <form action="{{url_for('predict')}}"method="post">
+          <!--  <input class='inp' placeholder="Enter Author">
+            <input class='inp' placeholder="Enter Headline">-->
+                <textarea name="text" id='inp1' placeholder="Enter News Url"></textarea>
+                <br> <button class="btn">Evaluate</button>
+            </form>
+        </div>
+    <div class="credits"><i class="far fa-copyright"></i> Created by LetsUpgrade Team</div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+print('Hello,WELCOME To Naruto Quiz')
+
+ans = input ('Are you ready to play (yes/no) :  ')
+score = 0 
+total_q = 5
+
+if ans.lower () == 'yes' :
+     ans = input ('1 . What is narutos dream ? ')
+     if ans.lower() == 'hokage' :
+         score  += 1
+         print('correct')
+     else :
+         print('incorrect')
+
+     ans = input ('2 . What is narutos favorite food ? ')
+     if ans.lower() == 'raman' :
+         score  += 1
+         print('correct')
+     else :
+         print('incorrect')
+
+
+     ans = input ('3 . What is narutos fathers name ? ')
+     if ans.lower() == 'minato' or ans.lower() == 'minato namikaze' :
+         score  += 1
+         print('correct')
+     else :
+         print('incorrect')
+
+
+     ans = input ('4 . Who taught naruto rasengan ? ')
+     if ans.lower() == 'jiraya' :
+         score  += 1
+         print('correct')
+     else :
+         print('incorrect')
+
+
+     ans = input ('5 . What is the name of the creature sealed in naruto ? ')
+     if ans.lower() == 'kurama'  or ans.lower() == 'nine tails' :
+         score  += 1
+         print('correct')
+     else :
+         print('incorrect')
+
+
+print(f'THANK YOU for playing you got {score}', "questions correct") 
+mark = (score/total_q)  * 100
+
+print("Mark:",str (mark)  +  '%')
+
+print('GOOD BYE')

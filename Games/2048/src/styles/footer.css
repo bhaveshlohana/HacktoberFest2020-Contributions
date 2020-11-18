@@ -1,0 +1,31 @@
+.footer {
+  width: 248px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer__how-to-play,
+.footer__attribution {
+  font-size: 0.6em;
+  padding-bottom: 1em;
+}
+
+.footer__how-to-play {
+  border-bottom: solid 1px #776e65;
+}
+
+.footer__emphasized-text {
+  font-weight: bolder;
+  padding-right: 0.3em;
+}
+
+.footer__emphasized-text:not(:first-child) {
+  padding-left: 0.3em;
+}
+
+.footer__link {
+  font-weight: bolder;
+  color: #776e65;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}

@@ -1,0 +1,44 @@
+contract AEQuiz =
+
+  record question =
+    { question : string,
+      correct : string,
+      incorrect : list(string) }
+    
+  record score =
+    { username : string,
+      score : int }
+
+  record state =
+    { questions : map(string, question),
+      scores : map(string, (string * int)) }
+
+  entrypoint init() = 
+    { questions = {},
+      scores = {} }
+
+  function checkQuestion(question: string) : bool =
+    Map.member(question, state.questions)
+
+  entrypoint getQuestions() =
+    state.questions
+
+  entrypoint getScores() =
+    state.scores
+
+  stateful entrypoint addScore(username : string, score : int) =
+    let newScore = (username, score)
+
+    put(state{scores[username] = newScore})
+
+  stateful entrypoint addQuestion(question' : string, correct' : string, incorrect1 : string, incorrect2 : string,  incorrect3 : string) =
+    require(!checkQuestion(question'), "Question Already Exist")
+    let newQuestion = {question = question', correct = correct', incorrect = [incorrect1, incorrect2, incorrect3]}
+
+    put(state{questions[question'] = newQuestion})
+
+  stateful entrypoint deleteQuestion(question' : string)=
+    require(checkQuestion(question'), "Question Not Found")
+    let newQuestions = Map.delete(question', state.questions)
+
+    put(state{questions = newQuestions})
