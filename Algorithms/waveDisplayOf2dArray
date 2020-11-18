@@ -1,0 +1,57 @@
+package array2d;
+
+import java.util.Scanner;
+
+public class array2d {
+	
+	static Scanner scn = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int[][] arr = takeInput();
+    
+		System.out.println("wave");
+		waveDisplay(arr);
+		display(arr);
+		
+	}
+	public static int[][] takeInput(){
+		System.out.println("rows");
+		int row = scn.nextInt();
+		System.out.println("columns");
+		int column = scn.nextInt();
+		
+		int[][] arr = new int[row][column];
+		for(int r = 0; r < arr.length; r++) {
+			for(int c = 0; c < arr[0].length; c++) {
+				System.out.println(" [ " + r + " - " + c + " ]? ");
+				arr[r][c] = scn.nextInt();
+			}
+		}
+		return arr;
+
+	}
+		public static void display(int[][] arr) {
+			for(int r = 0; r < arr.length; r++) {
+				for(int c = 0; c < arr[0].length; c++) {
+					System.out.print(arr[r][c] + " ");
+					
+				}
+				System.out.println();
+			}
+			
+		}
+		public static void waveDisplay(int[][] arr) {
+			for(int c = 0; c < arr[0].length; c++ ) {
+				if (c%2==0) {
+					for(int r = 0; r < arr.length; r++) {
+						System.out.print(arr[r][c] + " ");
+					}
+				}else {
+					for(int r = arr.length-1; r >=0; r--) {
+						System.out.print(arr[r][c] + " ");
+					}
+					
+				}
+			}
+		}
+}
