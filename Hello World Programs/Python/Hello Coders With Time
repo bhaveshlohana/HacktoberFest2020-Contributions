@@ -1,0 +1,7 @@
+import time
+
+print("Hello Coders !")
+time.sleep(2)
+print("Hope You All Are Doing Well")
+time.sleep(2)
+print("Thank You !")
