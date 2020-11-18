@@ -1,0 +1,7 @@
+class hacktober
+{
+    Void fest()
+    {
+        System.out.println("Hello and welcome to the world of Hackathon");
+    }
+}
