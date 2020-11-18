@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <div class="grid-container">
+          <div class="screen">
+              <div class="previousInput" id="previous"></div>
+              <div class="input" id="now"></div>
+          </div>
+          <div class="grid-itemAC" onclick="allClear()" ontouchstart="touchs(this)" ontouchend="touche(this)">AC</div>
+          <div class="grid-item" onclick="deleteNumber()" ontouchstart="touchs(this)" ontouchend="touche(this)">DEL</div>
+          <div class="grid-item" onclick = "operation(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">÷</div>
+          <div class="grid-item" onclick="numberDisplay(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">7</div>
+          <div class="grid-item" onclick="numberDisplay(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">8</div>
+          <div class="grid-item" onclick="numberDisplay(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">9</div>
+          <div class="grid-item" onclick="operation(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">×</div>
+          <div class="grid-item" onclick="numberDisplay(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">4</div>
+          <div class="grid-item" onclick="numberDisplay(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">5</div>
+          <div class="grid-item" onclick="numberDisplay(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">6</div>
+          <div class="grid-item" onclick = "operation(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">-</div>
+          <div class="grid-item" onclick="numberDisplay(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">1</div>
+          <div class="grid-item" onclick="numberDisplay(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">2</div>
+          <div class="grid-item" onclick="numberDisplay(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">3</div>
+          <div class="grid-item" onclick = "operation(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">+</div>
+          <div class="grid-item" onclick="numberDisplay(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">0</div>
+          <div class="grid-item" onclick="numberDisplay(this)" ontouchstart="touchs(this)" ontouchend="touche(this)">.</div>
+          <div class="grid-itemEQ" onclick="result()" ontouchstart="touchs(this)" ontouchend="touche(this)">=</div>
+        </div>
+        <script>
+            
+            let computedValue
+            var griditem = document.getElementById("grid-itemAC")
+            function touchs(el) {
+                el.style.background = "#00ABFF"
+            }
+            function touche(el) {
+                el.style.background= "#00CCFF"
+            }
+            
+            class Calculator{
+                constructor(previousInput, input) {
+                    this.previousInput = previousInput
+                    this.input = input
+                    this.clear()
+                }
+                
+                clear() {
+                    this.previousInput = ""
+                    this.input = ""
+                    this.operator = undefined
+                }
+                
+                delete() {
+                   this.input = this.input.toString().slice(0, -1)
+                }
+                
+                display(numberValue) {
+                    if(numberValue == "." && this.input.includes(".")) {
+                        return
+                    }
+                    this.input = this.input.toString() + numberValue.toString()
+                }
+                
+                operate(operator) {
+                    if(this.input == ""){
+                        return
+                    }
+                    if(this.previousInput != ""){
+                        this.compute()
+                    }
+                    this.operator = operator
+                    this.previousInput = this.input
+                    this.input = ""
+                }
+                
+                compute() {
+                    
+                    const previous = parseFloat(this.previousInput)
+                    const now = parseFloat(this.input)
+                    
+                    if(isNaN(this.previousInput) || isNaN(this.input)) {
+                        return
+                    }
+                    
+                    if(this.operator == "+") {
+                        computedValue = previous + now
+                    }
+                    else if(this.operator == "-") {
+                        computedValue = previous - now
+                    }
+                    else if(this.operator == "×") {
+                        computedValue = previous * now
+                    }
+                    else if(this.operator == "÷") {
+                        computedValue = previous / now
+                    }
+                    else{
+                        return
+                    }
+                    this.input = computedValue
+                    this.previousInput = ""
+                    this.operator = undefined
+                }
+                
+                updateDisplay() {
+                    inputValue.innerText = this.input
+                    previousInputValue.innerText = this.previousInput
+                    if(this.operator) {
+                        previousInputValue.innerText = this.previousInput + this.operator.toString()
+                    }
+                }
+            }
+            
+            const previousInputValue = document.getElementById("previous")
+            const inputValue = document.getElementById("now")
+            const calculator = new Calculator(previousInputValue, inputValue)
+            
+            function numberDisplay(number) {
+                if(computedValue != undefined){
+                    computedValue = undefined 
+                    calculator.clear()
+                    calculator.updateDisplay()
+                }
+                calculator.display(number.innerText)
+                calculator.updateDisplay()
+            }
+            
+            function operation(operatorValue) {
+                calculator.operate(operatorValue.innerText)
+                calculator.updateDisplay()
+            }
+            
+            function deleteNumber() {
+                calculator.delete()
+                calculator.updateDisplay()
+            }
+            
+            function allClear() {
+                calculator.clear();
+                calculator.updateDisplay()
+            }
+            
+            function result() {
+                calculator.compute()
+                calculator.updateDisplay()
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
