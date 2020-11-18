@@ -1,0 +1,40 @@
+import random
+import statistics
+
+#We assume that there is a referential with coordinates being the origin the center of the circle and the limits the bounds of the square
+#Note: For this resolution I divided the square in 4 parts, since the probability is the same and the calcules are also the same
+#Note: The points are represented through lists, for example: O[0, 0]
+
+#--------------------Global variables--------------------
+needles_in_circle = 0
+needles_in_square = 0
+no_needles  = 1000  #Initial number of needles
+pi_val = []     #Empty list for pi estimatives
+avg = []        #Empty list for averages
+variance = 1    #Random number value just to enter the while loop
+
+
+def average(lst):
+    """
+    This function takes a list and returns the average of the elements of the list
+    """
+    return sum(lst) / len(lst)
+
+
+while (variance >= 0.005):
+    pi_val.clear()
+    avg.clear()
+    for estimate in range(100):
+        for no_need in range(no_needles):
+            p = [random.random(), random.random()]      #Point with random coordinates between 0 and 1
+            if (p[0] ** 2 + p[1] ** 2) <= 1:        #TODO: Could improve the notation, instead of lists use just values
+                needles_in_circle += 1
+            needles_in_square += 1
+        est = (4 * (needles_in_circle)) / needles_in_square
+        pi_val += [est]    
+    avg = avg + [average(pi_val)]     #Calculates the average of the 100 tries and adds it to the averages array  
+    variance = statistics.stdev(pi_val)
+    no_needles = no_needles * 2         #Doubles the number of needles each time the variance is superior to 0.005
+
+
+print(average(avg))
