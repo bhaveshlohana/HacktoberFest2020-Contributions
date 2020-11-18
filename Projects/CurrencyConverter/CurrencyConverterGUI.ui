@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>347</width>
+    <height>220</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Currency Converter</string>
+  </property>
+  <widget class="QLineEdit" name="le_from_currency">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cb_from_currency">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>20</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>60</y>
+     <width>71</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>TO</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cb_to_currency">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>100</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_converted_currency">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>180</y>
+     <width>321</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Converted Result</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_convert_currency">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>140</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Convert</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>le_from_currency</tabstop>
+  <tabstop>cb_from_currency</tabstop>
+  <tabstop>cb_to_currency</tabstop>
+  <tabstop>pb_convert_currency</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
