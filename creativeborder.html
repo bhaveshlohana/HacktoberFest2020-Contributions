@@ -1,0 +1,33 @@
+<div class='example'>
+    <div class='content'>
+        <p><span class='accent'>L</span>orem ipsum dolor sit amet consectetur adipisicing elit. Tempora id magnam maiores quod repellat vitae provident. Sequi id dolorem recusandae quos quo dolorum nihil culpa libero beatae debitis explicabo suscipit fugit hic itaque temporibus, expedita rerum error obcaecati repudiandae dicta quas omnis repellendus harum quis. Quaerat eius culpa doloribus nulla aliquam ducimus, quod error quos!</p>
+        <p>Consectetur minima alias maxime obcaecati est mollitia dolore tempore quas corrupti enim delectus in provident ea architecto corporis magni possimus saepe similique ab, voluptate maiores quia accusantium beatae velit! Eos facere asperiores quisquam doloribus optio minima itaque voluptatibus adipisci excepturi perferendis error, libero ipsam suscipit, neque iure quidem, laudantium porro vero deleniti quod officia dicta! Architecto id fugit laboriosam nobis nemo cupiditate dolor.</p>
+    </div>
+    <svg class='background' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'>
+        <g filter='url(#separated-border)'>
+            <rect width='100%' height='100%' mask='url(#background-mask)' fill='#fff' />
+        </g>
+    </svg>
+</div>
+
+
+<svg class='global-svg' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'>
+    <defs>
+        <mask id='background-mask'>
+            <rect width='100%' height='100%' fill='#000' />
+            <path d='m26.7 0.702c13.6 0.192 27.2 3.79 40.7 2.26 5.01-0.564 10-1.83 15-1.05 2.62 0.41 5.16 1.39 7.32 2.93 2.16 1.54 3.93 3.64 5.01 6.06 1.15 2.6 1.48 5.52 1.28 8.36-0.208 2.84-0.937 5.62-1.83 8.32-1.78 5.41-4.26 10.7-4.7 16.4-0.413 5.34 1.01 10.6 2.62 15.7 1.61 5.1 3.45 10.2 3.89 15.5 0.319 3.82-0.103 7.75-1.62 11.3-1.52 3.52-4.19 6.6-7.66 8.24-3.45 1.64-7.44 1.77-11.2 1.35s-7.53-1.35-11.3-1.73c-8.01-0.804-16 0.844-24 2.19-7.94 1.35-16.2 2.4-24 0.441-3.72-0.935-7.33-2.58-10.2-5.18s-4.83-6.2-5.07-10c-0.184-3.01 0.703-5.99 1.87-8.77 1.17-2.78 2.62-5.44 3.66-8.27 2.07-5.62 2.44-11.8 1.77-17.7-0.67-5.95-2.35-11.7-4.31-17.4-0.843-2.44-1.74-4.87-2.3-7.39-0.559-2.52-0.77-5.16-0.231-7.68 0.545-2.55 1.85-4.91 3.61-6.84 1.76-1.93 3.96-3.42 6.33-4.5 4.75-2.15 10.1-2.61 15.3-2.54z' fill='#fff' />
+        </mask>
+
+        <filter id='separated-border'>
+            <feFlood flood-color='#86cb92' result='borderColor' />
+            <feComposite in='borderColor' in2='SourceAlpha' operator='in' result='borderShape' />
+            <feMorphology in='borderShape' operator='erode' radius='0.8' result='borderShapeIn' />
+            <feMorphology in='borderShape' operator='erode' radius='1' result='borderShapeOut' />
+            <feComposite in='borderShapeIn' in2='borderShapeOut' operator='out' result='borderStroke' />
+            <feMerge>
+                <feMergeNode in='SourceGraphic' />
+                <feMergeNode in='borderStroke' />
+            </feMerge>
+        </filter>
+    </defs>
+</svg>
