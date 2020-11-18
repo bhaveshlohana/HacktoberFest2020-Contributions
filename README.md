@@ -1,6 +1,8 @@
 ## Disclaimer:
 ![image](https://user-images.githubusercontent.com/53433312/95980882-6ed14580-0e3b-11eb-80f8-8bdd1717205b.png)
 
+Hacktoberfest is a month-long celebration of open source software run by DigitalOcean in partnership with GitHub and Twilio. Hacktoberfest is open to everyone in our global community!
+
 #### Edit 2: You contribution would be counted towards Hacktoberfest if it has been approved or merged or has a "hacktoberfest-accepted" label. It is not mandatory to have all 3 on a particular PR.
 ![image](https://user-images.githubusercontent.com/53433312/95441866-49929200-0978-11eb-9fcb-adf3c935adba.png)
 #### Edit 1: Don't add something if its already there in the same programming language. Try to add quality content. I won't merge, if you are spamming with PRs.
