@@ -1,0 +1,123 @@
+html,
+body,
+section,
+div,
+h1 {
+    scroll-behavior: smooth;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#particles-js {
+    background-color: #000000;
+    position: fixed;
+    left: 0;
+    opacity: 100%;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    color: white;
+}
+
+header {
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    color: #fff;
+    font-size: 18px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2px;
+    z-index: 99;
+    transition: background-color 0.5s ease-out;
+}
+
+
+
+header ul a {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    visibility: hidden;
+    transition: background-color 0.5s ease-out;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+}
+
+section {
+    font-family: 'Josefin Sans', sans-serif;
+    height: 100%;
+    position: relative;
+    transition: background-color 0.5s ease-out;
+}
+
+.home {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    padding: 0;
+    margin-top: 200px;
+    margin-bottom: 170px;
+    text-align: center;
+    justify-content: center;
+    transition: background-color 0.5s ease-out;
+}
+
+.home h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-shadow: 0 15px 20px #808080;
+    visibility: hidden;
+}
+
+.home h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 10px 0 50px;
+    display: inline-block;
+    letter-spacing: 2;
+    visibility: hidden;
+}
+
+.section-title {
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 60px;
+    text-align: center;
+    color: #fff;
+}
+
+.section-title h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    display: inline-block;
+    font-size: 26px;
+    border-bottom: 1px solid;
+    text-transform: uppercase;
+    padding: 0 0 10px;
+}
+
+.section-info {
+    font-family: 'Josefin Sans', sans-serif;
+    width: 60%;
+    margin: 0 auto;
+    padding: 50px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.section-info p {
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+.mynav {
+  background-color: #a9a9a9;
+}

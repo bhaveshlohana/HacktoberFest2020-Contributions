@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <title>guess the name of the track</title>
+
+</head>
+
+<body style="background-color: #4285f4;">
+  <header>
+    <!-- Just an image -->
+    <nav class="navbar navbar-dark primary-color">
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/38/3492427038_35c61d6c-c26a-4045-9639-65b6cb0bf069.png?cb=1596993651"
+          width="120px" alt="mdb logo">
+      </a>
+    </nav>
+  </header>
+  <main>
+    <div class="container my-4">
+
+
+
+      <!--Grid row-->
+      <div class="text-center">
+
+        <!--Grid column-->
+
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div >
+
+          <h2 class="my-5 h2" id="second-music">guess the name of the  track</h2>
+          <audio id="audio" src="{{preview_url}}"   controls></audio>
+          <!-- Default form subscription -->
+
+
+
+
+          <!-- title -->
+
+          <!-- artist -->
+          <form method="POST" action="/spotify/data">
+            {% csrf_token %}
+            <select name="anwser" class="mdb-select md-form">
+              <option value="" disabled selected>Choose your option</option>
+              {% for choice in choices %}
+
+              <option value="{{choice}}">{{choice}}</option>
+              {% endfor %}
+
+            </select>
+
+            <!-- submit button -->
+            <button class="btn btn-info btn-block" type="submit" name="submit" value="submit-one"
+              onclick="check()">submit</button>
+
+          </form>
+
+          <!-- Default form subscription -->
+
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </div>
+  </main>
+
+
+
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+  </script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js">
+  </script>
+   <script>
+    function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+  var start=getRndInteger(0,15);
+  var end=start+10;
+
+   myAudio=document.getElementById('audio');
+  myAudio.addEventListener('canplaythrough', function() {
+    if(this.currentTime < start){
+      this.currentTime =start;
+    }
+    
+
+    this.play();
+  });
+  myAudio.addEventListener('timeupdate', function() {
+    if(this.currentTime > end){
+      this.currentTime =start;
+    }
+  });
+  
+  </script> 
+
+</body>
+
+</html>

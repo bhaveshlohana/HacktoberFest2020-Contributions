@@ -1,0 +1,100 @@
+body {
+  background: #faf8ef;
+  color: #776e65;
+}
+
+.App {
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+  font-size: 18px;
+  width: 268px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: block;
+  width: 248px;
+  height: 234px;
+  background-color: #776e65;
+  border: 10px #776e65 solid;
+  border-radius: 5px;
+}
+
+.row {
+  display: block;
+  width: 248px;
+  height: 50px;
+  margin-bottom: 10px;
+  margin-left: 3px;
+}
+
+.cell {
+  display: block;
+  width: 56px;
+  height: 50px;
+  margin-right: 6px;
+  float: left;
+  background: rgba(238, 228, 218, 0.35);
+  border-radius: 2px;
+}
+
+.cell--2 {
+  background-color: #eee4da;
+}
+
+.cell--4 {
+  background-color: #ede0c8;
+}
+
+.cell--8 {
+  color: #f9f6f2;
+  background-color: #f2b179;
+}
+
+.cell--16 {
+  color: #f9f6f2;
+  background-color: #f59563;
+}
+
+.cell--32 {
+  color: #f9f6f2;
+  background-color: #f67c5f;
+}
+
+.cell--64 {
+  color: #f9f6f2;
+  background-color: #f65e3b;
+}
+
+.cell--128 {
+  color: #f9f6f2;
+  background-color: #edcf72;
+}
+
+.cell--256 {
+  color: #f9f6f2;
+  background-color: #edcc61;
+}
+
+.cell--512 {
+  color: #f9f6f2;
+  background-color: #edc850;
+}
+
+.cell--1024 {
+  color: #f9f6f2;
+  background-color: #edc53f;
+}
+
+.cell--2048 {
+  color: #f9f6f2;
+  background-color: #edc22e;
+}
+
+.cell__label {
+  display: block;
+  position: relative;
+  top: 90%;
+  margin-top: -50%;
+}

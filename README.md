@@ -1,15 +1,24 @@
+## Disclaimer:
+![image](https://user-images.githubusercontent.com/53433312/95980882-6ed14580-0e3b-11eb-80f8-8bdd1717205b.png)
+
+#### Edit 2: You contribution would be counted towards Hacktoberfest if it has been approved or merged or has a "hacktoberfest-accepted" label. It is not mandatory to have all 3 on a particular PR.
+![image](https://user-images.githubusercontent.com/53433312/95441866-49929200-0978-11eb-9fcb-adf3c935adba.png)
+#### Edit 1: Don't add something if its already there in the same programming language. Try to add quality content. I won't merge, if you are spamming with PRs.
+
+
+
+
+  
+  
 # Overview
 The goal of this project is to help the beginners with their contributions in Open Source. We aim to achieve this collaboratively, so feel free to contribute in any way you want, just make sure to follow the contribution guidelines. You can contribute to it in either of the following ways:
 
-- Beginners
-	- A "Hello World" program in your favorite language
-- Intermediate
-	- Add any one of your favorite algorithm in your favorite language, from simple to complex!
-- Expert
-	-Add any graphical game in your favorite programming language!
 
-
-
+- Beginner/Intermediate:
+	- Add a project you have worked on, **if and only if it's not already present in the repository.**
+- Expert:
+	- Add a graphical game in your favorite programming language, **if and only if it's not already present in the repository.**
+	- Add a ML project you have worked on.
 
 # HacktoberFest-2020
 
@@ -47,7 +56,7 @@ Contributing to open-source is easy.
 - Improve current program by
   - improving functionality
   - adding new feature
-  - improving to documentation
+  - improving the documentation
 - Push your work and Create a Pull Request
 
 [Click here for detailed explanation](/Contribute.md)
@@ -65,7 +74,7 @@ You can contribute to any open source project hosted on Github.com and contribut
 ---
 ## References
 
-- [HactoberFest-2020](https://hacktoberfest.digitalocean.com/)
+- [Hacktoberfest presented by DigitalOcean](https://hacktoberfest.digitalocean.com/)
 - [A participation guide for Hacktoberfest](https://dev.to/zenika/a-participation-guide-for-hacktoberfest-19c1)
 - [What is Hacktoberfest and How can a beginner contribute?](https://medium.com/@bawantharathnayaka/what-is-hacktoberfest-and-how-can-a-beginner-contribute-39cf2081804e)
 - [Hacktoberfest 2019: How you can get your free shirt — even if you’re new to coding](https://www.freecodecamp.org/news/hacktoberfest-2018-how-you-can-get-your-free-shirt-even-if-youre-new-to-coding-96080dd0b01b/)

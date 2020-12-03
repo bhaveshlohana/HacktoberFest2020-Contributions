@@ -1,0 +1,337 @@
+Name,Population,Type
+Alabama,4888000,Province/State
+Alaska,737438,Province/State
+Alberta,4371000,Province/State
+Anhui,62000000,Province/State
+Arizona,7172000,Province/State
+Arkansas,301400,Province/State
+Aruba,105264,Province/State
+Australian Capital Territory,418440,Province/State
+Beijing,21540000,Province/State
+British Columbia,5071000,Province/State
+California,39560000,Province/State
+Cayman Islands,61559,Province/State
+Channel Islands,173414,Province/State
+Chongqing,30480000,Province/State
+Colorado,5696000,Province/State
+Connecticut,3573000,Province/State
+Curacao,161014,Province/State
+Delaware,967171,Province/State
+Denmark,5603000,Province/State
+Diamond Princess,3770,Province/State
+District of Columbia,633427,Province/State
+Faroe Islands,49290,Province/State
+Florida,21300000,Province/State
+France,66990000,Province/State
+French Guiana,290691,Province/State
+French Polynesia,283007,Province/State
+From Diamond Princess,3770,Province/State
+Fujian,38560000,Province/State
+Gansu,25580000,Province/State
+Georgia,10520000,Province/State
+Gibraltar,34571,Province/State
+Grand Princess,4200,Province/State
+Guadeloupe,395700,Province/State
+Guam,164229,Province/State
+Guangdong,113460000,Province/State
+Guangxi,48380000,Province/State
+Guizhou,34750000,Province/State
+Hainan,9258000,Province/State
+Hawaii,1420000,Province/State
+Hebei,74700000,Province/State
+Heilongjiang,38310000,Province/State
+Henan,94000000,Province/State
+Hong Kong,7392000,Province/State
+Hubei,58500000,Province/State
+Hunan,67370000,Province/State
+Idaho,1754000,Province/State
+Illinois,12740000,Province/State
+Indiana,6692000,Province/State
+Inner Mongolia,24710000,Province/State
+Iowa,3156000,Province/State
+Jiangsu,80400000,Province/State
+Jiangxi,45200000,Province/State
+Jilin,27460000,Province/State
+Kansas,2912000,Province/State
+Kentucky,4468000,Province/State
+Liaoning,43900000,Province/State
+Louisiana,4660000,Province/State
+Macau,622567,Province/State
+Maine,1338000,Province/State
+Manitoba,1369000,Province/State
+Maryland,6043000,Province/State
+Massachusetts,6902000,Province/State
+Mayotte,270372,Province/State
+Michigan,9996000,Province/State
+Minnesota,5611000,Province/State
+Mississippi,2987000,Province/State
+Missouri,6126000,Province/State
+Montana,1062000,Province/State
+Montserrat,5900,Province/State
+Nebraska,1929000,Province/State
+Netherlands,17180000,Province/State
+Nevada,3034000,Province/State
+New Brunswick,776827,Province/State
+New Hampshire,1356000,Province/State
+New Jersey,8909000,Province/State
+New Mexico,2095000,Province/State
+New South Wales,7544000,Province/State
+New York,8623000,Province/State
+Newfoundland and Labrador,521542,Province/State
+Ningxia,6301000,Province/State
+North Carolina,10380000,Province/State
+North Dakota,760077,Province/State
+Northern Territory,244300,Province/State
+Nova Scotia,971395,Province/State
+Ohio,11690000,Province/State
+Oklahoma,3943000,Province/State
+Ontario,14570000,Province/State
+Oregon,4191000,Province/State
+Pennsylvania,12810000,Province/State
+Prince Edward Island,156947,Province/State
+Puerto Rico,3195000,Province/State
+Qinghai,5627000,Province/State
+Quebec,8485000,Province/State
+Queensland,5071000,Province/State
+Reunion,859959,Province/State
+Rhode Island,1057000,Province/State
+Saint Barthelemy,9131,Province/State
+Saskatchewan,1174000,Province/State
+Shaanxi,37330000,Province/State
+Shandong,90000000,Province/State
+Shanghai,24240000,Province/State
+Shanxi,36500000,Province/State
+Sichuan,81100000,Province/State
+South Australia,1677000,Province/State
+South Carolina,5084000,Province/State
+South Dakota,882235,Province/State
+St Martin,32125,Province/State
+Tasmania,515000,Province/State
+Tennessee,6770000,Province/State
+Texas,28700000,Province/State
+Tianjin,15000000,Province/State
+Tibet,3180000,Province/State
+United Kingdom,66440000,Province/State
+United States Virgin Islands,107268,Province/State
+US,,Province/State
+Utah,3161000,Province/State
+Vermont,626299,Province/State
+Victoria,6359000,Province/State
+Virgin Islands,107268,Province/State
+Virginia,8518000,Province/State
+Washington,7536000,Province/State
+West Virginia,1806000,Province/State
+Western Australia,2589000,Province/State
+Wisconsin,5814000,Province/State
+Wyoming,577737,Province/State
+Xinjiang,21810000,Province/State
+Yunnan,45970000,Province/State
+Zhejiang,57370000,Province/State
+Afghanistan,38928346,Country/Region
+Albania,2877797,Country/Region
+Algeria,43851044,Country/Region
+Andorra,77265,Country/Region
+Antigua and Barbuda,97929,Country/Region
+Argentina,45195774,Country/Region
+Armenia,2963243,Country/Region
+Aruba,106766,Country/Region
+Australia,25499884,Country/Region
+Austria,9006398,Country/Region
+Azerbaijan,10139177,Country/Region
+Bahrain,1701575,Country/Region
+Bangladesh,164689383,Country/Region
+Barbados,287375,Country/Region
+Belarus,9449323,Country/Region
+Belgium,11589623,Country/Region
+Benin,12123200,Country/Region
+Bhutan,771608,Country/Region
+Bolivia,11673021,Country/Region
+Bosnia and Herzegovina,3280819,Country/Region
+Brazil,212559417,Country/Region
+Brunei,437479,Country/Region
+Bulgaria,6948445,Country/Region
+Burkina Faso,20903273,Country/Region
+Cambodia,16718965,Country/Region
+Cameroon,26545863,Country/Region
+Canada,37742154,Country/Region
+Central African Republic,37742154,Country/Region
+Chile,19116201,Country/Region
+ChinaHong Kong,7496981,Country/Region
+China,1439323776,Country/Region
+Colombia,50882891,Country/Region
+Congo (Brazzaville),5518087,Country/Region
+Congo (Kinshasa),89561403,Country/Region
+Costa Rica,5094118,Country/Region
+Cote d'Ivoire,26378274,Country/Region
+Croatia,4105267,Country/Region
+Cruise Ship,3500,Country/Region
+Cuba,11326616,Country/Region
+Cyprus,1207359,Country/Region
+Czechia,10708981,Country/Region
+Denmark,5792202,Country/Region
+Djibouti,988000,Country/Region
+Dominican Republic,10847910,Country/Region
+Ecuador,17643054,Country/Region
+Egypt,102334404,Country/Region
+Equatorial Guinea,1402985,Country/Region
+Estonia,1326535,Country/Region
+Eswatini,1160164,Country/Region
+Ethiopia,114963588,Country/Region
+Finland,5540720,Country/Region
+France,65273511,Country/Region
+French Guiana,298682,Country/Region
+Gabon,2225734,Country/Region
+"Gambia, The",2416668,Country/Region
+Georgia,3989167,Country/Region
+Germany,83783942,Country/Region
+Ghana,31072940,Country/Region
+Greece,10423054,Country/Region
+Greenland,56770,Country/Region
+Guadeloupe,400124,Country/Region
+Guam,168775,Country/Region
+Guatemala,17915568,Country/Region
+Guernsey,70000,Country/Region
+Guinea,13132795,Country/Region
+Guyana,786552,Country/Region
+Holy See,801,Country/Region
+Honduras,9904607,Country/Region
+Hungary,9660351,Country/Region
+Iceland,341243,Country/Region
+India,1380004385,Country/Region
+Indonesia,273523615,Country/Region
+Iran,83992949,Country/Region
+Iraq,40222493,Country/Region
+Ireland,4937786,Country/Region
+Israel,8655535,Country/Region
+Italy,60461826,Country/Region
+Jamaica,2961167,Country/Region
+Japan,126476461,Country/Region
+Jersey,106800,Country/Region
+Jordan,10203134,Country/Region
+Kazakhstan,18776707,Country/Region
+Kenya,53771296,Country/Region
+"Korea, South",51269185,Country/Region
+Kosovo,1810463,Country/Region
+Kuwait,4270571,Country/Region
+Kyrgyzstan,6524195,Country/Region
+Latvia,1886198,Country/Region
+Lebanon,6825445,Country/Region
+Liberia,5057681,Country/Region
+Liechtenstein,38128,Country/Region
+Lithuania,2722289,Country/Region
+Luxembourg,625978,Country/Region
+Malaysia,32365999,Country/Region
+Maldives,540544,Country/Region
+Malta,441543,Country/Region
+Martinique,375265,Country/Region
+Mauritania,4649658,Country/Region
+Mauritius,1271768,Country/Region
+Mayotte,272815,Country/Region
+Mexico,128932753,Country/Region
+Moldova,4033963,Country/Region
+Monaco,39242,Country/Region
+Mongolia,3278290,Country/Region
+Montenegro,628066,Country/Region
+Morocco,36910560,Country/Region
+Namibia,2540905,Country/Region
+Nepal,29136808,Country/Region
+Netherlands,17134872,Country/Region
+New Zealand,4822233,Country/Region
+Nigeria,206139589,Country/Region
+North Macedonia,2083374,Country/Region
+Norway,5421241,Country/Region
+Oman,5106626,Country/Region
+Pakistan,220892340,Country/Region
+Panama,4314767,Country/Region
+Paraguay,7132538,Country/Region
+Peru,32971854,Country/Region
+Philippines,109581078,Country/Region
+Poland,37846611,Country/Region
+Portugal,10196709,Country/Region
+Puerto Rico,2860853,Country/Region
+Qatar,2881053,Country/Region
+Republic of the Congo,5518087,Country/Region
+Reunion,895312,Country/Region
+Romania,19237691,Country/Region
+Russia,145934462,Country/Region
+Rwanda,12952218,Country/Region
+Saint Lucia,183627,Country/Region
+Saint Vincent and the Grenadines,115000,Country/Region
+San Marino,33931,Country/Region
+Saudi Arabia,34813871,Country/Region
+Senegal,16743927,Country/Region
+Serbia,8737371,Country/Region
+Seychelles,98347,Country/Region
+Singapore,5850342,Country/Region
+Slovakia,5459642,Country/Region
+Slovenia,2078938,Country/Region
+Somalia,15893222,Country/Region
+South Africa,59308690,Country/Region
+Spain,46754778,Country/Region
+Sri Lanka,21413249,Country/Region
+Sudan,43849260,Country/Region
+Suriname,586632,Country/Region
+Sweden,10099265,Country/Region
+Switzerland,8654622,Country/Region
+Taiwan*,23816775,Country/Region
+Tanzania,59734218,Country/Region
+Thailand,69799978,Country/Region
+The Bahamas,393244,Country/Region
+The Gambia,2416668,Country/Region
+Togo,8278724,Country/Region
+Trinidad and Tobago,1399488,Country/Region
+Tunisia,11818619,Country/Region
+Turkey,84339067,Country/Region
+US,331002651,Country/Region
+Ukraine,43733762,Country/Region
+United Arab Emirates,9890402,Country/Region
+United Kingdom,67886011,Country/Region
+Uruguay,3473730,Country/Region
+Uzbekistan,33469203,Country/Region
+Venezuela,28435940,Country/Region
+Vietnam,97338579,Country/Region
+Zambia,18383955,Country/Region
+Bermuda,65441,Province/State
+Greenland,56171,Province/State
+Isle of Man,84287,Province/State
+Martinique,375554,Province/State
+New Caledonia,271407,Province/State
+Sint Maarten,41109,Province/State
+Angola,32866272,Country/Region
+Bahamas,385340,Country/Region
+Belize,374681,Country/Region
+Cabo Verde,546388,Country/Region
+Chad,14900000,Country/Region
+Diamond Princess,3770,Country/Region
+Dominica,73925,Country/Region
+El Salvador,6378000,Country/Region
+Eritrea,4475000,Country/Region
+Fiji,905502,Country/Region
+Gambia,2416668,Country/Region
+Grenada,107825,Country/Region
+Guinea-Bissau,1861000,Country/Region
+Haiti,10980000,Country/Region
+Laos,6858000,Country/Region
+Libya,6375000,Country/Region
+Madagascar,25570000,Country/Region
+Mali,18540000,Country/Region
+Mozambique,29670000,Country/Region
+Nicaragua,6218000,Country/Region
+Niger,21480000,Country/Region
+Papua New Guinea,8251000,Country/Region
+Saint Kitts and Nevis,55345,Country/Region
+Syria,18270000,Country/Region
+Timor-Leste,1296000,Country/Region
+Uganda,42860000,Country/Region
+Zimbabwe,16530000,Country/Region
+Anguilla,15094,Province/State
+British Virgin Islands,31196,Province/State
+Northwest Territories,44826,Province/State
+Turks and Caicos Islands,35446,Province/State
+Yukon,40854,Province/State
+Botswana,2292000,Country/Region
+Burma,53370000,Country/Region
+Burundi,10860000,Country/Region
+MS Zaandam,2047,Country/Region
+Sierra Leone,7557000,Country/Region
+West Bank and Gaza,4685000,Country/Region

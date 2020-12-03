@@ -1,0 +1,49 @@
+.game-overlay {
+  position: absolute;
+  display: none;
+  width: 268px;
+  height: 255px;
+  z-index: 100;
+  background: rgba(238, 228, 218, 0.5);
+}
+
+.game-overlay.active {
+  display: block;
+}
+
+.game-overlay--won {
+  background: rgba(237, 194, 46, 0.5);
+  color: #f9f6f2;
+}
+
+.game-overlay__message {
+  margin-top: 75px;
+}
+
+.game-overlay__keep-going {
+  margin-right: 9px;
+}
+
+.game-overlay__keep-going,
+.game-overlay__try-again {
+  background: #8f7a66;
+  border-radius: 3px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #f9f6f2;
+  height: 40px;
+  font-size: 12px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.game-overlay__keep-going:focus,
+.game-overlay__keep-going:active,
+.game-overlay__keep-going,
+.game-overlay__try-again:focus,
+.game-overlay__try-again:active,
+.game-overlay__try-again {
+  border: none;
+  border-style: none;
+  outline: none;
+}

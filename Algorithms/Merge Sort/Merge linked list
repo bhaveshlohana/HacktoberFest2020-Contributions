@@ -1,0 +1,130 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node
+{
+  int data;
+  struct node *next;
+}*head1, *head2, *l1, *l2;
+
+void createlist1(int n);
+void createlist2(int m);
+void merge();
+void bubble_sort(struct node *head);
+void my_swap (struct node *node_1, struct node *node_2);
+int main()
+{
+  int n;
+  printf("Enter the number of nodes for first list\n");
+  scanf("%d",&n);
+  createlist1(n);
+  printf("Enter the number of nodes for second list\n");
+  scanf("%d",&n);
+  createlist2(n);
+  merge();
+  return 0;
+}
+ 
+void createlist1(int n)
+{
+  struct node *new;
+  l1=(struct node*)malloc(sizeof(struct node));
+  if(l1==NULL)
+    printf("MEMORY NOT ALLOCATED\n");
+  else
+  {
+    printf("Enter the data for 1st node: ");
+    scanf("%d",&l1->data);
+    l1->next=NULL;
+    head1=l1;
+    for(int i=0;i<n-1;i++)
+    {
+     new=(struct node*)malloc(sizeof(struct node)); 
+     if(new==NULL)
+       printf("MEMORY NOT ALLOCATED\n");
+     else
+     {
+       printf("Enter the data: ");
+       scanf("%d",&new->data);
+       l1->next=new;
+       l1=l1->next;
+     }
+    }
+  }
+}
+
+void createlist2(int m)
+{
+  struct node *new;
+  l2=(struct node*)malloc(sizeof(struct node));
+  if(l2==NULL)
+    printf("MEMORY NOT ALLOCATED\n");
+  else
+  {
+    printf("Enter the data for 1st node: ");
+    scanf("%d",&l2->data);
+    l2->next=NULL;
+    head2=l2;
+    for(int i=0;i<m-1;i++)
+    {
+     new=(struct node*)malloc(sizeof(struct node)); 
+     if(new==NULL)
+       printf("MEMORY NOT ALLOCATED\n");
+     else
+     {
+       printf("Enter the data: ");
+       scanf("%d",&new->data);
+       l2->next=new;
+       l2=l2->next;
+     }
+    }
+  }
+}
+void merge()
+{
+  struct node *ptr, *tmp;
+  ptr=head1;
+  while(ptr->next!=NULL)
+   ptr=ptr->next;
+  ptr->next= head2;
+  tmp=head1;
+  printf("The merged list:\n");
+  bubble_sort(head1);
+  while(tmp!=NULL)
+  {
+    printf("%d\n",tmp->data);
+    tmp=tmp->next;
+  }
+}
+void my_swap (struct node *node_1, struct node *node_2)
+{
+	int temp = node_1->data;
+	node_1->data = node_2 -> data;
+	node_2 -> data = temp;
+}
+
+void bubble_sort(struct node *head)
+{
+	int swapped;
+
+	struct node *lPtr; // left pointer will always point to the start of the list
+	struct node *rPrt = NULL; // right pointer will always point to the end of the list
+	do
+	{	
+		swapped = 0;
+		lPtr = head1;
+		while(lPtr->next != rPrt)
+		{
+			if (lPtr->data > lPtr->next->data) 
+			{
+				my_swap(lPtr, lPtr->next); 
+                swapped = 1; 
+			}
+			lPtr = lPtr->next;
+		}
+		//as the largest element is at the end of the list, assign that to rPtr as there is no need to
+		//check already sorted list
+		rPrt = lPtr;
+
+	}while(swapped);
+}

@@ -1,0 +1,5 @@
+First Run the get_pip file to make sure that you have pip installed on your machine.
+
+Then install the dependencies by running the "install_requirements.py" script
+
+Then run the "path_finding.py" and enjoy the visualization.   
