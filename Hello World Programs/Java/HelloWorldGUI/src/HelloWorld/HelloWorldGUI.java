@@ -28,8 +28,7 @@ public class HelloWorldGUI{
 
         final JFrame jf = new JFrame("Hello World");
 
-        final JLabel label = new JLabel("Hello World");
-        label.setIcon(this.resizeIcon("src/globe.png", 100, 100));
+        final JLabel label = new JLabel("Hello World", this.resizeIcon("src/globe.png", 100, 100), 0);
         label.setVisible(true);
 
         final Dimension size = label.getPreferredSize();
